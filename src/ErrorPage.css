@@ -1,0 +1,42 @@
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.error-container {
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #0072ff;
+}
+
+.error-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.error-description {
+  font-size: 1.5rem;
+  color: #666666;
+}
+
+.error-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0072ff;
+  color: #ffffff;
+  text-decoration: none;
+}

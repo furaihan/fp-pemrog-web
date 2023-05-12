@@ -18,10 +18,10 @@ function Navbar() {
           <a className="navbar-item" href="/explore">
             Explore
           </a>
-          <a className="navbar-item" href="#">
+          <a className="navbar-item" href="/about">
             About
           </a>
-          <a className="navbar-item" href="#">
+          <a className="navbar-item" href="/support">
             Support
           </a>
         </div>
