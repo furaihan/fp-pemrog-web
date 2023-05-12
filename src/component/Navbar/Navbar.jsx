@@ -12,7 +12,7 @@ function Navbar() {
           </a>
         </div>
         <div className="navbar-menu">
-          <a className="navbar-item" href="#">
+          <a className="navbar-item" href="/">
             Home
           </a>
           <a className="navbar-item" href="/explore">
