@@ -22,8 +22,23 @@ function App() {
         <section className="fun-fact">
           <div className="fun-fact-body">
             <p className="fun-fact-title">Fun Fact</p>
-            <div className="fun-fact-item">
-              
+            <div className="fun-fact-items">
+              <div className="fun-fact-item">
+                <div className="fun-fact-item-image">
+                  <img src="pikachu.jpg" alt="Iki Pika" />
+                </div>
+                <p className="fun-fact-item-title">Lorem Ipsum</p>
+                <p className="fun-fact-item-subtitle">
+                  Suka memakan kotorannya sendiri. Pika mengeluarkan kotoran
+                  berwarna hijau yang terdiri dari tanaman atau tumbuh-tumbuhan.
+                  Untuk mendapatkan lebih banyak nutrisi, Pika memakan lagi
+                  kotorannya dan setelah itu mengeluarkan kotoran berwarna
+                  gelap.
+                </p>
+                <div className="fun-fact-item-link">
+                  <button type="button">Read More</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>

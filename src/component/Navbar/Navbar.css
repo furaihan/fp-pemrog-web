@@ -6,7 +6,7 @@
   background-color: #ffffff;
   height: 60px;
   width: 100%;
-  position: fixed;
+  position:initial;
   top: 0;
   left: 0;
   z-index: 100;
