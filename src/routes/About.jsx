@@ -1,12 +1,20 @@
 import Navbar from "../component/Navbar/Navbar";
+import "./Root.css"
 
 export default function About() {
   return (
     <>
     <Navbar/>
       <div>
-        <h1>About</h1>
-        <p>This is the about page.</p>
+        <section className="hero">
+          <div className="hero-body">
+            <p className="hero-title">About</p>
+            <p className="hero-subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              nec iaculis mauris.
+            </p>
+          </div>
+        </section>
       </div>
     </>
   );
