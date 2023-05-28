@@ -1,7 +1,7 @@
 import "./Root.css";
-import ArrowDown from "../assets/image/arrow-down.jsx";
-import Navbar from "../component/Navbar/Navbar";
-import FunFactBox from "../component/FunFactBox/FunFactBox";
+import ArrowDown from "../../assets/image/arrow-down.jsx";
+import Navbar from "../../component/Navbar/Navbar";
+import FunFactBox from "../../component/FunFactBox/FunFactBox";
 
 function App() {
   const funFactItems = [

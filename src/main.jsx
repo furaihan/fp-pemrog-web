@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root.jsx";
+import Root from "./routes/Root/Root.jsx";
 import ErrorPage from "./ErrorPage.jsx";
-import About from "./routes/About.jsx";
-import Explore from "./routes/Explore.jsx";
+import About from "./routes/About/About.jsx";
+import Explore from "./routes/Explore/Explore.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([

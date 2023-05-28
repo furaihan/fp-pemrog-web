@@ -1,5 +1,5 @@
-import Navbar from "../component/Navbar/Navbar";
-import SearchBar from "../component/SearchBar/SearchBar";
+import Navbar from "../../component/Navbar/Navbar";
+import SearchBar from "../../component/SearchBar/SearchBar";
 
 function Explore() {
   return (
