@@ -39,6 +39,7 @@ export default function About() {
                   much more vulnerable to natural disasters, human disturbance and climate change. In the
                   worst-case scenario, the whole ecosystem can collapse – a tragedy in itself, and a threat to all
                   those who depend on it. 
+                  
                 </p>
                 <p>
                   Sadly, our planet’s stunning array of species is under serious threat, from habitat loss, pollution,
