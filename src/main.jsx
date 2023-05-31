@@ -5,6 +5,7 @@ import Root from "./routes/Root/Root.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import About from "./routes/About/About.jsx";
 import Explore from "./routes/Explore/Explore.jsx";
+import Train from "./routes/Train/Train.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
     element: <Explore />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/train",
+    element: <Train />,
+    errorElement: <ErrorPage />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
