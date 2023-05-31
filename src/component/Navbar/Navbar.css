@@ -1,3 +1,4 @@
+/* Base styles */
 .navbar {
   display: flex;
   flex-direction: row;
@@ -6,7 +7,7 @@
   background-color: #ffffff;
   height: 60px;
   width: 100vw;
-  position:initial;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -24,9 +25,11 @@
   margin-right: 20px;
   color: #000000;
 }
+
 .navbar-item:hover {
   color: #34d728;
 }
+
 .navbar-menu {
   display: flex;
   flex-direction: row;
@@ -64,14 +67,44 @@
   fill: red;
 }
 
-.login-button {
-  background-color: #3fd29b;
-  width: 100px;
-  height: 30px;
-}
+.login-button,
 .signup-button {
   background-color: #3fd29b;
   width: 100px;
   height: 30px;
+}
+
+.signup-button {
   margin-left: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    margin: 10px;
+    text-align: center;
+  }
+
+  .navbar-item {
+    margin: 5px;
+  }
+
+  .navbar-menu,
+  .navbar-search-login {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .login-button,
+  .signup-button {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+  }
 }

@@ -11,6 +11,9 @@ function Explore() {
           <p>This is the explore page.</p>
           <SearchBar />
         </div>
+        <section id="hero">
+
+        </section>
       </main>
     </>
   );

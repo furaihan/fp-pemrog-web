@@ -33,7 +33,7 @@ function App() {
         <Navbar />
         <section className="hero">
           <div className="hero-body">
-            <p className="hero-title">Lorep Ipsum</p>
+            <p className="hero-title">Lorem Ipsum</p>
             <p className="hero-subtitle">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               nec iaculis mauris.
