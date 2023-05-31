@@ -80,31 +80,13 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+  .navbar-menu{
+    display: none;
   }
-
-  .navbar-brand {
-    margin: 10px;
-    text-align: center;
+  .navbar-search-login{
+    display: none;
   }
-
-  .navbar-item {
-    margin: 5px;
-  }
-
-  .navbar-menu,
-  .navbar-search-login {
-    flex-direction: column;
-    margin: 10px 0;
-  }
-
-  .login-button,
-  .signup-button {
-    width: auto;
-    height: auto;
-    padding: 5px 10px;
+  .navbar-brand{
+    margin-left: 20px;
   }
 }

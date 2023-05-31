@@ -63,3 +63,9 @@
     border-bottom: 2px solid cyan;
 }
 
+@media (max-width: 768px) {
+    .navigation{
+        display: none;
+    }
+}
+
