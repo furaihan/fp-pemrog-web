@@ -2,38 +2,25 @@ import "./Hamburger.css";
 
 function Hamburger() {
   return (
-    <nav>
-      <div className="navbar">
-        <div className="container nav-container">
-          <input className="checkbox" type="checkbox" name="" id="" />
+    <nav className="navbar2">
+      <div className="navbar2-container container">
+          <input type="checkbox" name="" id=""/>
           <div className="hamburger-lines">
-            <span className="line line1"></span>
-            <span className="line line2"></span>
-            <span className="line line3"></span>
+              <span className="line line1"></span>
+              <span className="line line2"></span>
+              <span className="line line3"></span>
           </div>
+          <ul className="menu-items">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">Explore</a></li>
+              <li><a href="#food">About</a></li>
+              <li><a href="#food-menu">Support</a></li>
+          </ul>
           <div className="logo">
-            <h1>Navbar</h1>
+            
           </div>
-          <div className="menu-items">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">about</a>
-            </li>
-            <li>
-              <a href="#">blogs</a>
-            </li>
-            <li>
-              <a href="#">portfolio</a>
-            </li>
-            <li>
-              <a href="#">contact</a>
-            </li>
-          </div>
-        </div>
       </div>
-    </nav>
+  </nav>
   );
 }
 

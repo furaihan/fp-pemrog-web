@@ -26,3 +26,9 @@
   font-weight: 500;
   margin-top: 10px;
 }
+
+.filter-animal{
+  display: flex;
+  align-items: center;
+  margin: center;
+}
