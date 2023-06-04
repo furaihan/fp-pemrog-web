@@ -86,9 +86,6 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .navbar-menu {
-    display: none;
-  }
   .navbar-search-login {
     display: none;
   }
