@@ -1,6 +1,8 @@
 import Navbar from "../../component/Navbar/Navbar";
 import SearchBar from "../../component/SearchBar/SearchBar";
 import ArrowDown from "../../assets/image/arrow-down.jsx";
+import "./Explore.css"
+
 
 function Explore() {
   return (
@@ -21,12 +23,11 @@ function Explore() {
         </section>
         <section className="filter-animal">
           <div className="filter-animal-body">
-           <h5 className='filter-animal-type'> Type </h5>
-           <div>
-            
-           </div>
+           <h5 className="filter-animal-type"> Type </h5>
            <h5 className="filter-animal-region"> Region</h5>
-           <h5 className="filter-animal-environtment"> Environtment</h5>
+           <h5 className="filter-animal-environment"> Environment</h5>
+           <button className="filter-animal-filter"> Filter </button>
+           <button className="filter-animal-reset"> Reset </button>
           </div>
           
         </section>

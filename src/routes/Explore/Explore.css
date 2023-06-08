@@ -27,8 +27,24 @@
   margin-top: 10px;
 }
 
-.filter-animal{
+
+.filter-animal-type{
   display: flex;
-  align-items: center;
-  margin: center;
+}
+
+.filter-animal-region{
+  display: flex;
+}
+.filter-animal-filter{
+  border-radius: 10%;
+  background-color: #00A751;
+  height: 40px;
+
+}
+
+.filter-animal-reset{
+  border-radius: 10%;
+  background-color: #ffffff;
+  height: 40px;
+
 }
