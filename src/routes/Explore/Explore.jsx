@@ -1,9 +1,9 @@
 import Navbar from "../../component/Navbar/Navbar";
-import SearchBar from "../../component/SearchBar/SearchBar";
 import ArrowDown from "../../assets/image/arrow-down.jsx";
-import "./Explore.css"
-import logo from "../../assets/image/logo.svg";
-
+import "./Explore.css";
+import Environtment from "../../component/Dropdown/Environtment";
+import Region from "../../component/Dropdown/Region";
+import Type from "../../component/Dropdown/Type";
 
 function Explore() {
   return (
@@ -27,12 +27,15 @@ function Explore() {
             <div className="row">
               <div className="filter-animal-type">
                 <h5> Type </h5>
+                <Type />
               </div>
               <div className="filter-animal-region">
                 <h5> Region </h5>
+                <Region />
               </div>
               <div className="filter-animal-environtment"> 
                 <h5> Environment </h5>
+                <Environtment />
               </div>
               <div className="container-2">
                 <div className="row-2">
