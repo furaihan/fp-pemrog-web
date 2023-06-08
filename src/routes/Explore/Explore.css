@@ -1,5 +1,5 @@
 .hero {
-  background: url("homie.jpg") center/cover no-repeat;
+  background: url("takahe.jpg") center/cover no-repeat;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -28,16 +28,36 @@
 }
 
 
-.filter-animal-type{
+.filter{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+
 }
+
+.container{
+  width:100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.row{
+  width:80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
 
 .filter-animal-region{
   display: flex;
 }
 .filter-animal-filter{
   border-radius: 10%;
-  background-color: #00A751;
   height: 40px;
 
 }
