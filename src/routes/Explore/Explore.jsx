@@ -1,5 +1,5 @@
 import Navbar from "../../component/Navbar/Navbar";
-import SearchBar from "../../component/SearchBar/SearchBar";
+import "./Explore.css"
 import ArrowDown from "../../assets/image/arrow-down.jsx";
 
 function Explore() {
@@ -30,7 +30,23 @@ function Explore() {
           </div>
           
         </section>
-
+        
+        <section className="list-animal">
+          <div className="list-animal-body"> 
+            <div>
+              <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
+              <h5 className="list-animal-name">Iki Pika</h5>
+            </div>
+            <div>
+              <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
+              <h5 className="list-animal-name">Iki Pika</h5>
+            </div>
+            <div>
+              <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
+              <h5 className="list-animal-name">Iki Pika</h5>
+            </div>
+          </div>
+        </section>
         
 
       </main>

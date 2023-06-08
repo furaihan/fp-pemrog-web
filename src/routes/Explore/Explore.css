@@ -32,3 +32,17 @@
   align-items: center;
   margin: center;
 }
+.list-animal{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.list-animal-img{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 113px;
+}
+.list-animal-name{
+  font-weight: normal;
+}
