@@ -86,3 +86,31 @@
   height: 40px;
 
 }
+.list-animal{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.list-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list-row{
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.list-animal-img{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 113px;
+  border-radius: 100%;
+}
+.list-animal-name{
+  font-weight: normal;
+}

@@ -88,6 +88,19 @@ function App() {
                 </div>
               </div>
             </div>
+            
+        </section>
+        <section className="hewan-punah">
+            <div className="container-hewan-punah">
+              <div className="container-hewan-punah-1">
+                <h2>Jumlah Hewan Punah</h2>
+                <div className="jml-hewan-punah"></div>
+              </div>
+            </div>
+        </section>
+        <section className="kuis">
+          <h1>Kuis</h1>
+          <div className="container-kuis"></div>
         </section>
         <Footer />
       </main>
