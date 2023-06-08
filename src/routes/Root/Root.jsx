@@ -59,6 +59,28 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="pembatas">
+            <p className="our-focus-text">Semarak Bumi semakin indah dengan beragamnya hewan dan <br /> tumbuhan. Lestarikan mereka, lestarikan keindahan bumi, <br /> lestarikan kehidupan!</p>
+        </section>
+          <div className="fokus-kami">
+            <h1 className="fokus-kami-text">Fokus Kami</h1>
+          </div>
+        <section className="fokus-kami-img">
+            <div className="fauna-img">
+              <div className="border-box-fauna-1">
+                <div className="fauna-1"></div>
+              </div>
+              <div className="border-box-fauna-2">
+                <div className="fauna-2"></div>
+              </div>
+              <div className="border-box-fauna-3">
+                <div className="fauna-3"></div>
+              </div>
+              <div className="border-box-fauna-4">
+                <div className="fauna-4"></div>
+              </div>
+            </div>
+        </section>
         <Footer />
       </main>
     </>
