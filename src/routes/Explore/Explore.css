@@ -27,21 +27,51 @@
   margin-top: 10px;
 }
 
-.filter-animal{
+
+.filter-animal-type{
   display: flex;
-  align-items: center;
-  margin: center;
+}
+
+.filter-animal-region{
+  display: flex;
+}
+.filter-animal-filter{
+  border-radius: 10%;
+  background-color: #00A751;
+  height: 40px;
+
+}
+
+.filter-animal-reset{
+  border-radius: 10%;
+  background-color: #ffffff;
+  height: 40px;
+
 }
 .list-animal{
   align-items: center;
   display: flex;
   flex-direction: row;
 }
+.list-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list-row{
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 .list-animal-img{
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 113px;
+  border-radius: 100%;
 }
 .list-animal-name{
   font-weight: normal;
