@@ -35,42 +35,47 @@
 .fun-fact {
   background-color: #f5f5f5;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 .fun-fact-body {
   width: 100%;
-  height: 75%;
+  height: 90%;
   align-items: center;
   justify-content: start;
   display: flex;
-  padding: 20px;
   flex-direction: column;
 }
 .fun-fact-title {
   color: #000000;
-  font-size: 35px;
+  font-size: 3vw;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .fun-fact-items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   width: 100%;
+  height: 80%;
 }
-.pembatas{
+.pembatas {
   width: 100vw;
   height: 20vh;
   align-items: center;
-  background-color: #00A751;
+  background-color: #00a751;
 }
 
-.our-focus-text{
+.our-focus-text {
   color: #f5f5f5;
   text-align: center;
   position: relative;
@@ -80,11 +85,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.fokus-kami{
+.fokus-kami {
   width: 100vw;
   height: 35vh;
 }
-.fokus-kami-text{
+.fokus-kami-text {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -93,48 +98,48 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.fokus-kami-img{
+.fokus-kami-img {
   width: 100vh;
   height: auto;
   background-color: #f5f5f5;
 }
-.fauna-img{
+.fauna-img {
   width: 100vw;
   height: auto;
   display: flex;
   flex-direction: row;
-  background-color: #53616F;
+  background-color: #53616f;
 }
 .border-box-fauna-1{
   border: 12px solid;
-  border-color: #FFC090;
+  border-color: #ffc090;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
 .border-box-fauna-2{
   border: 12px solid;
-  border-color: #53616F;
+  border-color: #53616f;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
 .border-box-fauna-3{
   border: 12px solid;
-  border-color: #53616F;
+  border-color: #53616f;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
 .border-box-fauna-4{
   border: 12px solid;
-  border-color: #53616F;
+  border-color: #53616f;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
-.fauna-1{
+.fauna-1 {
   background: url("barbary-singa atlas.jpg") center/cover no-repeat;
   align-items: center;
   display: flex;
 }
-.fauna-2{
+.fauna-2 {
   background: url("irish elk.jpg") center/cover no-repeat;
   width: 331px;
   height: 523px;
@@ -143,7 +148,7 @@
   align-items: center;
   display: flex;
 }
-.fauna-3{
+.fauna-3 {
   background: url("takahe.jpg") center/cover no-repeat;
   width: 331px;
   height: 523px;
@@ -152,7 +157,7 @@
   align-items: center;
   display: flex;
 }
-.fauna-4{
+.fauna-4 {
   background: url("lesser bilby.jpg") center/cover no-repeat;
   width: 331px;
   height: 523px;
