@@ -106,40 +106,24 @@
   background-color: #53616F;
 }
 .border-box-fauna-1{
-  width: 331.84px;
-  height: 523.18px;
-  left: calc(50% - 360px/2 - 538.5px);
-  top: 0.32px;
   border: 12px solid;
   border-color: #FFC090;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
 .border-box-fauna-2{
-  width: 331.84px;
-  height: 523.18px;
-  left: calc(50% - 360px/2 - 538.5px);
-  top: 0.32px;
   border: 12px solid;
   border-color: #53616F;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
 .border-box-fauna-3{
-  width: 331.84px;
-  height: 523.18px;
-  left: calc(50% - 360px/2 - 538.5px);
-  top: 0.32px;
   border: 12px solid;
   border-color: #53616F;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
 .border-box-fauna-4{
-  width: 331.84px;
-  height: 523.18px;
-  left: calc(50% - 360px/2 - 538.5px);
-  top: 0.32px;
   border: 12px solid;
   border-color: #53616F;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
@@ -147,10 +131,6 @@
 }
 .fauna-1{
   background: url("barbary-singa atlas.jpg") center/cover no-repeat;
-  width: 331.84px;
-  height: 523.18px;
-  right: 13.45px;
-  bottom: 13.45px;
   align-items: center;
   display: flex;
 }
@@ -180,4 +160,31 @@
   left: 13.45px;
   align-items: center;
   display: flex;
+}
+.nama-fauna-1{
+  color: #f5f5f5;
+}
+.nama-fauna-2{
+  position: absolute;
+  left: 14.2px;
+  right: 208.11px;
+  top: 41.11px;
+  bottom: 428.4px;
+  color: #f5f5f5;
+}
+.nama-fauna-3{
+  position: absolute;
+  left: 14.2px;
+  right: 208.11px;
+  top: 41.11px;
+  bottom: 428.4px;
+  color: #f5f5f5;
+}
+.nama-fauna-4{
+  position: absolute;
+  left: 14.2px;
+  right: 208.11px;
+  top: 41.11px;
+  bottom: 428.4px;
+  color: #f5f5f5;
 }
