@@ -1,11 +1,11 @@
-.hero {
+.explore-hero {
   background: url("takahe.jpg") center/cover no-repeat;
   width: 100vw;
   height: 100vh;
   align-items: center;
   display: flex;
 }
-.hero-body {
+.explore-hero-body {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
@@ -14,13 +14,13 @@
   display: flex;
   flex-direction: column;
 }
-.hero-title {
+.explore-hero-title {
   color: white;
   font-size: 50px;
   font-weight: 700;
   margin-top: 20px;
 }
-.hero-subtitle {
+.explore-hero-subtitle {
   color: white;
   font-size: 20px;
   font-weight: 500;
@@ -44,7 +44,7 @@
 }
 
 .row{
-  width:80vw;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,17 +52,35 @@
   
 }
 
-
 .filter-animal-region{
   display: flex;
 }
-.filter-animal-filter{
+.filter-button-filter{
   border-radius: 10%;
+  background-color: #00A751;
   height: 40px;
+  color:#ffffff;
 
 }
 
-.filter-animal-reset{
+.container-2{
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.row-2{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.filter-button-reset{
   border-radius: 10%;
   background-color: #ffffff;
   height: 40px;
