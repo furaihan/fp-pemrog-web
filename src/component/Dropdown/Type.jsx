@@ -1,6 +1,6 @@
 import "./Type.css";
 
-export default function Type(props){
+export default function Type(){
     return (
     <select
         className="type-filter"

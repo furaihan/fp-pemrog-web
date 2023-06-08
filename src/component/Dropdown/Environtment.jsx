@@ -1,6 +1,6 @@
 import "./Environtment.css";
 
-export default function Environtment(props){
+export default function Environtment(){
     return (
     <select
         className="environtment-filter"
