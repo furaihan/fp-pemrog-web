@@ -1,9 +1,6 @@
-"use client"
 import Navbar from "../../component/Navbar/Navbar";
-import { useState } from 'react';
-import "./Login.css";
 
-function Login() {
+export function login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -25,7 +22,6 @@ function Login() {
 
     // Lakukan validasi atau tindakan lain yang diperlukan saat login disubmit
     // Misalnya, validasi email dan password, panggil API untuk otentikasi, dll.
-
     // Contoh validasi sederhana
     if (email === "") {
       alert("Email harus diisi");
@@ -107,5 +103,3 @@ function Login() {
     </>
   );
 }
-
-export default Login;

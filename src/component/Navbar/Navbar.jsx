@@ -36,8 +36,16 @@ function Navbar() {
         <div className="navbar-search">
           <img src={searchlogo} alt="Search" className="search-logo" />
         </div>
-        <div className="login-button">Login</div>
-        <div className="signup-button">Signup</div>
+        <div className="login-button">
+        <a className="login-item" href="/login">
+            Login
+          </a>
+        </div>
+        <div className="signup-button">
+        <a className="Signup-item" href="/Signup">
+            SignUp
+          </a>
+        </div>
       </div>
     </nav>
   );

@@ -6,44 +6,44 @@ function Signup() {
     <>
       <main>
         <Navbar />
-        <div className="form">
+        <div className="form-signUp">
           <div className="text-signup">SignUp</div>
-          <div className="form-body">
+          <div className="SignUp-body">
             <div className="username">
-              <label className="form__label" htmlFor="firstName">
+              <label className="SignUp__label" htmlFor="firstName">
                 First Name{" "}
               </label>
               <input
-                className="form__input"
+                className="SignUp__input"
                 type="text"
                 id="firstName"
                 placeholder="First Name"
               />
             </div>
             <div className="lastname">
-              <label className="form__label" htmlFor="lastName">
+              <label className="SignUp__label" htmlFor="lastName">
                 Last Name{" "}
               </label>
               <input
                 type="text"
                 id="lastName"
-                className="form__input"
+                className="SignUp__input"
                 placeholder="Last Name"
               />
             </div>
             <div className="email">
-              <label className="form__label" htmlFor="email">
+              <label className="SignUp__label" htmlFor="email">
                 Email/Phone Number{" "}
               </label>
               <input
                 type="email"
                 id="email"
-                className="form__input"
+                className="SignUp__input"
                 placeholder="example@gmail.com"
               />
             </div>
             <div className="password">
-              <label className="form__label" htmlFor="password">
+              <label className="SignUp__label" htmlFor="password">
                 Password{" "}
               </label>
               <input
@@ -54,24 +54,24 @@ function Signup() {
               />
             </div>
             <div className="confirm-password">
-              <label className="form__label" htmlFor="confirmPassword">
+              <label className="SignUp__label" htmlFor="confirmPassword">
                 Confirm Password{" "}
               </label>
               <input
-                className="form__input"
+                className="SignUp__input"
                 type="password"
                 id="confirmPassword"
                 placeholder="Confirm Password"
               />
             </div>
           </div>
-          <div className="image-login">
+          <div className="image-SignUp">
             <img
               src="src\assets\image\backround-Login.png"
-              alt="backround-login"
+              alt="backround-SignUp"
             />
           </div>
-          <button type="submit" className="btn">
+          <button type="submit" className="btn-SignUp">
             SignUp
           </button>
         </div>

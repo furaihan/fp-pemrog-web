@@ -7,7 +7,8 @@ import About from "./routes/About/About.jsx";
 import Explore from "./routes/Explore/Explore.jsx";
 import Train from "./routes/Train/Train.jsx";
 import Login from "./routes/Login/Login.jsx";
-import Signup from "./routes/Signup/Signup.jsx";
+import Signup from "./routes/SignUP/signUp.jsx";
+
 import "./index.css";
 
 const router = createBrowserRouter([

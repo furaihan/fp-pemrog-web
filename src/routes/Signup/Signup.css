@@ -1,23 +1,12 @@
-body {
-  position: relative;
-  width: 1440px;
-  height: 1024px;
-  background: #ffffff;
-}
-
-.form {
-  background-color: white;
-  border-radius: 10px;
-  width: 550px;
-  margin: 20px auto;
-  padding: 20px;
+.form-signUp {
   position: absolute;
-  left: 875.08px;
-  top: 100px;
-  /* height: 600px; */
+  width: 514.13px;
+  height: 602px;
+  left: 770px;
+  top: 80px;
 }
 
-.image-login {
+.image-SignUp {
   position: absolute;
   width: 1123px;
   height: 1010px;
@@ -37,16 +26,16 @@ body {
   color: #6eab40;
 }
 
-.form-body {
+.SignUp-body {
   text-align: left;
   padding: 20px 10px;
 }
 
-.form-body > * {
+.SignUp-body > * {
   padding: 5px;
 }
 
-.form__label {
+.SignUp__label {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -55,7 +44,7 @@ body {
   color: #000000;
 }
 
-.form__input {
+.SignUp__input {
   width: 514.13px;
   height: 55.35px;
   left: 875.08px;
@@ -69,17 +58,18 @@ body {
   line-height: 18px;
 }
 
-.btn {
+.btn-SignUp {
   position: absolute;
   width: 167.28px;
   height: 45.15px;
   left: 200px;
-  top: 410.98px;
+  top: 600px;
   background: #7abd48;
   border-radius: 9.40571px;
   border-color: transparent;
   font-family: "Inter";
   font-style: normal;
+  align-content: center;
   font-weight: 700;
   font-size: 24.5993px;
   color: #ffffff;
