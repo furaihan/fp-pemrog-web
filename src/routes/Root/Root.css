@@ -35,7 +35,7 @@
 .fun-fact {
   background-color: #f5f5f5;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -63,16 +63,13 @@
   align-items: center;
   width: 100%;
 }
-.our-focus{
+.pembatas{
   width: 100vw;
-  height: 100vh;
-  background-color: #f5f5f5;
-}
-.our-focus-title{
-  width:100vw ;
-  height: 13vh;
+  height: 20vh;
+  align-items: center;
   background-color: #00A751;
 }
+
 .our-focus-text{
   color: #f5f5f5;
   text-align: center;
@@ -85,7 +82,7 @@
 }
 .fokus-kami{
   width: 100vw;
-  height: 15vh;
+  height: 35vh;
 }
 .fokus-kami-text{
   margin: 0;
@@ -95,4 +92,92 @@
   color: #000000;
   top: 50%;
   transform: translateY(-50%);
+}
+.fokus-kami-img{
+  width: 100vh;
+  height: auto;
+  background-color: #f5f5f5;
+}
+.fauna-img{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: #53616F;
+}
+.border-box-fauna-1{
+  width: 331.84px;
+  height: 523.18px;
+  left: calc(50% - 360px/2 - 538.5px);
+  top: 0.32px;
+  border: 12px solid;
+  border-color: #FFC090;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+.border-box-fauna-2{
+  width: 331.84px;
+  height: 523.18px;
+  left: calc(50% - 360px/2 - 538.5px);
+  top: 0.32px;
+  border: 12px solid;
+  border-color: #53616F;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+.border-box-fauna-3{
+  width: 331.84px;
+  height: 523.18px;
+  left: calc(50% - 360px/2 - 538.5px);
+  top: 0.32px;
+  border: 12px solid;
+  border-color: #53616F;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+.border-box-fauna-4{
+  width: 331.84px;
+  height: 523.18px;
+  left: calc(50% - 360px/2 - 538.5px);
+  top: 0.32px;
+  border: 12px solid;
+  border-color: #53616F;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+.fauna-1{
+  background: url("barbary-singa atlas.jpg") center/cover no-repeat;
+  width: 331.84px;
+  height: 523.18px;
+  right: 13.45px;
+  bottom: 13.45px;
+  align-items: center;
+  display: flex;
+}
+.fauna-2{
+  background: url("irish elk.jpg") center/cover no-repeat;
+  width: 331px;
+  height: 523px;
+  top: 13.45px;
+  left: 13.45px;
+  align-items: center;
+  display: flex;
+}
+.fauna-3{
+  background: url("takahe.jpg") center/cover no-repeat;
+  width: 331px;
+  height: 523px;
+  top: 13.45px;
+  left: 13.45px;
+  align-items: center;
+  display: flex;
+}
+.fauna-4{
+  background: url("lesser bilby.jpg") center/cover no-repeat;
+  width: 331px;
+  height: 523px;
+  top: 13.45px;
+  left: 13.45px;
+  align-items: center;
+  display: flex;
 }
