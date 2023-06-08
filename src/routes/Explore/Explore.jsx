@@ -1,18 +1,19 @@
 import Navbar from "../../component/Navbar/Navbar";
-import SearchBar from "../../component/SearchBar/SearchBar";
 import ArrowDown from "../../assets/image/arrow-down.jsx";
-import "./Explore.css"
-
+import "./Explore.css";
+import Environtment from "../../component/Dropdown/Environtment";
+import Region from "../../component/Dropdown/Region";
+import Type from "../../component/Dropdown/Type";
 
 function Explore() {
   return (
     <>
       <main>
         <Navbar />
-        <section className="hero">
-          <div className="hero-body">
-            <p className="hero-title">Lorem Ipsum</p>
-            <p className="hero-subtitle">
+        <section className="explore-hero">
+          <div className="explore-hero-body">
+            <p className="explore-hero-title">Lorem Ipsum</p>
+            <p className="explore-hero-subtitle">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               nec iaculis mauris.
             </p>
@@ -22,24 +23,33 @@ function Explore() {
           </div>
         </section>
         <section className="filter">
-          <div class="container col-xxl-8 px-8 py-5">
-            <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div className="container">
+            <div className="row">
               <div className="filter-animal-type">
-                <h5 className="filter-animal-type"> Type </h5>
+                <h5> Type </h5>
+                <Type />
               </div>
               <div className="filter-animal-region">
-                <h5 className="filter-animal-region"> Region</h5>
+                <h5> Region </h5>
+                <Region />
               </div>
               <div className="filter-animal-environtment"> 
-                <h5 className="filter-animal-environment"> Environment</h5>
+                <h5> Environment </h5>
+                <Environtment />
               </div>
-              <div className="filter-animal-filter">
-                <button className="filter-animal-filter"> Filter </button>
+              <div className="container-2">
+                <div className="row-2">
+                  <div className="button-filter">
+                    <button className="filter-button-filter"> Filter </button>
+                  </div>
+                  <div className="button-reset">
+                      <button className="filter-button-reset"> Reset </button>
+                  </div>
+                </div>
               </div>
-              <div className="filter-animal-reset">
-                <button className="filter-animal-reset"> Reset </button>
+
               </div>
-           </div>
+              
             
           </div>
           

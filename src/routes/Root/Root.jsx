@@ -68,18 +68,39 @@ function App() {
         <section className="fokus-kami-img">
             <div className="fauna-img">
               <div className="border-box-fauna-1">
-                <div className="fauna-1"></div>
+                <div className="fauna-1">
+                  <h3 className="nama-fauna-1">Singa Atlas</h3>
+                </div>
               </div>
               <div className="border-box-fauna-2">
-                <div className="fauna-2"></div>
+                <div className="fauna-2">
+                <h3 className="nama-fauna-2">Irish Elk</h3>
+                </div>
               </div>
               <div className="border-box-fauna-3">
-                <div className="fauna-3"></div>
+                <div className="fauna-3">
+                <h3 className="nama-fauna-3">Takahe</h3>
+                </div>
               </div>
               <div className="border-box-fauna-4">
-                <div className="fauna-4"></div>
+                <div className="fauna-4">
+                <h3 className="nama-fauna-4">Leseer Bilby</h3>
+                </div>
               </div>
             </div>
+            
+        </section>
+        <section className="hewan-punah">
+            <div className="container-hewan-punah">
+              <div className="container-hewan-punah-1">
+                <h2>Jumlah Hewan Punah</h2>
+                <div className="jml-hewan-punah"></div>
+              </div>
+            </div>
+        </section>
+        <section className="kuis">
+          <h1>Kuis</h1>
+          <div className="container-kuis"></div>
         </section>
         <Footer />
       </main>
