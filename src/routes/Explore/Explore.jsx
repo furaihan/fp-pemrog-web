@@ -1,5 +1,5 @@
 import Navbar from "../../component/Navbar/Navbar";
-import SearchBar from "../../component/SearchBar/SearchBar";
+import "./Explore.css"
 import ArrowDown from "../../assets/image/arrow-down.jsx";
 import "./Explore.css"
 import logo from "../../assets/image/logo.svg";
@@ -52,9 +52,54 @@ function Explore() {
           
          
         </section>
-
         
-
+        <section className="list-animal">
+          <div className="list-container"> 
+            <div className="list-row">
+                <div>
+                  <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
+                  <h5 className="list-animal-name">Iki Pika</h5>
+                </div>
+                <div>
+                  <img className="list-animal-img" src="./public/barbary-singa atlas.jpg" alt="Singa Atlas"/>
+                  <h5 className="list-animal-name">Singa Atlas</h5>
+                </div>
+                <div>
+                  <img className="list-animal-img" src="./public/berang-berang.jpg" alt="Berang-Berang"/>
+                  <h5 className="list-animal-name">Berang-Berang</h5>
+                </div> 
+            </div>
+            <div className="list-row">
+              <div>
+                <img className="list-animal-img" src="./public/irish elk.jpg" alt="Irish Elk"/>
+                <h5 className="list-animal-name">Irish Elk</h5>
+              </div>
+              <div>
+                <img className="list-animal-img" src="./public/lesser bilby.jpg" alt="Lesser Bilby"/>
+                <h5 className="list-animal-name">Lesser Bilby</h5>
+              </div>
+              <div>
+                <img className="list-animal-img" src="./public/takahe.jpg" alt="Takahe"/>
+                <h5 className="list-animal-name">Takahe</h5>
+              </div>
+            </div>
+            <div className="list-row">
+              <div>
+                <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
+                <h5 className="list-animal-name">Iki Pika</h5>
+              </div>
+              <div>
+                <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
+                <h5 className="list-animal-name">Iki Pika</h5>
+              </div>
+              <div>
+                <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
+                <h5 className="list-animal-name">Iki Pika</h5>
+              </div>
+            </div>  
+          </div>
+        </section>
+        
       </main>
     </>
   );
