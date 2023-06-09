@@ -1,76 +1,13 @@
-.form-signUp {
-  position: absolute;
-  width: 514.13px;
-  height: 602px;
-  left: 770px;
-  top: 80px;
-}
-
-.image-SignUp {
-  position: absolute;
-  width: 1123px;
-  height: 1010px;
-  right: 158px;
-  top: 1px;
-  transform: scale();
-}
-
-.text-signup {
-  top: 500px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 52.8886px;
-  line-height: 64px;
-  text-align: center;
-  color: #6eab40;
-}
-
-.SignUp-body {
-  text-align: left;
-  padding: 20px 10px;
-}
-
-.SignUp-body > * {
-  padding: 5px;
-}
-
-.SignUp__label {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 19.6795px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.SignUp__input {
-  width: 514.13px;
-  height: 55.35px;
-  left: 875.08px;
-  top: 410.98px;
-  border-radius: 15.31px;
-  border-color: rgba(134, 208, 79, 1);
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14.7596px;
-  line-height: 18px;
-}
-
-.btn-SignUp {
-  position: absolute;
-  width: 167.28px;
-  height: 45.15px;
-  left: 200px;
-  top: 600px;
-  background: #7abd48;
-  border-radius: 9.40571px;
-  border-color: transparent;
-  font-family: "Inter";
-  font-style: normal;
-  align-content: center;
-  font-weight: 700;
-  font-size: 24.5993px;
-  color: #ffffff;
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgb(255,255,255.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgbrgb(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

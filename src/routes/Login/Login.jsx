@@ -51,6 +51,7 @@ function Login() {
       <main>
         <Navbar />
         <div className="form">
+          <div className="box-from">
           <div className="text-login">Login</div>
           <div className="form-body">
             <div className="email">
@@ -93,15 +94,11 @@ function Login() {
               />
             </div>
           </div>
-          <div className="image-login">
-            <img
-              src="src\assets\image\backround-Login.png"
-              alt="backround-login"
-            />
-          </div>
           <button type="submit" className="btn" onClick={handleSubmit}>
             Login
           </button>
+          
+        </div>
         </div>
       </main>
     </>
