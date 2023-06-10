@@ -26,13 +26,13 @@ function Explore() {
           <div className="container">
             <div className="row">
               <div className="filter-animal-type">
-                <h5> Type </h5>
+                <h4> Type </h4>
               </div>
               <div className="filter-animal-region">
-                <h5> Region </h5>
+                <h4> Region </h4>
               </div>
               <div className="filter-animal-environtment"> 
-                <h5> Environment </h5>
+                <h4> Environment </h4>
               </div>
               <div className="container-2">
                 <div className="row-2">
@@ -52,49 +52,51 @@ function Explore() {
           
          
         </section>
-        
+        <br />
         <section className="list-animal">
           <div className="list-container"> 
             <div className="list-row">
-                <div>
+                <div className="list-name">
                   <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
-                  <h5 className="list-animal-name">Iki Pika</h5>
+                  <h3 className="list-animal-name">Iki Pika</h3>
                 </div>
-                <div>
+                <div className="list-name">
                   <img className="list-animal-img" src="./public/barbary-singa atlas.jpg" alt="Singa Atlas"/>
-                  <h5 className="list-animal-name">Singa Atlas</h5>
+                  <h3 className="list-animal-name">Singa Atlas</h3>
                 </div>
-                <div>
+                <div className="list-name">
                   <img className="list-animal-img" src="./public/berang-berang.jpg" alt="Berang-Berang"/>
-                  <h5 className="list-animal-name">Berang-Berang</h5>
+                  <h3 className="list-animal-name">Berang-Berang</h3>
                 </div> 
             </div>
+            <br />
             <div className="list-row">
-              <div>
-                <img className="list-animal-img" src="./public/irish elk.jpg" alt="Irish Elk"/>
-                <h5 className="list-animal-name">Irish Elk</h5>
+              <div className="list-name">
+                <img className="list-animal-img" src="./public/karakalo australia.jpg" alt="Karakalo Australia"/>
+                <h3 className="list-animal-name">Karakalo Australia</h3>
               </div>
-              <div>
+              <div className="list-name">
                 <img className="list-animal-img" src="./public/lesser bilby.jpg" alt="Lesser Bilby"/>
-                <h5 className="list-animal-name">Lesser Bilby</h5>
+                <h3 className="list-animal-name">Lesser Bilby</h3>
               </div>
-              <div>
+              <div className="list-name">
                 <img className="list-animal-img" src="./public/takahe.jpg" alt="Takahe"/>
-                <h5 className="list-animal-name">Takahe</h5>
+                <h3 className="list-animal-name">Takahe</h3>
               </div>
             </div>
+            <br />
             <div className="list-row">
-              <div>
-                <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
-                <h5 className="list-animal-name">Iki Pika</h5>
+              <div className="list-name">
+                <img className="list-animal-img" src="./public/elang harpa.jpg" alt="Elang Harpa"/>
+                <h3 className="list-animal-name">Elang Harpa</h3>
               </div>
-              <div>
-                <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
-                <h5 className="list-animal-name">Iki Pika</h5>
+              <div className="list-name">
+                <img className="list-animal-img" src="./public/katak pinokio.jpg" alt="Katak Pinokio"/>
+                <h3 className="list-animal-name">Katak Pinokio</h3>
               </div>
-              <div>
-                <img className="list-animal-img" src="./public/pikachu.jpg" alt="Iki Pika"/>
-                <h5 className="list-animal-name">Iki Pika</h5>
+              <div className="list-name">
+                <img className="list-animal-img" src="./public/anglerfish.jpg" alt="Angler Fish"/>
+                <h3 className="list-animal-name">Angler Fish</h3>
               </div>
             </div>  
           </div>

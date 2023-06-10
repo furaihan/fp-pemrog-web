@@ -108,9 +108,16 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 113px;
+  height: 200px;
+  width: 200px;
   border-radius: 100%;
 }
 .list-animal-name{
   font-weight: normal;
+}
+.list-name{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
