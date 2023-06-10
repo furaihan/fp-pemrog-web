@@ -1,79 +1,64 @@
-import Navbar from "../../component/Navbar/Navbar";
 import "./SignUp.css";
 
 function Signup() {
   return (
     <>
       <main>
-        <Navbar />
-        <div className="form-signUp">
-          <div className="text-signup">SignUp</div>
-          <div className="SignUp-body">
-            <div className="username">
-              <label className="SignUp__label" htmlFor="firstName">
-                First Name{" "}
-              </label>
-              <input
-                className="SignUp__input"
-                type="text"
-                id="firstName"
-                placeholder="First Name"
-              />
+        <div className="wrapper">
+          <div className="form-box">
+            <div className="lock">
+              <img src="public\lock.svg" alt="lock" />
             </div>
-            <div className="lastname">
-              <label className="SignUp__label" htmlFor="lastName">
-                Last Name{" "}
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                className="SignUp__input"
-                placeholder="Last Name"
-              />
+            <div className="lock-2">
+              <img src="public\lock.svg" alt="lock" />
             </div>
             <div className="email">
-              <label className="SignUp__label" htmlFor="email">
-                Email/Phone Number{" "}
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="SignUp__input"
-                placeholder="example@gmail.com"
-              />
+              <img src="public\mail.svg" alt="email" />
             </div>
-            <div className="password">
-              <label className="SignUp__label" htmlFor="password">
-                Password{" "}
-              </label>
-              <input
-                className="form__input"
-                type="password"
-                id="password"
-                placeholder="Password"
-              />
+            <div className="user">
+              <img src="public\user.svg" alt="user" />
             </div>
-            <div className="confirm-password">
-              <label className="SignUp__label" htmlFor="confirmPassword">
-                Confirm Password{" "}
-              </label>
-              <input
-                className="SignUp__input"
-                type="password"
-                id="confirmPassword"
-                placeholder="Confirm Password"
-              />
-            </div>
+
+            <h2>SignUp</h2>
+            <form action="#">
+              <div className="input-box">
+                <input type="u-name" required />
+                <label>Username</label>
+              </div>
+
+              <div className="input-box">
+                <input type="email" required />
+                <label>Email</label>
+              </div>
+
+              <div className="input-box">
+                <input type="password" required />
+                <label>Password</label>
+              </div>
+
+              <div className="input-box">
+                <input type="password" required />
+                <label>Confirm Password</label>
+              </div>
+
+              <div className="remember-forgot">
+                <label>
+                  <input type="checkbox" />I agree to and Privacy Policy
+                </label>
+              </div>
+              <button type="submit" className="btn-signup">
+                SignUp
+              </button>
+              <div className="login-register">
+                <p>
+                  Have an account?{" "}
+                  <a href="#" className="login-link">
+                    Login
+                  </a>
+                </p>
+              </div>
+            </form>
           </div>
-          <div className="image-SignUp">
-            <img
-              src="src\assets\image\backround-Login.png"
-              alt="backround-SignUp"
-            />
-          </div>
-          <button type="submit" className="btn-SignUp">
-            SignUp
-          </button>
         </div>
       </main>
     </>

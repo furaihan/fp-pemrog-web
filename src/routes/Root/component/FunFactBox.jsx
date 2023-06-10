@@ -7,8 +7,10 @@ export default function FunFactBox(props) {
       <div className="fun-fact-item-image">
         <img src={props.image} alt={props.title} />
       </div>
-      <p className="fun-fact-item-title">{props.title}</p>
-      <p className="fun-fact-item-subtitle">{props.subtitle}</p>
+      <div className="fun-fact-item-title">{props.title}</div>
+      <div className="fun-fact-item-subtitle">
+        <p>{props.subtitle}</p>
+        </div>
       <div className="fun-fact-item-link">
         <button type="button">Read More</button>
       </div>

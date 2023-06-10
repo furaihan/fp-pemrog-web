@@ -1,79 +1,148 @@
-.form {
-  background-color: white;
-  border-radius: 10px;
-  width: 550px;
-  margin: 20px auto;
-  padding: 20px;
-  position: absolute;
-  left: 875.08px;
-  top: 100px;
-  /* height: 600px; */
+.wrapper-login{
+  height: 100vh;
+  width: 100vw;
+  background: url("bacround-signup.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-login {
-  position: absolute;
-  width: 1123px;
-  height: 1010px;
-  right: 158px;
-  top: 1px;
-  transform: scale();
+.form-box-login{
+  width: 25%;
+  padding: 40px;
+  position: relative;
+  background: transparent;
+  border: 2px solid rgba(255, 254, 254, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(100%);
+  box-shadow: 0 0 30px rgb(0, 0, 0, .10);
+  background-color: #ffff;
+  opacity: 80%;
 }
 
-.text-login {
-  top: 500px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 52.8886px;
-  line-height: 64px;
+.form-box-login h2{
+  font-size: 2em;
+  color: rgb(15, 15, 85);
   text-align: center;
-  color: #6eab40;
 }
 
-.form-body {
-  text-align: left;
-  padding: 20px 10px;
-}
-
-.form-body > * {
-  padding: 5px;
-}
-
-.form__label {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 19.6795px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.form__input {
-  width: 514.13px;
-  height: 55.35px;
-  left: 875.08px;
-  top: 410.98px;
-  border-radius: 15.31px;
-  border-color: rgba(134, 208, 79, 1);
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14.7596px;
-  line-height: 18px;
-}
-
-.btn {
+.email-login{
   position: absolute;
-  width: 167.28px;
-  height: 45.15px;
-  left: 200px;
-  top: 410.98px;
-  background: #7abd48;
-  border-radius: 9.40571px;
-  border-color: transparent;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24.5993px;
-  color: #ffffff;
+  width: 100px;
+  height: 20px;
+  left: 330px;
+  color: #162938;
+  top: 150px;
+  line-height: 57px;
+}
+
+.lock-login{
+  position: relative;
+  width: 80%;
+  height: 20px;
+  left: 290px;
+  color: #162938;
+  top: 160px;
+  line-height: 57px;
+}
+
+
+.remember-forgot-login {
+  font-size: .9em;
+  color: #162938;
+  font-weight: 500;
+  font-style: underline;
+  margin: -15px 30px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-box-login input:focus ~ label,
+.input-box-login input:valid ~ label{
+  top: -40%;
+  transition: .5s;
+}
+
+.input-box-login{
+  position: relative;
+  width: 85%;
+  height: 20px;
+  border-bottom: 2px solid #162938;
+  margin : 30px auto;
+}
+
+.input-box-login label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.input-box-login input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border:none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.remember-forgot-login label input{
+  accent-color:#162938;
+  margin-right: 3px;
+}
+
+.remember-forgot-login a:hover{
+  text-decoration: underline;
+}
+
+.btn-login{
+  width: 70%;
+  height: 45px;
+  background: #162938;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ffff;
+  font-weight: 500;
+  margin: 0px 60px 15px;
+}
+
+.signup-register{
+  font-size: .9em;
+  color: #162938;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.signup-register p a{
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-register p a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-login .form-box-login {
+    width: 80%;
+  }
+
+  .input-box-login, .remember-forgot-login {
+    width: 100%;
+  }
+
+  .btn-login {
+    width: 100%;
+  }
 }
