@@ -1,10 +1,10 @@
-import "./Filter.css";
+import "./Type.css";
 
-export default function Filter(props){
+export default function Type(){
     return (
     <select
-        className="h-10 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
-        name="filter">
+        className="type-filter"
+        name="type">
         <option value="Any"> Any </option>
         <option value="Mamals"> Mamals </option>
         <option value="Reptil"> Reptil </option>
