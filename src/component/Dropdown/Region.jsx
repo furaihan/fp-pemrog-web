@@ -1,6 +1,6 @@
 import "./Region.css";
 
-export default function Region(props){
+export default function Region(){
     return (
     <select
         className="region-filter"
