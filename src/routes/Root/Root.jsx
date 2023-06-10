@@ -92,9 +92,17 @@ function App() {
         </section>
         <section className="hewan-punah">
             <div className="container-hewan-punah">
+            <h2>Jumlah Hewan Punah</h2>
               <div className="container-hewan-punah-1">
-                <h2>Jumlah Hewan Punah</h2>
-                <div className="jml-hewan-punah"></div>
+                <div className="dunia">
+                  <p className="text-dunia">0</p>
+                </div>
+                <div className="asia">
+                  <p className="text-asia">0</p>
+                </div>
+                <div className="indonesia">
+                  <p className="text-indonesia">0</p>
+                </div>
               </div>
             </div>
         </section>
