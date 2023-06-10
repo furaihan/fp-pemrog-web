@@ -52,7 +52,7 @@ function Explore() {
 
               </div>
               
-            
+          
           </div>
           
          
