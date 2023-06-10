@@ -1,7 +1,7 @@
 import "./Root.css";
 import ArrowDown from "../../assets/image/arrow-down.jsx";
 import Navbar from "../../component/Navbar/Navbar";
-import FunFactBox from "../../component/FunFactBox/FunFactBox";
+import FunFactBox from "./component/FunFactBox";
 import Footer from "../../component/Footer/Footer";
 
 function App() {
