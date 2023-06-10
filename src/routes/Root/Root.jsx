@@ -1,5 +1,4 @@
 import "./Root.css";
-import ArrowDown from "../../assets/image/arrow-down.jsx";
 import Navbar from "../../component/Navbar/Navbar";
 import FunFactBox from "./component/FunFactBox";
 import Footer from "../../component/Footer/Footer";
@@ -40,7 +39,7 @@ function App() {
               nec iaculis mauris.
             </p>
             <div className="arrow-down">
-              <ArrowDown />
+              <img src="public\arrow-down.svg" alt="arrow-down" />
             </div>
           </div>
         </section>

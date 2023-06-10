@@ -93,9 +93,9 @@
 }
 .list-container{
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-row: auto;
+  grid-template-columns: repeat(3, 1fr);
 }
 .list-row{
   width: 100vw;
