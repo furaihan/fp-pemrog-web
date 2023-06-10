@@ -40,9 +40,11 @@ function Explore() {
               <div className="container-2">
                 <div className="row-2">
                   <div className="button-filter">
+                    
                     <button className="filter-button-filter"> Filter </button>
                   </div>
                   <div className="button-reset">
+                      
                       <button className="filter-button-reset"> Reset </button>
                   </div>
                 </div>
