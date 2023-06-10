@@ -6,9 +6,9 @@ export default function Environtment(props){
         className="environtment-filter"
         name="region">
         <option value="Any"> Any </option>
-        <option value="Mamals"> Mamals </option>
-        <option value="Reptil"> Reptil </option>
-        <option value="Amfibi"> Amfibi </option>
+        <option value="Sumatra"> Sumatra </option>
+        <option value="Maroko"> Maroko </option>
+        <option value="NTB"> Nusa Tenggara Barat </option>
       </select>
     );
 }

@@ -6,8 +6,8 @@ export default function Region(props){
         className="region-filter"
         name="region">
         <option value="Any"> Any </option>
-        <option value="Mamals"> Mamals </option>
-        <option value="Reptil"> Reptil </option>
+        <option value="Indonesia"> Indonesia </option>
+        <option value="Afrika"> Afrika </option>
         <option value="Amfibi"> Amfibi </option>
       </select>
     );
