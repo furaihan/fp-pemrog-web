@@ -116,6 +116,7 @@
   font-weight: normal;
 }
 .list-name{
+  cursor:pointer;
   align-items: center;
   display: flex;
   flex-direction: column;
