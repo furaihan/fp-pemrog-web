@@ -15,14 +15,14 @@ function App() {
     },
     {
       id: 2,
-      image: "pikachu.jpg",
+      image: "barbary-singa atlas.jpg",
       title: "Sumatran Tiger",
       subtitle:
         "Salah satu fakta unik Harimau Sumatra yaitu memiliki penglihatan yang tajam 30 kali lebih tajam dari penglihatan manusia pada saat malam hari.",
     },
     {
       id: 3,
-      image: "pikachu.jpg",
+      image: "berang-berang.jpg",
       title: "Berang-Berang",
       subtitle:
         "Berang-Berang mempunyai nama untuk kotorannya, yang diberi nama keselo. Keselo mempunyai aroma yang khas dan bisa digunakan untuk berkomunikasi menunjukkan lokasi serta dari aroma tersebut Berang-Berang dapat mengenali identitas Berang-Berang lain seperti jenis kelamin dan usianya.",
@@ -47,7 +47,7 @@ function App() {
         <section className="fun-fact">
           <div className="fun-fact-title">
             <p>Fun Fact</p>
-            </div>
+          </div>
           <div className="fun-fact-items">
             {funFactItems.map((item) => (
               <FunFactBox
@@ -59,12 +59,14 @@ function App() {
             ))}
           </div>
         </section>
-        <section className="pembatas">
-          <p className="our-focus-text">
-            Semarak Bumi semakin indah dengan beragamnya hewan dan <br />{" "}
-            tumbuhan. Lestarikan mereka, lestarikan keindahan bumi, <br />{" "}
-            lestarikan kehidupan!
-          </p>
+        <section className="quotes">
+          <div className="pembatas">
+            <p className="our-focus-text">
+              Semarak Bumi semakin indah dengan beragamnya hewan dan <br />{" "}
+              tumbuhan. Lestarikan mereka, lestarikan keindahan bumi, <br />{" "}
+              lestarikan kehidupan!
+            </p>
+          </div>
         </section>
         <div className="fokus-kami">
           <h1 className="fokus-kami-text">Fokus Kami</h1>

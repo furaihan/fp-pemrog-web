@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // import { useState } from 'react';
 import "./Login.css";
 
@@ -96,7 +96,7 @@ function Login() {
   //         <button type="submit" className="btn" onClick={handleSubmit}>
   //           Login
   //         </button>
-          
+
   //       </div>
   //       </div>
   //     </main>
@@ -107,12 +107,15 @@ function Login() {
       <main>
         <div className="wrapper-login">
           <div className="form-box-login">
-            <div className="lock-login"><img src="public\lock.svg" alt="lock" /></div>
-            <div className="email-login"><img src="public\mail.svg" alt="email" /></div>
-            
+            <div className="lock-login">
+              <img src="public\lock.svg" alt="lock" />
+            </div>
+            <div className="email-login">
+              <img src="public\mail.svg" alt="email" />
+            </div>
+
             <h2>Login</h2>
             <form action="#">
-
               <div className="input-box-login">
                 <input type="email" required />
                 <label>Email</label>

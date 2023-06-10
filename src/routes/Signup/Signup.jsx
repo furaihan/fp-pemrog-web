@@ -1,17 +1,24 @@
 import "./SignUp.css";
 
 function Signup() {
-  
   return (
     <>
       <main>
         <div className="wrapper">
           <div className="form-box">
-            <div className="lock"><img src="public\lock.svg" alt="lock" /></div>
-            <div className="lock-2"><img src="public\lock.svg" alt="lock" /></div>
-            <div className="email"><img src="public\mail.svg" alt="email" /></div>
-            <div className="user"><img src="public\user.svg" alt="user" /></div>
-            
+            <div className="lock">
+              <img src="public\lock.svg" alt="lock" />
+            </div>
+            <div className="lock-2">
+              <img src="public\lock.svg" alt="lock" />
+            </div>
+            <div className="email">
+              <img src="public\mail.svg" alt="email" />
+            </div>
+            <div className="user">
+              <img src="public\user.svg" alt="user" />
+            </div>
+
             <h2>SignUp</h2>
             <form action="#">
               <div className="input-box">
@@ -36,8 +43,7 @@ function Signup() {
 
               <div className="remember-forgot">
                 <label>
-                  <input type="checkbox" />
-                  I agree to and Privacy Police
+                  <input type="checkbox" />I agree to and Privacy Policy
                 </label>
               </div>
               <button type="submit" className="btn-signup">
