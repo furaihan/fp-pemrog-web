@@ -8,6 +8,8 @@ import Explore from "./routes/Explore/Explore.jsx";
 import Train from "./routes/Train/Train.jsx";
 import Login from "./routes/Login/Login.jsx";
 import Signup from "./routes/SignUP/signUp.jsx";
+import Description from "./routes/Explore/Description.jsx";
+import Quiz from "./routes/Quiz/Quiz.jsx";
 
 import "./index.css";
 
@@ -40,6 +42,16 @@ const router = createBrowserRouter([
   {
     path: "/Signup",
     element: <Signup />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Description",
+    element: <Description />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Quiz",
+    element: <Quiz />,
     errorElement: <ErrorPage />,
   },
 ]);
