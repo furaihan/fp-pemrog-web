@@ -1,0 +1,28 @@
+{
+  "name": "extinct-fauna",
+  "version": "0.0.1",
+  "description": "[![Made with love in Indonesia](https://madewithlove.now.sh/id?heart=true&template=for-the-badge)](https://github.com/furaihan/fp-pemrog-web)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:frontend dev:backend",
+    "dev:frontend": "cd client && npm run dev",
+    "dev:backend": "cd server && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furaihan/fp-pemrog-web.git"
+  },
+  "keywords": [
+    "Extinct",
+    "Fauna"
+  ],
+  "author": "Team 8 21-IF-08",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/furaihan/fp-pemrog-web/issues"
+  },
+  "homepage": "https://github.com/furaihan/fp-pemrog-web#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
