@@ -35,7 +35,7 @@ h2 {
 }
 
 .left{
-    background: tomato;
+    background: white;
     width: 45%;
     height: auto;
     float: left;
@@ -76,7 +76,7 @@ h2 {
 }
 
 .right{
-    background: lemonchiffon;
+    background: white;
     width: 20%;
     float: left;
     margin-left: 5%;
