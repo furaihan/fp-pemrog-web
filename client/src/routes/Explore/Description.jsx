@@ -54,7 +54,7 @@ function Description() {
               </div>
               <h4>#FromTheField Camera trap footage of grey wolves</h4>
               <iframe
-                width="560"
+                width="86%"
                 height="315"
                 src="https://www.youtube.com/embed/WBD2uNCywtA"
                 title="YouTube video player"
