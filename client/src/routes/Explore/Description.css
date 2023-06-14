@@ -26,234 +26,70 @@
     font-weight: 500;
     margin-top: 10px;
 }
-.desc1{
-    position: relative;
-    width: 1240px;
-    height: 100%;
-    margin-left: 133px;
-    margin-right: 67px;
-    margin-top: 8px;
+h2 {
+    margin-bottom: 40px;
 }
-.content-family{
-    display: flex;
-    flex-direction: row;
-}
-.content1{
-    position: relative;
-    width: 819.66px;
-}
-.dog{
-    position: relative;
-    margin-top: 107px;
-}
-.family{
-    position: absolute;
-    left: 874.5px;
-    top: 65px;
-    width: 399.31px;
-    height: 330.88px;
-}
-.family-title{
-    font-size: 23.94px;
-    font-weight: 900;
-    margin-bottom: 6.5px;
-}
-.family-after-title{
-    font-size: 15.84px;
-    font-weight: 400;
-    font-style: italic;
-    color: #A4A2A8;
-}
-.least-concern{
-    margin-top: 42.36px;
-    margin-bottom: 47.11px;
-    display: flex;
-    flex-direction: row;
-}
-.least-concern-logo{
-    width: 30px;
-    height: 30px;
-    background-color: #006666;
-    color: white;
-    font-weight: bold;
-    border-radius: 50%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.least-concern-text{
-    margin: 0;
-    margin-left: 7.9px;
-    margin-top: 2px;
-}
-.p-margin{
-    font-size: 18px;
-    margin-bottom: 33px;
-}
-.youtube{
-    display: flex;
-    flex-direction: column;
-}
-.youtube-title{
-    margin-top: 110px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.tumb{
-    position: relative;
-    height: 431px;
-    width: 766px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-}
-.tumb-image{
-    position: absolute;
-    z-index: -1;
-}
-.tumb-top{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.tumb-title{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin-left: 12px;
-    margin-top: 12px;
-    width: 283px;
+
+.container{
     height: auto;
 }
-.tumb-logo{
-    position: absolute;
-    border-radius: 20px;
-    height: 40px;
-    width: 40px;
-    left: 12px;
-    top: 12px;
+
+.left{
+    background: #fff;
+    width: 45%;
+    height: auto;
+    float: left;
+    margin-left: 5%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10vh;
 }
-.tumb-text{
-    margin: 0;
-    position: absolute;
-    left: 62px;
-    top: 19px;
-    font-size: 18px;
-    color: #EEEEEE;
+
+.desc p{
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
 }
-.share{
-    position: absolute;
-    width: 20px;
-    height: 16.52px;
-    left: 709.99px;
-    top: 15.74px;
+
+.p-last{
+    margin-bottom: 110px
 }
-.share-p{
-    position: absolute;
-    left: 701.94px;
-    top: 27px;
-    font-size: 14px;
-    color: #EEEEEE;
-}
-.youtube-logo {
-    width: 80px;
-    height: 60px;
-    top: 191.5px;
-    left: 349px;
-    background-color: #ff0000;
-    border-radius: 30%;
-    position: absolute;
-    overflow: hidden;
-}
-.youtube-play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-}
-.watch-on{
-    position: absolute;
-    height: 47px;
-    left: 0px;
-    right: 593.95px;
-    bottom: 5px;
-    background: rgba(23, 23, 23, 0.8);
-    border-radius: 0px 2px 2px 0px;
-}
-.watch-text{
-    position: absolute;
-    left: 12px;
-    top: -2px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-}
-.watch-img{
-    position: absolute;
-    left: 91.02px;
-    top: 16.61px;
-}
+
 .facts{
-    display: flex;
-    flex-direction: column;
+    margin-top: 70px;
 }
-.fact-title{
-    position: relative;
-    width: 271.09px;
-    height: 32px;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #323031;
-    margin-bottom: 42px;
-}
-.fact-content{
-    position: relative;
-    font-size: 18px;
+
+.facts p{
+    margin: 0;
+    margin-left: 5vh;
     margin-bottom: 12px;
-    margin-left: 54px;
-    width: 713.69px;
 }
-.story-title{
-    position: relative;
-    height: 32px;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #323031;
-    margin-top: 5%;
-    margin-bottom: 42px;
+
+.story{
+    margin-top: 70px;
 }
-.story-content1{
-    position: relative;
-    font-size: 18px;
-    margin-bottom: 33.6px;
-    margin-left: 54px;
-    width: 713.69px;
+
+.story p{
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
 }
-.story-content2{
-    position: relative;
-    font-size: 18px;
-    margin-bottom: 33.59px;
-    margin-left: 54px;
-    width: 713.69px;
+
+.right{
+    background: #fff;
+    width: 20%;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 5vh;
 }
-.story-content3{
-    position: relative;
-    font-size: 18px;
-    margin-bottom: 5%;
-    margin-left: 54px;
-    width: 713.69px;
+
+.title p{
+    margin: 0;
+}
+
+.nama_ilmiah{
+    color: #A4A2A8;
 }
