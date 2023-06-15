@@ -16,23 +16,21 @@ export default function About() {
             </p>
           </div>
         </section>
-        <section>
-          <div className="about-page">
-            <div className="mission-content">
-              <div className="mission-body">
-                <div className="mission-left">
-                  <p className="mission-left-text">Our Mission</p>
+        <section id="about">
+          <div className="container">
+            <div className="left">
+              <div className="mission">
+                <div className="m-left">
+                  <p>Our Mission</p>
                 </div>
-                <div className="mission-right">
-                  <p className="mission-right-text">
-                    is to conserve threatened species and ecosystems
-                    <br />
-                    worldwide.
+                <div className="m-right">
+                  <p>
+                    is to conserve threatened species and ecosystems worldwide.
                   </p>
                 </div>
-                <div className="garis"></div>
+                <div className="inner-box"></div>
               </div>
-              <div className="content-teks">
+              <div className="content">
                 <p>
                   We depend on nature for so many things: materials, medicines,
                   clean air and water, a stable climate…the list goes on. Many
@@ -42,7 +40,7 @@ export default function About() {
                 </p>
                 <p>
                   The ecosystems that provide us with this priceless service
-                  depend on an brincredibly diverse range of species that
+                  depend on an incredibly diverse range of species that
                   interconnect to form a complex web. When a species is lost, we
                   risk upsetting this fine balance so that the whole system,
                   once rich in variety, becomes much more vulnerable to natural
@@ -83,8 +81,52 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="article">
-              <p className="p">Article</p>
+            <div className="right">
+              <div className="article">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas sed eaque sint hic necessitatibus ad incidunt
+                  temporibus corrupti, esse omnis, quisquam aut ipsam, in id
+                  veritatis ut at nemo quae. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Rem vero officia voluptatem nisi
+                  quod beatae atque dolorem dicta in eaque sapiente illo eum
+                  accusantium assumenda quaerat autem odio, maiores totam. Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Vel, unde.
+                  Doloremque ducimus ratione maiores veritatis saepe. Quo quasi
+                  eius ea a exercitationem? Dicta voluptatem inventore nam est
+                  itaque. Fugit, eaque! Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Provident aperiam vel cum praesentium
+                  necessitatibus maiores. Qui sed ipsam provident vero tenetur,
+                  ea deleniti voluptates commodi facilis id, impedit, aspernatur
+                  voluptatum. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Magni error, assumenda nostrum voluptas
+                  repudiandae id reiciendis alias veritatis! Fuga, veniam iusto
+                  rerum assumenda quibusdam provident adipisci quas voluptate
+                  necessitatibus recusandae. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Quia natus, sed eius rerum
+                  ratione animi cupiditate vel odio, quos mollitia id velit
+                  doloremque totam sit enim iste aliquam fugiat ducimus? Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Quis veniam
+                  qui ipsa. Deleniti nihil corrupti animi suscipit! Voluptatum
+                  voluptate error provident a. Neque recusandae dolor ad
+                  facilis, adipisci voluptate. Sed! Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Itaque eaque maiores quos,
+                  aliquam placeat temporibus odio distinctio quae ipsum
+                  necessitatibus. Commodi architecto voluptatum cumque saepe
+                  amet dolorum necessitatibus rem quas. Lorem ipsum dolor sit,
+                  amet consectetur adipisicing elit. Minima ut blanditiis nemo
+                  amet vel numquam, cumque tempore error quibusdam quo iure
+                  dolorem esse magni voluptates repellat harum animi ipsa illum.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Vitae adipisci aspernatur ab voluptatum dignissimos quo illo
+                  saepe corporis quod, dolorem ea, reiciendis velit? Sed
+                  laudantium cupiditate labore sint. Vero, ex. Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Nostrum animi
+                  eveniet sapiente, tempore nihil nemo quia, distinctio ipsam
+                  quidem deserunt quaerat excepturi libero vel reprehenderit
+                  illo aut, inventore pariatur id.
+                </p>
+              </div>
             </div>
           </div>
         </section>
