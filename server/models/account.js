@@ -1,5 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
+const joi = require("joi");
 module.exports = (sequelize, DataTypes) => {
   class Account extends Model {
     static associate(models) {
@@ -8,9 +9,30 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: {
           name: "account_id",
           allowNull: false,
-          type: DataTypes.UUID
+          type: DataTypes.UUID,
         },
       });
+    }
+    static validate(model) {
+      const schema = joi.object({
+        email: joi.string()
+          .email({ tlds: { allow: false } }) // Enforces email format without allowing TLDs like .com
+          .required()
+          .messages({
+            'string.empty': 'Email cannot be empty',
+            'string.email': 'Email is not valid',
+            'any.required': 'Email is required',
+          }),
+        password: joi.string()
+          .min(8)
+          .required()
+          .messages({
+            'string.empty': 'Password cannot be empty',
+            'string.min': 'Password must be at least 8 characters long',
+            'any.required': 'Password is required',
+          }),
+      });
+      return schema.validate(model);
     }
   }
   Account.init(
