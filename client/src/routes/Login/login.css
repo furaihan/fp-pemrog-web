@@ -24,26 +24,29 @@
   font-size: 2em;
   color: rgb(15, 15, 85);
   text-align: center;
+  
 }
 
 .email-login{
-  position: absolute;
-  width: 100px;
+  /* position: absolute; */
+  display: flex;
+  width: max-content;
   height: 20px;
-  left: 330px;
+  /* left: 330px; */
   color: #162938;
-  top: 150px;
-  line-height: 57px;
+  /* top: 150px; */
+  /* line-height: 57px; */
 }
 
 .lock-login{
-  position: relative;
-  width: 80%;
+  display: flex;
+  width: max-content;
   height: 20px;
-  left: 290px;
+  /* position: relative;
+  left: 290px; */
   color: #162938;
-  top: 160px;
-  line-height: 57px;
+  /* top: 160px;
+  line-height: 57px; */
 }
 
 
@@ -112,7 +115,6 @@
   font-size: 1rem;
   color: #ffff;
   font-weight: 500;
-  margin: 0px 60px 15px;
 }
 
 .signup-register{

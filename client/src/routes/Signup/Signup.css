@@ -27,43 +27,47 @@
 }
 
 .email{
-  position: absolute;
-  width: 100px;
+  /* position: absolute; */
+  display: flex;
+  width: max-content;
   height: 20px;
-  left: 360px;
+  /* left: 360px; */
   color: #162938;
-  top: 200px;
-  line-height: 57px;
+  /* top: 200px; */
+  /* line-height: 57px; */
 }
 
 .lock{
-  position: relative;
-  width: 80%;
+  /* position: relative; */
+  display: flex;
+  width: max-content;
   height: 20px;
-  left: 320px;
+  /* left: 320px; */
   color: #162938;
-  top: 210px;
-  line-height: 57px;
+  /* top: 210px; */
+  /* line-height: 57px; */
 }
 
 .lock-2{
-  position: absolute;
-  width: 80vw;
-  height: 10px;
-  left: 360px;
+  /* position: absolute; */
+  display: flex;
+  width: max-content;
+  height: 20px;
+  /* left: 360px; */
   color: #162938;
-  top: 300px;
-  line-height: 57px;
+  /* top: 300px; */
+  /* line-height: 57px; */
 }
 
 .user{
-  position: absolute;
-  width: 80%;
+  /* position: absolute; */
+  display: flex;
+  width: max-content;
   height: 20px;
-  left: 360px;
+  /* left: 360px; */
   color: #162938;
-  top: 145px;
-  line-height: 57px;
+  /* top: 145px; */
+  /* line-height: 57px; */
 }
 
 
@@ -89,6 +93,11 @@
   height: 20px;
   border-bottom: 2px solid #162938;
   margin : 30px auto;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-box label{
@@ -129,10 +138,15 @@
   background: #162938;
   border-radius: 6px;
   cursor: pointer;
-  font-size: em;
+  font-size: 1rem;
   color: #ffff;
   font-weight: 500;
-  margin: 0px 60px 15px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-register{
