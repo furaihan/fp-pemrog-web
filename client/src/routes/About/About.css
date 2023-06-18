@@ -1,0 +1,103 @@
+.hero {
+  background: url("homie.jpg") center/cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+.hero-body {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.hero-title {
+  position: absolute;
+  color: white;
+  font-size: 64px;
+  font-weight: 700;
+  left: 263px;
+  top: 344px;
+  margin-top: 10px; 
+}
+.hero-subtitle {
+  color: white;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  left: 263px;
+  top: 434px;
+  margin-top: 10px; 
+}
+#about .container{
+  width: 100%;
+  height: auto;
+  /* background-color: tomato; */
+}
+#about .left{
+  /* background-color: #FDCEDF; */
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-left: 5%;
+  margin-top: 25vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.mission{
+  width: 100%;
+  height: 25vh;
+}
+.inner-box{
+  position: relative;
+  width: 95%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #F1EAEA;
+  background-color: rgba(#CBB279, 0, 0, 1);
+}
+.m-left{
+  background-color: #53616F;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  float: left;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.m-right{
+  /* background: #7C96AB; */
+  display: flex;
+  width: 70%;
+  height: 100%;
+  float: left;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.content{
+  margin-top: 15vh;
+}
+.content p{
+  margin-bottom: 33px;
+}
+#about .right{
+  /* background: #8294C4; */
+  width: 30%;
+  height: auto;
+  float: right;
+  margin-right: 5%;
+  padding: 20px;
+  box-sizing: border-box;
+}

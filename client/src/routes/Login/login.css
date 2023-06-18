@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper-login{
   height: 100vh;
   width: 100vw;
   background: url("bacround-signup.jpg") center/cover no-repeat;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.wrapper .form-box{
+.form-box-login{
   width: 25%;
   padding: 40px;
   position: relative;
@@ -20,54 +20,37 @@
   opacity: 80%;
 }
 
-.form-box h2{
+.form-box-login h2{
   font-size: 2em;
   color: rgb(15, 15, 85);
   text-align: center;
+  
 }
 
-.email{
-  position: absolute;
-  width: 100px;
+.email-login{
+  /* position: absolute; */
+  display: flex;
+  width: max-content;
   height: 20px;
-  left: 360px;
+  /* left: 330px; */
   color: #162938;
-  top: 200px;
-  line-height: 57px;
+  /* top: 150px; */
+  /* line-height: 57px; */
 }
 
-.lock{
-  position: relative;
-  width: 80%;
+.lock-login{
+  display: flex;
+  width: max-content;
   height: 20px;
-  left: 320px;
+  /* position: relative;
+  left: 290px; */
   color: #162938;
-  top: 210px;
-  line-height: 57px;
-}
-
-.lock-2{
-  position: absolute;
-  width: 80vw;
-  height: 10px;
-  left: 360px;
-  color: #162938;
-  top: 300px;
-  line-height: 57px;
-}
-
-.user{
-  position: absolute;
-  width: 80%;
-  height: 20px;
-  left: 360px;
-  color: #162938;
-  top: 145px;
-  line-height: 57px;
+  /* top: 160px;
+  line-height: 57px; */
 }
 
 
-.remember-forgot {
+.remember-forgot-login {
   font-size: .9em;
   color: #162938;
   font-weight: 500;
@@ -77,13 +60,13 @@
   justify-content: space-between;
 }
 
-.input-box input:focus ~ label,
-.input-box input:valid ~ label{
+.input-box-login input:focus ~ label,
+.input-box-login input:valid ~ label{
   top: -40%;
   transition: .5s;
 }
 
-.input-box{
+.input-box-login{
   position: relative;
   width: 85%;
   height: 20px;
@@ -91,7 +74,7 @@
   margin : 30px auto;
 }
 
-.input-box label{
+.input-box-login label{
   position: absolute;
   top: 50%;
   left: 5px;
@@ -102,7 +85,7 @@
   pointer-events: none;
 }
 
-.input-box input{
+.input-box-login input{
   width: 100%;
   height: 100%;
   background: transparent;
@@ -114,28 +97,27 @@
   padding: 0 35px 0 5px;
 }
 
-.remember-forgot label input{
+.remember-forgot-login label input{
   accent-color:#162938;
   margin-right: 3px;
 }
 
-.remember-forgot a:hover{
+.remember-forgot-login a:hover{
   text-decoration: underline;
 }
 
-.btn-signup{
+.btn-login{
   width: 70%;
   height: 45px;
   background: #162938;
   border-radius: 6px;
   cursor: pointer;
-  font-size: em;
+  font-size: 1rem;
   color: #ffff;
   font-weight: 500;
-  margin: 0px 60px 15px;
 }
 
-.login-register{
+.signup-register{
   font-size: .9em;
   color: #162938;
   text-align: center;
@@ -143,26 +125,26 @@
   margin: 25px 0 10px;
 }
 
-.login-register p a{
+.signup-register p a{
   color: #162938;
   text-decoration: none;
   font-weight: 600;
 }
 
-.login-register p a:hover{
+.signup-register p a:hover{
   text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper .form-box {
+  .wrapper-login .form-box-login {
     width: 80%;
   }
 
-  .input-box, .remember-forgot {
+  .input-box-login, .remember-forgot-login {
     width: 100%;
   }
 
-  .btn-signup {
+  .btn-login {
     width: 100%;
   }
 }

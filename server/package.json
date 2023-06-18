@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint src --fix --ext .js --report-unused-disable-directives --max-warnings 0"
+  },
+  "author": "Team 8 21-IF-08",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/furaihan/fp-pemrog-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/furaihan/fp-pemrog-web/issues"
+  },
+  "homepage": "https://github.com/furaihan/fp-pemrog-web#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.1.4",
+    "express-jwt": "^8.4.1",
+    "express-validator": "^7.0.1",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.3.5",
+    "sequelize": "^6.32.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "prettier": "2.8.7",
+    "sequelize-cli": "^6.6.1"
+  }
+}

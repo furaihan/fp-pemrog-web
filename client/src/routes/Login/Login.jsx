@@ -107,23 +107,27 @@ function Login() {
       <main>
         <div className="wrapper-login">
           <div className="form-box-login">
-            <div className="lock-login">
-              <img src="public\lock.svg" alt="lock" />
-            </div>
-            <div className="email-login">
-              <img src="public\mail.svg" alt="email" />
-            </div>
 
             <h2>Login</h2>
             <form action="#">
-              <div className="input-box-login">
-                <input type="email" required />
-                <label>Email</label>
+              <div className="input-box-login flex">
+                <div>
+                  <input type="email" required />
+                  <label>Email</label>
+                </div>
+                <div className="email-login">
+                  <img src="public\mail.svg" alt="email" />
+                </div>
               </div>
 
-              <div className="input-box-login">
-                <input type="password" required />
-                <label>Password</label>
+              <div className="input-box-login flex">
+                <div>
+                  <input type="password" required />
+                  <label>Password</label>
+                </div>
+                <div className="lock-login">
+                  <img src="public\lock.svg" alt="lock" />
+                </div>
               </div>
 
               <div className="remember-forgot-login">
@@ -133,9 +137,11 @@ function Login() {
                 </label>
                 <a href="#"> Forgot Password?</a>
               </div>
-              <button type="submit" className="btn-login">
-                Login
-              </button>
+              <div className="center">
+                <button type="submit" className="btn-login">
+                  Login
+                </button>
+              </div>
               <div className="signup-register">
                 <p>
                   Don&apos;t have an account?{" "}
