@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   class Account extends Model {
     static associate(models) {
       // define association here
-      this.User = this.hasOne(models.Users, {
+      this.User = this.hasOne(models.User, {
         foreignKey: {
           name: "account_id",
           allowNull: false,
@@ -15,22 +15,20 @@ module.exports = (sequelize, DataTypes) => {
     }
     static validate(model) {
       const schema = joi.object({
-        email: joi.string()
-          .email({ tlds: { allow: false } }) // Enforces email format without allowing TLDs like .com
-          .required()
-          .messages({
-            'string.empty': 'Email cannot be empty',
-            'string.email': 'Email is not valid',
-            'any.required': 'Email is required',
-          }),
-        password: joi.string()
-          .min(8)
-          .required()
-          .messages({
-            'string.empty': 'Password cannot be empty',
-            'string.min': 'Password must be at least 8 characters long',
-            'any.required': 'Password is required',
-          }),
+        email: joi.string().trim().email().required().messages({
+          "string.empty": "Email tidak boleh kosong",
+          "string.email": "Email tidak valid",
+          "any.required": "Email dibutuhkan",
+        }),
+        password: joi.string().min(8).max(30).required().messages({
+          "string.empty": "Password tidak boleh kosong",
+          "string.min": "Password setidaknya 8 karakter",
+          "string.max": "Password maksimal 30 karakter",
+          "any.required": "Password dibutuhkan",
+        }),
+        confirm_password: joi.valid(joi.ref("password")).messages({
+          "any.only": "Password tidak cocok",
+        }),
       });
       return schema.validate(model);
     }
@@ -65,9 +63,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "accounts",
+      modelName: "Account",
+      tableName: "accounts",
       freezeTableName: true,
+      underscored: true,
       timestamps: false,
+      
     }
   );
   return Account;

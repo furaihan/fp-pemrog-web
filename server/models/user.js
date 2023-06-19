@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       // define association here
-      User.belongsTo(models.Accounts, {
+      User.belongsTo(models.Account, {
         foreignKey: "account_id",
         targetKey: "account_id",
         as: "account",
@@ -14,24 +14,21 @@ module.exports = (sequelize, DataTypes) => {
     static validate(model) {
       const schema = joi.object({
         username: joi.string().alphanum().min(3).max(30).required().messages({
-          "string.empty": "Username cannot be empty",
-          "string.alphanum":
-            "Username must only contain alphanumeric characters",
-          "string.min": "Username must be at least 3 characters long",
-          "string.max": "Username cannot exceed 30 characters",
-          "any.required": "Username is required",
+          "string.empty": "Username tidak boleh kosong",
+          "string.alphanum": "Username hanya boleh mengandung huruf dan angka",
+          "string.min": "Username setidaknya 3 karakter",
+          "string.max": "Username tidak boleh lebih dari 30 karakter",
+          "any.required": "Username dibutuhkan",
         }),
-        first_name: joi.string().trim().min(2).max(30).required().messages({
-          "string.empty": "First name cannot be empty",
-          "string.min": "First name must be at least 2 characters long",
-          "string.max": "First name cannot exceed 30 characters",
-          "any.required": "First name is required",
+        first_name: joi.string().trim().min(2).max(30).messages({
+          "string.empty": "Nama depan tidak boleh kosong",
+          "string.min": "Nama depan setidaknya 2 karakter",
+          "string.max": "Nama depan tidak boleh lebih dari 30 karakter",
         }),
-        last_name: joi.string().trim().min(2).max(30).required().messages({
-          "string.empty": "Last name cannot be empty",
-          "string.min": "Last name must be at least 2 characters long",
-          "string.max": "Last name cannot exceed 30 characters",
-          "any.required": "Last name is required",
+        last_name: joi.string().trim().min(2).max(30).messages({
+          "string.empty": "Nama belakang tidak boleh kosong",
+          "string.min": "Nama belakang setidaknya 2 karakter",
+          "string.max": "Nama belakang tidak boleh lebih dari 30 karakter",
         }),
       });
       return schema.validate(model);
@@ -66,9 +63,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "users",
+      modelName: "User",
+      tableName: "users",
       freezeTableName: true,
+      underscored: true,
       timestamps: false,
     }
   );
+  return User;
 };
