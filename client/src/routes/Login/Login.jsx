@@ -1,6 +1,7 @@
 "use client";
 // import { useState } from 'react';
 import "./Login.css";
+import {Link, Form} from "react-router-dom";
 
 function Login() {
   // const [email, setEmail] = useState("");
@@ -109,7 +110,7 @@ function Login() {
           <div className="form-box-login">
 
             <h2>Login</h2>
-            <form action="#">
+            <Form id='login-form' method="post">
               <div className="input-box-login flex">
                 <div>
                   <input type="email" required />
@@ -145,12 +146,10 @@ function Login() {
               <div className="signup-register">
                 <p>
                   Don&apos;t have an account?{" "}
-                  <a href="#" className="signup-link">
-                    SignUp
-                  </a>
+                  <Link to="/signup" className="signup-link">Sign Up</Link>
                 </p>
               </div>
-            </form>
+            </Form>
           </div>
         </div>
       </main>

@@ -1,6 +1,7 @@
 import logo from "../../assets/image/logo.svg";
 import searchlogo from "../../assets/image/search.svg";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -12,39 +13,39 @@ function Navbar() {
           </a>
         </div>
         <div className="navbar-menu">
-          <a className="navbar-item" href="/">
+          <Link to="/" className="navbar-item">
             Home
-          </a>
-          <a className="navbar-item" href="/explore">
+          </Link>
+          <Link to="/explore" className="navbar-item">
             Explore
-          </a>
-          <a className="navbar-item" href="/about">
+          </Link>
+          <Link to="/about" className="navbar-item">
             About
-          </a>
-          <a className="navbar-item" href="/support">
+          </Link>
+          <Link to="/support" className="navbar-item">
             Support
-          </a>
+          </Link>
         </div>
-        <input type="checkbox" name="" id=""/>
+        <input type="checkbox" name="" id="" />
         <div className="hamburger-lines">
-              <span className="line line1"></span>
-              <span className="line line2"></span>
-              <span className="line line3"></span>
-          </div>
+          <span className="line line1"></span>
+          <span className="line line2"></span>
+          <span className="line line3"></span>
+        </div>
       </div>
       <div className="navbar-search-login">
         <div className="navbar-search">
           <img src={searchlogo} alt="Search" className="search-logo" />
         </div>
         <div className="login-button">
-        <a className="login-item" href="/login">
+          <Link to="/login" className="login-item">
             Login
-          </a>
+          </Link>
         </div>
         <div className="signup-button">
-        <a className="Signup-item" href="/Signup">
-            SignUp
-          </a>
+          <Link to="/signup" className="signup-item">
+            Sign Up
+          </Link>
         </div>
       </div>
     </nav>

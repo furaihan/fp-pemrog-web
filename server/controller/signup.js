@@ -68,7 +68,7 @@ const signup = async (req, res) => {
         algorithm: "HS256",
       }
     );
-    res.cookie("jwt", token, {
+    res.cookie("EF_TOKEN_ID", token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24,
     });

@@ -1,4 +1,5 @@
 import "./SignUp.css";
+import { Link, Form } from "react-router-dom";
 
 function Signup() {
   return (
@@ -9,7 +10,7 @@ function Signup() {
             
 
             <h2>SignUp</h2>
-            <form action="#">
+            <Form id="signup-form" method="post">
               <div className="input-box flex">
                 <div>
                   <input type="u-name" required />
@@ -63,12 +64,10 @@ function Signup() {
               <div className="login-register">
                 <p>
                   Have an account?{" "}
-                  <a href="#" className="login-link">
-                    Login
-                  </a>
+                  <Link to="/login" className="login-link">Login</Link>
                 </p>
               </div>
-            </form>
+            </Form>
           </div>
         </div>
       </main>
