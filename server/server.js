@@ -8,10 +8,10 @@ app.use((res, req, next) => {
   res.header("Content-Type", "application/json");
   next();
 });
-app.use(accountRoutes);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+app.use(accountRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

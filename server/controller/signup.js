@@ -11,7 +11,9 @@ const env = process.env.NODE_ENV || "development";
 const db = require("../config/database.js")[env];
 
 const signup = async (req, res) => {
+  console.log("Signup");
   const { email, password, confirmPassword, username } = req.body;
+  console.log(req.body);
   const sequelize = new Sequelize(db);
   try {
     // Check if the username already exists
@@ -19,20 +21,21 @@ const signup = async (req, res) => {
       throw new ValidationError("Username already exists");
     }
     // Check if the email already exists
-    if (await User.findOne({ where: { email: email } })) {
+    if (await Account.findOne({ where: { email: email } })) {
       throw new ValidationError("Email already exists");
     }
+    console.log("Email and username are available");
     // Validate the singup input
     const inputAccount = {
       email: email,
       password: password,
       confirm_password: confirmPassword,
     };
-    const { accError } = Account.validate(inputAccount);
+    const { error: accError } = Account.validate(inputAccount);
     const inputUser = {
       username: username,
     };
-    const { userError } = User.validate(inputUser);
+    const { error: userError } = User.validate(inputUser);
     if (accError || userError) {
       throw new ValidationError((accError || userError).details[0].message);
     }
@@ -74,7 +77,8 @@ const signup = async (req, res) => {
       status: "Created",
       message: "Account created",
       data: {
-        id: user.id,
+        user_id: user.user_id,
+        account_id: account.account_id,
         username: user.username,
         email: account.email,
       },
