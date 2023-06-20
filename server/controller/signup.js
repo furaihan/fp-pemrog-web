@@ -11,9 +11,7 @@ const env = process.env.NODE_ENV || "development";
 const db = require("../config/database.js")[env];
 
 const signup = async (req, res) => {
-  console.log("Signup");
   const { email, password, confirmPassword, username } = req.body;
-  console.log(req.body);
   const sequelize = new Sequelize(db);
   try {
     // Check if the username already exists
@@ -103,8 +101,7 @@ const signup = async (req, res) => {
     };
     console.log(response);
     return res.status(response.code).json(response);
-  }
-  finally {
+  } finally {
     await sequelize.close();
   }
 };
