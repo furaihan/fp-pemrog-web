@@ -10,9 +10,9 @@ export default function FunFactBox(props) {
       <div className="fun-fact-item-title">{props.title}</div>
       <div className="fun-fact-item-subtitle">
         <p>{props.subtitle}</p>
-        </div>
+      </div>
       <div className="fun-fact-item-link">
-        <button type="button">Read More</button>
+        <button type="button"><span>Read More</span></button>
       </div>
     </div>
   );
