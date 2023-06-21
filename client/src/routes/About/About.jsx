@@ -1,11 +1,9 @@
-import Navbar from "../../component/Navbar/Navbar";
-import Footer from "../../component/Footer/Footer";
 import "./About.css";
+import React from "react";
 
 export default function About() {
   return (
-    <>
-      <Navbar />
+    <React.Fragment>
       <div className="body">
         <section className="hero">
           <div className="hero-body">
@@ -137,7 +135,6 @@ export default function About() {
           </div>
         </section>
       </div>
-      <Footer />
-    </>
+    </React.Fragment>
   );
 }
