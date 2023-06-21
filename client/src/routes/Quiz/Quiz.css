@@ -1,11 +1,30 @@
 .quiz{
-    background-color: #242F33 ;
+    background-color: #00586B ;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
+.quiz.border.outside{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    border: 10px solid #06809b;
+}
+.quiz.border.inside{
+    box-sizing: border-box;
+    position: absolute;
+    width: 95vw;
+    height: 95vh;
+    border: 2px solid #00FFF0;
+}
 
+.quiz-jumlah-soal{
+   color: white;
+   display: flex;
+   justify-content: right;
+}
 .top{
   height: 50%;
   position: relative;
@@ -15,7 +34,8 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: 5px solid white;
+  background-color: #005B5B;
+  border: 5px solid #00FFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +44,8 @@
   position: absolute;
   bottom: 10px;
   left: 80px;
+  align-items: center;
+  color: white;
 }
 
 .bottom{
@@ -41,27 +63,73 @@
 
 .question{
   width: 80%;
-  background-color: aqua;
-  border: 2px solid white;
+  background-color: #08011F;
+  border: 3px solid #00FFFF;
+  border-radius: 50px;
+  width: 1020px;
+  height: 221px;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
   font-size: 20px;
+  color: white;
 }
 
 .answers{
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .answer{
   width: 40%;
   padding: 10px;
   text-align: center;
-  background-color: aqua;
-  border: 1 px solid white;
-  border-radius: 15px;
+  background-color: #08011F;
+  border: 3px solid #00FFFF;
+  border-radius: 50px;
   font-size: 20px;
   font-weight: 300;
+  cursor: pointer;
+  margin: 20px 10px 10px 10px;
+  color: white;
 }
+
+.answer:hover,
+.answer.active{
+  background-color: mediumblue;
+}
+
+.answer.correct{
+  animation: correct 3s ease forwards;
+}
+
+  @keyframes correct{
+   0%, 22%, 42%{
+    background: mediumaquamarine;
+   }
+   20%, 40%, 60%{
+    background: aqua;
+   }
+   62%, 100% {
+    background: green;
+   }
+  }
+
+.answer.wrong{
+  animation: wrong 3s ease forwards;
+}
+
+  @keyframes wrong{
+   0%, 22%, 42%{
+    background: mediumaquamarine;
+   }
+   20%, 40%, 60%{
+    background: aqua;
+   }
+   62%, 100% {
+    background: crimson;
+   }
+  }
