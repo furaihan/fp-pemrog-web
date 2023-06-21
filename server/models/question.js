@@ -3,12 +3,9 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Question extends Model {
     static associate(models) {
-      this.QuizDetail = this.hasMany(models.QuizDetail, {
-        foreignKey: {
-          name: "question_id",
-          allowNull: false,
-          type: DataTypes.UUID,
-        },
+      this.Quiz = this.belongsToMany(models.Quiz, {
+        through: models.QuizDetail,
+        foreignKey: "question_id",
       });
     }
   }
@@ -50,7 +47,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "questions",
+      modelName: "Question",
+      tableName: "questions",
       freezeTableName: true,
       timestamps: false,
     }

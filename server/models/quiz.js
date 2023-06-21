@@ -17,12 +17,9 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.INTEGER,
         },
       });
-      this.QuizDetail = this.hasMany(models.QuizDetail, {
-        foreignKey: {
-          name: "quiz_id",
-          allowNull: false,
-          type: DataTypes.UUID,
-        },
+      this.Question = this.belongsToMany(models.Question, {
+        through: models.QuizDetail,
+        foreignKey: "quiz_id",
       });
     }
   }
@@ -44,7 +41,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "quizzes",
+      modelName: "Quiz",
+      tableName: "quizzes",
       freezeTableName: true,
       timestamps: false,
     }

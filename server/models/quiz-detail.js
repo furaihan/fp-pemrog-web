@@ -29,10 +29,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "quiz_details",
+      modelName: "QuizDetail",
+      tableName: "quiz_details",
       freezeTableName: true,
       timestamps: false,
       underscored: true,
     }
   );
+  return QuizDetail;
 };

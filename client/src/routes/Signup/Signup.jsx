@@ -1,55 +1,44 @@
 import "./SignUp.css";
+import { Link, Form, redirect, useActionData } from "react-router-dom";
+import axios from "axios";
 
 function Signup() {
+  const data = useActionData();
   return (
     <>
       <main>
         <div className="wrapper">
           <div className="form-box">
-            
-
             <h2>SignUp</h2>
-            <form action="#">
+            <Form id="signup-form" method="post">
               <div className="input-box flex">
-                <div>
-                  <input type="u-name" required />
-                  <label>Username</label>
-                </div>
+                <input type="u-name" name="username" required />
+                <label>Username</label>
                 <div className="user">
                   <img src="public\user.svg" alt="user" />
                 </div>
               </div>
-
               <div className="input-box flex">
-                <div>
-                  <input type="email" required />
-                  <label>Email</label>
-                </div>
+                <input type="email" name="email" required />
+                <label>Email</label>
                 <div className="email">
                   <img src="public\mail.svg" alt="email" />
                 </div>
               </div>
-
               <div className="input-box flex">
-                <div>
-                  <input type="password" required />
-                  <label>Password</label>
-                </div>
+                <input type="password" name="password" required />
+                <label>Password</label>
                 <div className="lock">
                   <img src="public\lock.svg" alt="lock" />
                 </div>
               </div>
-
               <div className="input-box flex">
-                <div>
-                  <input type="password" required />
-                  <label>Confirm Password</label>
-                </div>
+                <input type="password" name="confirmPassword" required />
+                <label>Confirm Password</label>
                 <div className="lock-2">
                   <img src="public\lock.svg" alt="lock" />
                 </div>
               </div>
-
               <div className="remember-forgot">
                 <label>
                   <input type="checkbox" />I agree to and Privacy Policy
@@ -63,12 +52,12 @@ function Signup() {
               <div className="login-register">
                 <p>
                   Have an account?{" "}
-                  <a href="#" className="login-link">
+                  <Link to="/login" className="login-link">
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
-            </form>
+            </Form>
           </div>
         </div>
       </main>
@@ -77,3 +66,18 @@ function Signup() {
 }
 
 export default Signup;
+export const registerAction = async ({ request }) => {
+  const data = await request.formData();
+  console.log(data);
+  const submission = {
+    username: data.get("username"),
+    email: data.get("email"),
+    password: data.get("password"),
+    confirmPassword: data.get("confirmPassword"),
+  };
+  const response = await axios.post("http://localhost:3000/signup", submission);
+  console.log(response);
+
+  console.log(submission);
+  return redirect("#");
+};
