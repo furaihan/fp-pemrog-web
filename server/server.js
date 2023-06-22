@@ -1,8 +1,10 @@
 const express = require("express");
 const accountRoutes = require("./routes/accountRoutes");
+const cors = require("cors");
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use((res, req, next) => {
   res.header("Content-Type", "application/json");
