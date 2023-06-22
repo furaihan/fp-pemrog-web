@@ -1,32 +1,4 @@
-.wrapper{
-  height: 100vh;
-  width: 100vw;
-  background: url("bacround-signup.jpg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrapper .form-box{
-  width: 25%;
-  padding: 40px;
-  position: relative;
-  background: transparent;
-  border: 2px solid rgba(255, 254, 254, 0.5);
-  border-radius: 20px;
-  backdrop-filter: blur(100%);
-  box-shadow: 0 0 30px rgb(0, 0, 0, .10);
-  background-color: #ffff;
-  opacity: 80%;
-}
-
-.form-box h2{
-  font-size: 2em;
-  color: rgb(15, 15, 85);
-  text-align: center;
-}
-
-.email{
+.email {
   /* position: absolute; */
   display: flex;
   width: max-content;
@@ -37,7 +9,7 @@
   /* line-height: 57px; */
 }
 
-.lock{
+.lock {
   /* position: relative; */
   display: flex;
   width: max-content;
@@ -48,7 +20,7 @@
   /* line-height: 57px; */
 }
 
-.lock-2{
+.lock-2 {
   /* position: absolute; */
   display: flex;
   width: max-content;
@@ -59,7 +31,7 @@
   /* line-height: 57px; */
 }
 
-.user{
+.user {
   /* position: absolute; */
   display: flex;
   width: max-content;
@@ -70,9 +42,8 @@
   /* line-height: 57px; */
 }
 
-
 .remember-forgot {
-  font-size: .9em;
+  font-size: 0.9em;
   color: #162938;
   font-weight: 500;
   font-style: underline;
@@ -82,25 +53,25 @@
 }
 
 .input-box input:focus ~ label,
-.input-box input:valid ~ label{
+.input-box input:valid ~ label {
   top: -40%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.input-box{
+.input-box {
   position: relative;
   width: 85%;
   height: 20px;
   border-bottom: 2px solid #162938;
-  margin : 30px auto;
+  margin: 30px auto;
 }
 
-.flex{
+.flex {
   display: flex;
   justify-content: space-between;
 }
 
-.input-box label{
+.input-box label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -111,11 +82,11 @@
   pointer-events: none;
 }
 
-.input-box input{
+.input-box input {
   width: 100%;
   height: 100%;
   background: transparent;
-  border:none;
+  border: none;
   outline: none;
   font-size: 1em;
   color: #162938;
@@ -123,16 +94,16 @@
   padding: 0 35px 0 5px;
 }
 
-.remember-forgot label input{
-  accent-color:#162938;
+.remember-forgot label input {
+  accent-color: #162938;
   margin-right: 3px;
 }
 
-.remember-forgot a:hover{
+.remember-forgot a:hover {
   text-decoration: underline;
 }
 
-.btn-signup{
+.btn-signup {
   width: 70%;
   height: 45px;
   background: #162938;
@@ -143,36 +114,33 @@
   font-weight: 500;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-register{
-  font-size: .9em;
+.login-register {
+  font-size: 0.9em;
   color: #162938;
   text-align: center;
   font-weight: 500;
   margin: 25px 0 10px;
 }
 
-.login-register p a{
+.login-register p a {
   color: #162938;
   text-decoration: none;
   font-weight: 600;
 }
 
-.login-register p a:hover{
+.login-register p a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper .form-box {
-    width: 80%;
-  }
-
-  .input-box, .remember-forgot {
+  .input-box,
+  .remember-forgot {
     width: 100%;
   }
 

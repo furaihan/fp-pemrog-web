@@ -1,0 +1,31 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: url("bacround-signup.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-box {
+  width: 25%;
+  padding: 40px;
+  position: relative;
+  background: transparent;
+  border: 2px solid rgba(255, 254, 254, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(100%);
+  box-shadow: 0 0 30px rgb(0, 0, 0, 0.1);
+  background-color: #ffff;
+  opacity: 80%;
+}
+.form-box h2 {
+  font-size: 2em;
+  color: rgb(15, 15, 85);
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .form-box {
+    width: 80%;
+  }
+}

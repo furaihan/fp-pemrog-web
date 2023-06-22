@@ -1,33 +1,4 @@
-.wrapper-login{
-  height: 100vh;
-  width: 100vw;
-  background: url("bacround-signup.jpg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-box-login{
-  width: 25%;
-  padding: 40px;
-  position: relative;
-  background: transparent;
-  border: 2px solid rgba(255, 254, 254, 0.5);
-  border-radius: 20px;
-  backdrop-filter: blur(100%);
-  box-shadow: 0 0 30px rgb(0, 0, 0, .10);
-  background-color: #ffff;
-  opacity: 80%;
-}
-
-.form-box-login h2{
-  font-size: 2em;
-  color: rgb(15, 15, 85);
-  text-align: center;
-  
-}
-
-.email-login{
+.email-login {
   /* position: absolute; */
   display: flex;
   width: max-content;
@@ -38,7 +9,7 @@
   /* line-height: 57px; */
 }
 
-.lock-login{
+.lock-login {
   display: flex;
   width: max-content;
   height: 20px;
@@ -49,9 +20,8 @@
   line-height: 57px; */
 }
 
-
 .remember-forgot-login {
-  font-size: .9em;
+  font-size: 0.9em;
   color: #162938;
   font-weight: 500;
   font-style: underline;
@@ -61,20 +31,20 @@
 }
 
 .input-box-login input:focus ~ label,
-.input-box-login input:valid ~ label{
+.input-box-login input:valid ~ label {
   top: -40%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.input-box-login{
+.input-box-login {
   position: relative;
   width: 85%;
   height: 20px;
   border-bottom: 2px solid #162938;
-  margin : 30px auto;
+  margin: 30px auto;
 }
 
-.input-box-login label{
+.input-box-login label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -85,11 +55,11 @@
   pointer-events: none;
 }
 
-.input-box-login input{
+.input-box-login input {
   width: 100%;
   height: 100%;
   background: transparent;
-  border:none;
+  border: none;
   outline: none;
   font-size: 1em;
   color: #162938;
@@ -97,16 +67,16 @@
   padding: 0 35px 0 5px;
 }
 
-.remember-forgot-login label input{
-  accent-color:#162938;
+.remember-forgot-login label input {
+  accent-color: #162938;
   margin-right: 3px;
 }
 
-.remember-forgot-login a:hover{
+.remember-forgot-login a:hover {
   text-decoration: underline;
 }
 
-.btn-login{
+.btn-login {
   width: 70%;
   height: 45px;
   background: #162938;
@@ -117,30 +87,27 @@
   font-weight: 500;
 }
 
-.signup-register{
-  font-size: .9em;
+.signup-register {
+  font-size: 0.9em;
   color: #162938;
   text-align: center;
   font-weight: 500;
   margin: 25px 0 10px;
 }
 
-.signup-register p a{
+.signup-register p a {
   color: #162938;
   text-decoration: none;
   font-weight: 600;
 }
 
-.signup-register p a:hover{
+.signup-register p a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper-login .form-box-login {
-    width: 80%;
-  }
-
-  .input-box-login, .remember-forgot-login {
+  .input-box-login,
+  .remember-forgot-login {
     width: 100%;
   }
 
