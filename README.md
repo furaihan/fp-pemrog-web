@@ -4,6 +4,14 @@
 # Pemrograman Web
 Final Project Kelompok 8 (21-Informatika-8) Mata Kuliah Pemrograman Web Program Studi Informatika Universitas Amikom Yogyakarta
 
+# How To
+- Clone the project first
+```sh
+npm install
+cd client && npm install
+cd ..
+cd server && npm install
+```
 ### Anggota Kelompok
 |**No**| **Nama** | **NIM** |
 |---|------|-----|
