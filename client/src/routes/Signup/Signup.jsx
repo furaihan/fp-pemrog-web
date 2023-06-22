@@ -1,13 +1,14 @@
 import "./SignUp.css";
-import { Link, Form, redirect, useActionData } from "react-router-dom";
-import axios from "axios";
+import { Link, Form, useActionData, useNavigation } from "react-router-dom";
 import React from "react";
 
 function Signup() {
   const data = useActionData();
+  const state = useNavigation();
   return (
     <React.Fragment>
       <h2>SignUp</h2>
+      {data && data.error && <p>{data.error}</p>}
       <Form id="signup-form" method="post">
         <div className="input-box flex">
           <input type="u-name" name="username" required />
@@ -44,7 +45,11 @@ function Signup() {
         </div>
         <div className="center">
           <button type="submit" className="btn-signup">
-            SignUp
+            {state === "action"
+              ? "Loading..."
+              : state === "success"
+              ? "Success"
+              : "Sign Up"}
           </button>
         </div>
         <div className="login-register">
@@ -61,18 +66,3 @@ function Signup() {
 }
 
 export default Signup;
-export const registerAction = async ({ request }) => {
-  const data = await request.formData();
-  console.log(data);
-  const submission = {
-    username: data.get("username"),
-    email: data.get("email"),
-    password: data.get("password"),
-    confirmPassword: data.get("confirmPassword"),
-  };
-  const response = await axios.post("http://localhost:3000/signup", submission);
-  console.log(response);
-
-  console.log(submission);
-  return redirect("#");
-};
