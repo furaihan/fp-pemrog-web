@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
         field: "animal_name",
       },
       animal_type: {
-        type: DataTypes.ENUM("cat", "dog", "bird", "fish", "reptile", "other"),
+        type: DataTypes.ENUM("unique", "extinct", "rare"),
         allowNull: false,
         field: "animal_type",
       },
