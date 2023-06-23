@@ -1,14 +1,18 @@
 import "./SignUp.css";
 import { Link, Form, useActionData, useNavigation } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 
 function Signup() {
   const data = useActionData();
   const state = useNavigation();
+  useEffect(() => {
+    console.log(data);
+    console.log(state.state);
+  }, [data, state]);
   return (
     <React.Fragment>
       <h2>SignUp</h2>
-      {data && data.error && <p>{data.error}</p>}
+      {data && <div className="errorMsg">{data}</div>}
       <Form id="signup-form" method="post">
         <div className="input-box flex">
           <input type="u-name" name="username" required />
@@ -45,9 +49,9 @@ function Signup() {
         </div>
         <div className="center">
           <button type="submit" className="btn-signup">
-            {state === "action"
-              ? "Loading..."
-              : state === "success"
+            {state.state === "submitting"
+              ? "Signing Up..."
+              : state.state === "success"
               ? "Success"
               : "Sign Up"}
           </button>

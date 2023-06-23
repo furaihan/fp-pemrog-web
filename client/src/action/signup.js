@@ -1,9 +1,11 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { redirect } from "react-router-dom";
+
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 const signupAction = async ({ request }) => {
   const data = await request.formData();
-  axios
+  const axiosRequest = await axios
     .post(
       "http://localhost:3000/signup",
       {
@@ -19,14 +21,17 @@ const signupAction = async ({ request }) => {
       }
     )
     .then(function (response) {
-      console.log("signupAction response:");
-      console.log(response);
+      return response;
     })
     .catch(function (error) {
-      console.log("signupAction error:");
-      console.log(error.response.data.message);
-      return { error: error.response.data.message };
+      return error;
     });
-  return redirect("/signup");
+  console.log("Response:");
+  console.log(axiosRequest);
+  if (axiosRequest instanceof AxiosError) {
+    return axiosRequest.response.data.message;
+  }
+  await delay(2000);
+  return redirect("/");
 };
 export default signupAction;
