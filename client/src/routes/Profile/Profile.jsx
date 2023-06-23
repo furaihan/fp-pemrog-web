@@ -25,11 +25,13 @@ function Profile() {
           </div>
           <button className="edit-profile">Edit Profile</button>
         </div>
-        <div className="bawah">
-          <div className="shape"></div>
-          <div className="shape"></div>
-          <div className="shape"></div>
-        </div>
+        <div className="card">
+  <div className="icon"></div>
+  <div className="title">Easy Cheesy</div>
+  <p className="description">This cheesy, juicy ultimate comforting lunch or quick and easy dinner recipe.</p>
+  <div className="rating"></div>
+  {/* <a href="#" className="link">See the recipe</a> */}
+</div>
       </div>
     </>
   );

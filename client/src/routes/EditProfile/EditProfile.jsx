@@ -4,12 +4,16 @@ function EditProfile() {
   return (
     <>
       <div id="edit">
-        <div className="left"></div>
+        <div className="left">
+        <div className="FotoPP"><img src="public\BGPP.svg" alt="FotoPP" /></div>
+        </div>
         <div className="right">
           <div className="content">
             <div className="title">
               <h1>Edit Profile</h1>
-              <div className="profile"></div>
+              <div className="profile">
+                <img src="public\camera.svg" alt="camera" className="camera"/>
+              </div>
             </div>
             <div className="double">
               <div className="firstName">
@@ -70,8 +74,8 @@ function EditProfile() {
               </div>
             </div>
             <div className="acc-button">
-              <button className="cancel"></button>
-              <button className="save"></button>
+              <button className="cancel">Cancel</button>
+              <button className="save">Save</button>
             </div>
           </div>
         </div>
