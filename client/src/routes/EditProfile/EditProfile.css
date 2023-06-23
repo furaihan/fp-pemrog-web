@@ -1,0 +1,100 @@
+#edit{
+    margin: 0;
+    display: flex;
+}
+#edit .left {
+  width: 25%;
+  height: 100vh;
+  background-color: #F1C27B;
+  float: left;
+}
+#edit .right {
+    display: flex;
+  width: 75%;
+  height: 100vh;
+  background-color: #FFD89C;
+  float: left;
+  font-weight: bold;
+}
+#edit .right .content{
+    width: 80%;
+    height: 88%;
+    margin-top: 4%;
+    margin-left: 4%;
+    background-color: #A2CDB0;
+}
+#edit .right .content .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C4D7B2;
+}
+#edit .right .content .profile{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #85A389;
+}
+input{
+    height: 4vh;
+    border-radius: 5px;
+}
+select{
+    height: 4vh;
+    border-radius: 5px;
+    width: 50% ;
+}
+.double{
+    margin-top: 2vh;
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    height: auto;
+    background-color: #A0C49D;
+    /* font-weight: bold; */
+}
+.double input{
+    width: 50%;
+}
+.firstName{
+    width: 50%;
+    float: left;
+}
+.lastName{
+    width: 50%;
+    float: left;
+}
+.single{
+    margin-top: 2vh;
+}
+.single input{
+    width: 75%;
+}
+.city{
+    width: 50%;
+    float: left;
+}
+.state{
+    width: 50%;
+    float: left;
+}
+.acc-button{
+    margin-top: 4vh;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+}
+.cancel{
+    width: 10%;
+    height: 5vh;
+    border-radius: 5px;
+    border: 2px solid #6EAB40;
+}
+.save{
+    margin-left: 3vw;
+    width: 10%;
+    height: 5vh;
+    border-radius: 5px;
+    background-color: #6EAB40;
+    border: 0;
+}
