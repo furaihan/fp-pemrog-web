@@ -15,6 +15,7 @@ import Login from "./routes/Login/Login.jsx";
 import Signup from "./routes/Signup/Signup.jsx";
 import Description from "./routes/Explore/Description.jsx";
 import Quiz from "./routes/Quiz/Quiz.jsx";
+import Profile from "./routes/Profile/Profile.jsx";
 
 //Layouts
 import RootLayout from "./layouts/RootLayout.jsx";
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
         <Route path="explore" element={<Explore />} />
         <Route path="description" element={<Description />} />
         <Route path="train" element={<Train />} />
+        <Route path="profile" element={<Profile />} />
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
