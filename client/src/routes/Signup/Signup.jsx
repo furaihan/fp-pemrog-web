@@ -51,8 +51,8 @@ function Signup() {
           <button type="submit" className="btn-signup">
             {state.state === "submitting"
               ? "Signing Up..."
-              : state.state === "success"
-              ? "Success"
+              : state.state === "loading"
+              ? "Saved!"
               : "Sign Up"}
           </button>
         </div>

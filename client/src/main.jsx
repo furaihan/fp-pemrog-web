@@ -22,8 +22,9 @@ import EditProfile from "./routes/EditProfile/EditProfile.jsx";
 import RootLayout from "./layouts/RootLayout.jsx";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 
-//Api
-import signUpAction from "./action/signup.js"; 
+//Action
+import signUpAction from "./action/signup.js";
+import loginAction from "./action/login.js";
 
 import "./index.css";
 
@@ -40,7 +41,7 @@ const router = createBrowserRouter(
         <Route path="editprofile" element={<EditProfile />} />
       </Route>
       <Route element={<AuthLayout />}>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} action={loginAction} />
         <Route path="/signup" element={<Signup />} action={signUpAction} />
       </Route>
       <Route path="/quiz" element={<Quiz />} />
