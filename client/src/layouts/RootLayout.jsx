@@ -5,10 +5,12 @@ import Footer from "../component/Footer/Footer";
 
 export default function RootLayout(){
     const data = useLoaderData();
+    console.log("RootLayout Loader Data:");
+    console.log(data);
     return(
         <React.Fragment>
             <header>
-                <Navbar />
+                <Navbar isLoggedin={data.isUserLoggedIn} username={data.user.username}/>
             </header>
             <main>
                 <Outlet/>

@@ -1,9 +1,9 @@
 import logo from "../../assets/image/logo.svg";
-import searchlogo from "../../assets/image/search.svg";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-function Navbar() {
+export default function Navbar({ isLoggedin, username }) {
   return (
     <nav className="navbar">
       <div className="navbar-logo-menu">
@@ -33,23 +33,30 @@ function Navbar() {
           <span className="line line3"></span>
         </div>
       </div>
-      <div className="navbar-search-login">
-        <div className="navbar-search">
-          <img src={searchlogo} alt="Search" className="search-logo" />
+      {!isLoggedin ? (
+        <div className="navbar-search-login">
+          <div className="login-button">
+            <Link to="/login" className="login-item">
+              Login
+            </Link>
+          </div>
+          <div className="signup-button">
+            <Link to="/signup" className="signup-item">
+              Sign Up
+            </Link>
+          </div>
         </div>
-        <div className="login-button">
-          <Link to="/login" className="login-item">
-            Login
-          </Link>
+      ) : (
+        <div className="navbar-search-login">
+          <h3>{username}</h3>
         </div>
-        <div className="signup-button">
-          <Link to="/signup" className="signup-item">
-            Sign Up
-          </Link>
-        </div>
-      </div>
+      )}
     </nav>
   );
 }
 
-export default Navbar;
+
+Navbar.propTypes = {
+  isLoggedin: PropTypes.bool,
+  username: PropTypes.string,
+};

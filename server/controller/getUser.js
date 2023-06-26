@@ -1,9 +1,10 @@
-const { User } = require("../models");
+const { User, Account } = require("../models");
 
 const getUser = async (req, res) => {
-  const user = await User.findOne({
-    where: { user_id: req.body.userId },
+  const account = await Account.findOne({
+    include: { model: User, where: { user_id: req.body.userId } },
   });
+  const user = account.User;
   if (!user) {
     const error = new Error("User not found!");
     error.code = "404";
@@ -19,10 +20,10 @@ const getUser = async (req, res) => {
     code: "200",
     status: "OK",
     message: "User found!",
-    data: {
+    user: {
       id: user.user_id,
       username: user.username,
-      email: null,
+      email: account.email,
     },
   };
   console.log(response);
