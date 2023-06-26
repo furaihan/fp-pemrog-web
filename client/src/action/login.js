@@ -9,7 +9,7 @@ const loginAction = async ({ request }) => {
     .post(
       "http://localhost:3000/login",
       {
-        email: data.get("email"),
+        emailOrUsername: data.get("emailOrUsername"),
         password: data.get("password"),
       },
       {

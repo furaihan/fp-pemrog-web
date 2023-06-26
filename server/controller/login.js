@@ -2,37 +2,66 @@ const { Sequelize, ValidationError } = require("sequelize");
 const bcrypt = require("bcrypt");
 const jsonwebtoken = require("jsonwebtoken");
 const { Account, User } = require("../models");
+const joi = require("joi");
 const env = process.env.NODE_ENV || "development";
 const db = require("../config/database.js")[env];
 
 const login = async (req, res) => {
   const sequelize = new Sequelize(db);
-  const { email, password } = req.body;
+  const { emailOrUsername, password } = req.body;
+
+  const validationSchema = joi.alternatives().try(
+    joi.string().email().required().messages({
+      "string.empty": "Email tidak boleh kosong",
+      "string.email": "Email tidak valid",
+      "any.required": "Email dibutuhkan",
+    }),
+    joi.string().alphanum().min(3).max(30).required().messages({
+      "string.empty": "Username tidak boleh kosong",
+      "string.alphanum": "Username hanya boleh mengandung huruf dan angka",
+      "string.min": "Username setidaknya 3 karakter",
+      "string.max": "Username tidak boleh lebih dari 30 karakter",
+      "any.required": "Username dibutuhkan",
+    })
+  );
+
   try {
-    const account = await Account.findOne({ where: { email: email } });
+    const { error } = validationSchema.validate(emailOrUsername);
+    if (error) {
+      throw new ValidationError(error.message);
+    }
+
+    let account = null;
+    let user = null;
+
+    if (emailOrUsername.includes("@")) {
+      account = await Account.findOne({
+        where: { email: emailOrUsername },
+        include: User,
+      });
+    } else {
+      account = await Account.findOne({
+        include: { model: User, where: { username: emailOrUsername } },
+      });
+    }
+
     if (!account) {
       throw new ValidationError("Account does not exist");
     }
-    const inputAccount = {
-      email: email,
-      password: password,
-    };
-    const { error: accError } = Account.validate(inputAccount);
-    if (accError) {
-      throw new ValidationError(accError.details[0].message);
-    }
+
+    user = account.User;
+
     const saltedPassword =
       process.env.PREFIX_SALT + password + process.env.SUFFIX_SALT;
     const isPasswordCorrect = await bcrypt.compare(
       saltedPassword,
       account.password
     );
+
     if (!isPasswordCorrect) {
       throw new ValidationError("Password is incorrect");
     }
-    const user = await User.findOne({
-      where: { account_id: account.account_id },
-    });
+
     const payload = {
       userId: user.user_id,
       username: user.username,
@@ -46,21 +75,18 @@ const login = async (req, res) => {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24,
     });
+
     const response = {
       code: 200,
       message: "Login successful",
     };
     return res.status(response.code).json(response);
   } catch (error) {
-    if (error instanceof ValidationError) {
-      error.code = 400;
-      error.status = "Bad Request";
-    } else {
-      console.log("Unknown Error:");
-      console.log(error);
-      error.code = 500;
-      error.status = "Internal Server Error";
-    }
+    console.log("Unknown Error:");
+    console.log(error);
+    error.code = error instanceof ValidationError ? 400 : 500;
+    error.status = error instanceof ValidationError ? "Bad Request" : "Internal Server Error";
+
     const response = {
       code: error.code,
       message: error.message,

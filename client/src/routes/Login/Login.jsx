@@ -13,8 +13,8 @@ function Login() {
       <Form id="login-form" method="post">
         <div className="input-box-login flex">
           <div>
-            <input type="email" name="email" required />
-            <label>Email</label>
+            <input name="emailOrUsername" required />
+            <label htmlFor="emailOrUsername">Email / Username</label>
           </div>
           <div className="email-login">
             <img src="public\mail.svg" alt="email" />
@@ -33,7 +33,7 @@ function Login() {
 
         <div className="remember-forgot-login">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" name="rememberMe" />
             Remember me
           </label>
           <a href="#"> Forgot Password?</a>
