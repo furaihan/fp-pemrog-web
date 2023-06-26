@@ -1,7 +1,7 @@
 const { Sequelize, ValidationError } = require("sequelize");
 const bcrypt = require("bcrypt");
 const jsonwebtoken = require("jsonwebtoken");
-const { Account } = require("../models");
+const { Account, User } = require("../models");
 const env = process.env.NODE_ENV || "development";
 const db = require("../config/database.js")[env];
 
@@ -17,7 +17,7 @@ const login = async (req, res) => {
       email: email,
       password: password,
     };
-    const { error: accError } = Account.validate(inputAccount); 
+    const { error: accError } = Account.validate(inputAccount);
     if (accError) {
       throw new ValidationError(accError.details[0].message);
     }
@@ -30,11 +30,18 @@ const login = async (req, res) => {
     if (!isPasswordCorrect) {
       throw new ValidationError("Password is incorrect");
     }
-    const token = jsonwebtoken.sign(
-      { id: account.id },
-      process.env.JWT_SECRET,
-      { expiresIn: "1h" }
-    );
+    const user = await User.findOne({
+      where: { account_id: account.account_id },
+    });
+    const payload = {
+      userId: user.user_id,
+      username: user.username,
+    };
+    console.log(payload);
+    const token = jsonwebtoken.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: "7d",
+      algorithm: "HS256",
+    });
     res.cookie("EF_TOKEN_ID", token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24,
@@ -48,6 +55,11 @@ const login = async (req, res) => {
     if (error instanceof ValidationError) {
       error.code = 400;
       error.status = "Bad Request";
+    } else {
+      console.log("Unknown Error:");
+      console.log(error);
+      error.code = 500;
+      error.status = "Internal Server Error";
     }
     const response = {
       code: error.code,

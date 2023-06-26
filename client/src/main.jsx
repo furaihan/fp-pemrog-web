@@ -25,13 +25,14 @@ import AuthLayout from "./layouts/AuthLayout.jsx";
 //Action
 import signUpAction from "./action/signup.js";
 import loginAction from "./action/login.js";
+import getCurrentUserLoader from "./action/getCurrentUser.js";
 
 import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<RootLayout />} loader={getCurrentUserLoader}>
         <Route index element={<Root />} />
         <Route path="about" element={<About />} />
         <Route path="explore" element={<Explore />} />

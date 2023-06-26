@@ -18,6 +18,7 @@ const signupAction = async ({ request }) => {
         headers: {
           "Content-Type": "application/json",
         },
+        withCredentials: true,
       }
     )
     .then(function (response) {
