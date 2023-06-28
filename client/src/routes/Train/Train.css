@@ -1,0 +1,165 @@
+.cards-wrapper {
+    position: relative;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-wrapper {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0;
+    width: 28%;
+    height: 0;
+    padding: 0 0 28%;
+    perspective: 700px;
+  }
+
+  .card-object {
+    color: #FFF;
+    display: block;
+    float: left;
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    width: 88%;
+    height: 88%;
+    transform-style: preserve-3d;
+  }
+  .card-object.card-1 .front {
+    background: #222 url("lesser bilby.jpg") 90% 35%;
+    background-size: 115%;
+  }
+  
+  .card-object.card-2 .front {
+    background: #222 url("takahe.jpg") 90% 35%;
+    background-size: 115%;
+  }
+  .card-object.card-3 .front {
+    background: #222 url("irish elk.jpg") 90% 35%;
+    background-size: 115%;
+  }
+
+.face {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .face.front {
+    z-index: 20;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .face.front::before {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    content: "";
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+    opacity: 0.7;
+    z-index: 20;
+    transition: opacity 0.2s ease;
+  }
+  
+.face.front::after {
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    bottom: 7%;
+    left: 7%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    z-index: 100;
+    content: "";
+  }
+  .face.front .title-wrapper {
+    position: absolute;
+    bottom: 3%;
+    left: 25%;
+    right: 25%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 100;
+    transform: translateY(0);
+    transition: transform 0.28s ease;
+  }
+  .face.front .title-wrapper .title {
+    position: relative;
+    font-family: 'Archivo Black', sans-serif;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 2vw;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    font-weight: bold; /* Add this line to make the text bold */
+    color: inherit; /* Add this line to inherit the text color */
+  }
+  .face.front .title-wrapper .title::after {
+    display: block;
+    margin: 7% auto 8% auto;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background-color: #fff;
+    opacity: 0.5;
+    transform: scale(0);
+    transition: transform 0.15s;
+    font-weight: bold; /* Add this line to make the text bold */
+    color: inherit; 
+  }
+  .face.front .title-wrapper .subtitle {
+    font-size: 0.9vw;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.15s;
+    font-weight: bold; /* Add this line to make the text bold */
+    color: inherit; 
+  }
+  .face.front:hover::before {
+    opacity: 0.9;
+    font-weight: bold; 
+  }
+  .face.front:hover .title-wrapper {
+    transform: translateY(-50%);
+    font-weight: bold; 
+  }
+  .face.front:hover .title-wrapper .title {
+    opacity: 1;
+    color : blue;
+    font-weight: bold; /* Add this line to make the text bold */
+
+  }
+  .face.front:hover .title-wrapper .title::after {
+    transform: scale(1);
+    opacity: 0.5;
+    transition-delay: 0.15s;
+    transition-duration: 0.2s;
+    font-weight: bold; 
+  }
+  .face.front:hover .title-wrapper .subtitle {
+    opacity: 0.7;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+    font-weight: bold; 
+  }
