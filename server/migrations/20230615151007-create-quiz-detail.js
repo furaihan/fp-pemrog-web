@@ -9,14 +9,14 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    queryInterface.changeColumn("questions", "question_id", {
+    await queryInterface.changeColumn("questions", "question_id", {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
       allowNull: false,
       unique: true,
       field: "question_id",
     });
-    queryInterface.createTable("quiz_details", {
+    await queryInterface.createTable("quiz_details", {
       quiz_id: {
         type: Sequelize.UUID,
         allowNull: false,

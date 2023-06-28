@@ -1,13 +1,18 @@
 import "./SignUp.css";
-import { Link, Form, redirect, useActionData } from "react-router-dom";
-import axios from "axios";
-import React from "react";
+import { Link, Form, useActionData, useNavigation } from "react-router-dom";
+import React, { useEffect } from "react";
 
 function Signup() {
   const data = useActionData();
+  const state = useNavigation();
+  useEffect(() => {
+    console.log(data);
+    console.log(state.state);
+  }, [data, state]);
   return (
     <React.Fragment>
       <h2>SignUp</h2>
+      {data && <div className="errorMsg">{data}</div>}
       <Form id="signup-form" method="post">
         <div className="input-box flex">
           <input type="u-name" name="username" required />
@@ -44,7 +49,11 @@ function Signup() {
         </div>
         <div className="center">
           <button type="submit" className="btn-signup">
-            SignUp
+            {state.state === "submitting"
+              ? "Signing Up..."
+              : state.state === "loading"
+              ? "Saved!"
+              : "Sign Up"}
           </button>
         </div>
         <div className="login-register">
@@ -61,18 +70,3 @@ function Signup() {
 }
 
 export default Signup;
-export const registerAction = async ({ request }) => {
-  const data = await request.formData();
-  console.log(data);
-  const submission = {
-    username: data.get("username"),
-    email: data.get("email"),
-    password: data.get("password"),
-    confirmPassword: data.get("confirmPassword"),
-  };
-  const response = await axios.post("http://localhost:3000/signup", submission);
-  console.log(response);
-
-  console.log(submission);
-  return redirect("#");
-};

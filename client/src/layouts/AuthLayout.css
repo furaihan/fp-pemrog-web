@@ -23,6 +23,12 @@
   color: rgb(15, 15, 85);
   text-align: center;
 }
+.form-box .errorMsg {
+  color: red;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+}
 
 @media screen and (max-width: 768px) {
   .wrapper .form-box {

@@ -58,14 +58,14 @@ const signup = async (req, res) => {
       }
     );
     const user = account.User;
-    const token = jwt.sign(
-      { id: user.id, username: user.username },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "7d",
-        algorithm: "HS256",
-      }
-    );
+    const payload = {
+      userId: user.user_id,
+      username: user.username,
+    };
+    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: "7d",
+      algorithm: "HS256",
+    });
     res.cookie("EF_TOKEN_ID", token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24,

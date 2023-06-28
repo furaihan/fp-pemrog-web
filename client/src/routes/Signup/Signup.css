@@ -55,6 +55,7 @@
 .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: -40%;
+  font-size: 0.8em;
   transition: 0.5s;
 }
 

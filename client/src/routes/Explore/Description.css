@@ -34,7 +34,7 @@ h2 {
     height: auto;
 }
 
-.left{
+#body .container .left{
     background: white;
     width: 45%;
     height: auto;
@@ -75,7 +75,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-.right{
+#body .container .right{
     background: white;
     width: 20%;
     float: left;

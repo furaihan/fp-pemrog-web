@@ -33,6 +33,7 @@
 .input-box-login input:focus ~ label,
 .input-box-login input:valid ~ label {
   top: -40%;
+  font-size: 0.8em;
   transition: 0.5s;
 }
 
