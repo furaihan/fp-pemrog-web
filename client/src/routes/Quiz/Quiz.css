@@ -126,3 +126,25 @@
     background: crimson;
    }
   }
+
+@media screen and (max-width: 768px) {
+    .question {
+      font-size: 18px;
+    }
+  
+    .answer {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .top,
+    .bottom {
+      height: 40vh;
+    }
+  
+    .timer {
+      width: 20
+  
+    }
+  }
