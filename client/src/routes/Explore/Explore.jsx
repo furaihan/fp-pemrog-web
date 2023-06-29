@@ -5,6 +5,54 @@ import Region from "../../component/Dropdown/Region";
 import Type from "../../component/Dropdown/Type";
 import React from "react";
 
+const animalList = [
+  {
+    src: "./public/pikachu.jpg",
+    alt: "Iki Pika",
+    name: "Iki Pika",
+  },
+  {
+    src: "./public/barbary-singa atlas.jpg",
+    alt: "Singa Atlas",
+    name: "Singa Atlas",
+  },
+  {
+    src: "./public/berang-berang.jpg",
+    alt: "Berang-Berang",
+    name: "Berang-Berang",
+  },
+  {
+    src: "./public/karakalo australia.jpg",
+    alt: "Karakalo Australia",
+    name: "Karakalo Australia",
+  },
+  {
+    src: "./public/lesser bilby.jpg",
+    alt: "Lesser Bilby",
+    name: "Lesser Bilby",
+  },
+  {
+    src: "./public/takahe.jpg",
+    alt: "Takahe",
+    name: "Takahe",
+  },
+  {
+    src: "./public/elang harpa.jpg",
+    alt: "Elang Harpa",
+    name: "Elang Harpa",
+  },
+  {
+    src: "./public/katak pinokio.jpg",
+    alt: "Katak Pinokio",
+    name: "Katak Pinokio",
+  },
+  {
+    src: "./public/anglerfish.jpg",
+    alt: "Angler Fish",
+    name: "Angler Fish",
+  },
+];
+
 function Explore() {
   return (
     <React.Fragment>
@@ -51,78 +99,16 @@ function Explore() {
       <br />
       <section className="list-animal">
         <div className="list-container">
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/pikachu.jpg"
-              alt="Iki Pika"
-            />
-            <h3 className="list-animal-name">Iki Pika</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/barbary-singa atlas.jpg"
-              alt="Singa Atlas"
-            />
-            <h3 className="list-animal-name">Singa Atlas</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/berang-berang.jpg"
-              alt="Berang-Berang"
-            />
-            <h3 className="list-animal-name">Berang-Berang</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/karakalo australia.jpg"
-              alt="Karakalo Australia"
-            />
-            <h3 className="list-animal-name">Karakalo Australia</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/lesser bilby.jpg"
-              alt="Lesser Bilby"
-            />
-            <h3 className="list-animal-name">Lesser Bilby</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/takahe.jpg"
-              alt="Takahe"
-            />
-            <h3 className="list-animal-name">Takahe</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/elang harpa.jpg"
-              alt="Elang Harpa"
-            />
-            <h3 className="list-animal-name">Elang Harpa</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/katak pinokio.jpg"
-              alt="Katak Pinokio"
-            />
-            <h3 className="list-animal-name">Katak Pinokio</h3>
-          </div>
-          <div className="list-name">
-            <img
-              className="list-animal-img"
-              src="./public/anglerfish.jpg"
-              alt="Angler Fish"
-            />
-            <h3 className="list-animal-name">Angler Fish</h3>
-          </div>
+          {animalList.map((animal, index) => (
+            <div className="list-name" key={index}>
+              <img
+                className="list-animal-img"
+                src={animal.src}
+                alt={animal.alt}
+              />
+              <h3 className="list-animal-name">{animal.name}</h3>
+            </div>
+          ))}
         </div>
       </section>
     </React.Fragment>
