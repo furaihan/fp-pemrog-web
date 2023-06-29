@@ -9,7 +9,7 @@
     display: flex;
     margin: 0;
     width: 100%;
-    height: 300px;
+    height: 150px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #7ABD48;
@@ -24,43 +24,44 @@
     justify-content: center;
 }
 .foto{
-    width: 80%;
-    height: 80%;
+    width: 30%;
+    height: 60%;
     border-radius: 50%;
-    background-color: #116A7B;
+    background-color: #b8b8b8;
 }
+
+.user{
+  width: 40%;
+  height: 40%;
+  padding-top: 30%;
+  padding-left: 30%;
+}
+
 .biodata{
     width: 55%;
     height: 100%;
     /* background-color: #F2D8D8; */
 }
 .biodata .nama{
-    margin-top: 7vh;
+    margin-top: 2vh;
+    font-size: 30px;
 }
-.job-address{
-    display: flex;
-    flex-direction: row;
-    margin-top: -2vh;
-    font-weight: bold;
-}
-.job{
-    margin-right: 2vw;
-}
-.address{
-    margin-left: 2vw;
-}
+
 .bio{
     color: #fff;
+    font-size: small;
+    margin-top: 1vh;
 }
+
 .atas .edit-profile{
-    width: 15%;
-    height: 50px;
-    border-radius: 20px;
+    width: 8%;
+    height: 20%;
+    border-radius: 10px;
     margin-left: 3vw;
-    margin-top: 10vh;
-    font-size: 16px;
+    margin-top: 5vh;
+    font-size: 13px;
     font-weight: bold;
-    background-color: #fff;
+    background-color: transparent;
     /* background-color: #B3C890; */
 }
 /* .bawah{
