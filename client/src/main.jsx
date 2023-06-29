@@ -17,6 +17,7 @@ import Description from "./routes/Explore/Description.jsx";
 import Quiz from "./routes/Quiz/Quiz.jsx";
 import Profile from "./routes/Profile/Profile.jsx";
 import EditProfile from "./routes/EditProfile/EditProfile.jsx";
+import QuizResult from "./routes/Quiz/QuizResult.jsx";
 
 //Layouts
 import RootLayout from "./layouts/RootLayout.jsx";
@@ -46,6 +47,7 @@ const router = createBrowserRouter(
         <Route path="/signup" element={<Signup />} action={signUpAction} />
       </Route>
       <Route path="/quiz" element={<Quiz />} />
+      <Route path="/quizresult" element={<QuizResult />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )
