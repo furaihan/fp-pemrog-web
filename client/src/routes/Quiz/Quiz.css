@@ -116,7 +116,7 @@
   animation: wrong 3s ease forwards;
 }
 
-  @keyframes wrong{
+@keyframes wrong{
    0%, 22%, 42%{
     background: mediumaquamarine;
    }
@@ -126,4 +126,4 @@
    62%, 100% {
     background: crimson;
    }
-  }
+}
