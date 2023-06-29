@@ -1,23 +1,18 @@
 .cards-wrapper {
-  position: relative;
-  height: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0 5%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card-wrapper {
   display: block;
   float: left;
-  position: relative;
+  display: relative;
   margin: 0;
-  width: 35%;
+  width: 30%;
   height: 0;
-  padding: 0 0 35%;
+  padding: 0 0 30%;
   perspective: 700px;
 }
 
@@ -56,8 +51,8 @@
   align-items: flex-end;
   flex-wrap: wrap;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -180,11 +175,24 @@
 
 /* Media Queries */
 
+@media screen and (max-width: 1200px) {
+  .card-wrapper {
+    width: 40%;
+    padding-bottom: 40%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card-wrapper {
+    width: 45%;
+    padding-bottom: 45%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .card-wrapper {
-    width: 100%;
-    padding: 0;
-    margin-bottom: 20px;
+    width: 80%;
+    padding-bottom: 80%;
   }
 
   .face.front .title-wrapper .title {
@@ -193,5 +201,20 @@
 
   .face.front .title-wrapper .subtitle {
     font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-wrapper {
+    width: 90%;
+    padding-bottom: 90%;
+  }
+
+  .face.front .title-wrapper .title {
+    font-size: 5vw;
+  }
+
+  .face.front .title-wrapper .subtitle {
+    font-size: 3vw;
   }
 }

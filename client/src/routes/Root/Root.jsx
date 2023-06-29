@@ -69,14 +69,9 @@ function App() {
           </p>
         </div>
       </section>
-      <section className="focus">
-        <div className="our-focus-title">
-          <h1>Our Focus</h1>
-        </div>
-        <div className="img-focus">
-          <FocusImg />
-        </div>
-      </section>
+      
+      <FocusImg />
+
       <section className="hewan-punah">
         <div className="container-hewan-punah">
           <h2>Jumlah Hewan Punah</h2>

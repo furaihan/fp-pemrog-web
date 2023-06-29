@@ -27,6 +27,10 @@ function FocusImg() {
   ];
 
   return (
+  <section className="focus">
+    <div className="our-focus-title">
+      <h1>Our Focus</h1>
+    </div>
     <div className="cards-wrapper">
       {OurFocus.map((item) => (
         <div className="card-wrapper" key={item.id}>
@@ -41,6 +45,7 @@ function FocusImg() {
         </div>
       ))}
     </div>
+    </section>  
   );
 }
 
