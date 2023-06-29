@@ -1,6 +1,7 @@
 import "./Root.css";
 import FunFactBox from "./component/FunFactBox";
 import React from "react";
+import FocusImg from "../FocusImg/FocusImg";
 
 function App() {
   const funFactItems = [
@@ -13,7 +14,7 @@ function App() {
     },
     {
       id: 2,
-      image: "barbary-singa atlas.jpg",
+      image: "barbary-singa-atlas.jpg",
       title: "Sumatran Tiger",
       subtitle:
         "Salah satu fakta unik Harimau Sumatra yaitu memiliki penglihatan yang tajam 30 kali lebih tajam dari penglihatan manusia pada saat malam hari.",
@@ -64,31 +65,12 @@ function App() {
           </p>
         </div>
       </section>
-      <div className="fokus-kami">
-        <h1 className="fokus-kami-text">Fokus Kami</h1>
-      </div>
-      <section className="fokus-kami-img">
-        <div className="fauna-img">
-          <div className="border-box-fauna-1">
-            <div className="fauna-1">
-              <h3 className="nama-fauna-1">Singa Atlas</h3>
-            </div>
-          </div>
-          <div className="border-box-fauna-2">
-            <div className="fauna-2">
-              <h3 className="nama-fauna-2">Irish Elk</h3>
-            </div>
-          </div>
-          <div className="border-box-fauna-3">
-            <div className="fauna-3">
-              <h3 className="nama-fauna-3">Takahe</h3>
-            </div>
-          </div>
-          <div className="border-box-fauna-4">
-            <div className="fauna-4">
-              <h3 className="nama-fauna-4">Leseer Bilby</h3>
-            </div>
-          </div>
+      <section className="focus">
+        <div className="our-focus-title">
+          <h1>Our Focus</h1>
+        </div>
+        <div className="img-focus">
+          <FocusImg />
         </div>
       </section>
       <section className="hewan-punah">

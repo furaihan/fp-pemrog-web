@@ -1,5 +1,6 @@
 import Hamburger from "../../component/Hamburger/Hamburger";
 import "./Train.css";
+import FocusImg from "../FocusImg/FocusImg";
 
 function Explore() {
 
@@ -11,8 +12,9 @@ function Explore() {
           <h1>Train</h1>
           <p>Halaman untuk coba coba dan utak atik react.</p>
         </div>
-        <div className="cards-wrapper">
-            <div className="card-wrapper">
+        <FocusImg />
+        {/* <div className="cards-wrapper"> */}
+            {/* <div className="card-wrapper">
               <div className="card-1 card-object card-object-hf">
                 <a class="face front" href="#">
                 <div className="title-wrapper">
@@ -20,26 +22,29 @@ function Explore() {
                   <div className="subtitle">Asal</div>
                   </div></a>
                   </div>
-                </div>
-                <div className="card-wrapper">
+  </div>*/}
+                {/* <div className="card-wrapper"> 
                 <div className="card-2 card-object card-object-hf">
-                <a class="face front" href="#">
+                  <div className="Focus">
+                  
+                  </div>
+                  
                 <div className="title-wrapper">
                   <div className="title">Singa Atlas</div>
                   <div className="subtitle">Asal</div>
-                  </div></a>
-                </div>
-              </div>
-              <div className="card-wrapper">
+                  </div>
+                </div> */}
+              {/* </div> */}
+              {/* <div className="card-wrapper">
                 <div className="card-3 card-object card-object-hf">
                 <a class="face front" href="#">
                 <div className="title-wrapper">
                   <div className="title">Singa Atlas</div>
                   <div className="subtitle">Asal</div>
                   </div></a>
-                </div>
-              </div>
-            </div>
+                </div> */}
+             {/* </div> 
+            </div> */}
       </main>
     </>
   );

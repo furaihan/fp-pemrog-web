@@ -1,4 +1,4 @@
-/* .cards-wrapper {
+.cards-wrapper {
     position: relative;
     height: 100%;
     list-style: none;
@@ -13,9 +13,9 @@
     float: left;
     position: relative;
     margin: 0;
-    width: 28%;
+    width: 35%;
     height: 0;
-    padding: 0 0 28%;
+    padding: 0 0 35%;
     perspective: 700px;
   }
 
@@ -26,24 +26,24 @@
   position: absolute;
   top: 6%;
   left: 6%;
-  width: 88%;
-  height: 88%;
+  width: 90%;
+  height: 90%;
   transform-style: preserve-3d;
 }
 .card-object.card-1 .front {
-  background: #222 url("lesser bilby.jpg") 90% 35%;
-  background-size: 115%;
-}
-  
-.card-object.card-2 .front{
   background: #222 90% 35%;
   background-size: 115%;
-}
-
-.card-object.card-3 .front {
-  background: #222 url("irish elk.jpg") 90% 35%;
+}  
+  
+ .card-object.card-2 .front{
+  background: #222 90% 35%;
   background-size: 115%;
-}
+} 
+
+.card-object.card-3 .front { 
+  background: #222 90% 35%;
+  background-size: 115%;
+} 
 
 .face {
   color: #fff;
@@ -112,8 +112,8 @@
   opacity: 0.8;
   transition: opacity 0.2s ease;
   font-weight: bold; /* Add this line to make the text bold */
-  /* color: inherit; /* Add this line to inherit the text color */
-/*}
+  color: inherit; /* Add this line to inherit the text color */
+}
 .face.front .title-wrapper .title::after {
   display: block;
   margin: 7% auto 8% auto;
@@ -125,7 +125,7 @@
   transform: scale(0);
   transition: transform 0.15s;
   font-weight: bold; /* Add this line to make the text bold */
-/*color: inherit; 
+  color: inherit; 
 }
 .face.front .title-wrapper .subtitle {
   font-size: 0.9vw;
@@ -135,7 +135,7 @@
   opacity: 0;
   transition: opacity 0.15s;
   font-weight: bold; /* Add this line to make the text bold */
-  /*color: inherit; 
+  color: inherit; 
 }
 .face.front:hover::before {
   opacity: 0.9;
@@ -149,7 +149,7 @@
   opacity: 1;
   color : blue;
   font-weight: bold; /* Add this line to make the text bold */
-/*}
+}
 .face.front:hover .title-wrapper .title::after {
   transform: scale(1);
   opacity: 0.5;
@@ -162,4 +162,6 @@
   transition-delay: 0.2s;
   transition-duration: 0.2s;
   font-weight: bold; 
-} */
+}
+
+
