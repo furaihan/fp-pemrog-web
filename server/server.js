@@ -11,11 +11,7 @@ const frontendURL = process.env.APP_FRONTEND_URL;
 // Use cors to allow cross-origin resource sharing
 app.use(
   cors({
-    // Only allow requests from the frontend
-    /*origin: [
-      frontendURL,
-      "http://localhost:5173"
-    ],*/
+    origin: "*",
     credentials: true,
   })
 );
