@@ -9,15 +9,16 @@ const port = process.env.APP_PORT;
 const frontendURL = process.env.APP_FRONTEND_URL;
 
 // Use cors to allow cross-origin resource sharing
-app.use(cors(
-  { 
+app.use(
+  cors({
     // Only allow requests from the frontend
-    origin: [
+    /*origin: [
       frontendURL,
       "http://localhost:5173"
-    ], 
-    credentials: true 
-  }));
+    ],*/
+    credentials: true,
+  })
+);
 // Use express.json() to parse incoming requests with JSON payloads
 app.use(express.json());
 // Use cookieParser() to parse incoming requests with cookies
