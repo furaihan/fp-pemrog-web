@@ -3,6 +3,7 @@ import "./Root.css";
 import React from "react";
 import FocusImg from "../FocusImg/FocusImg";
 import Fun from "../Fun/Fun";
+import { HiChevronDoubleDown } from "react-icons/hi";
 
 function App() {
   // const funFactItems = [
@@ -41,7 +42,7 @@ function App() {
             nec iaculis mauris.
           </p>
           <div className="arrow-down">
-            <img src="public\arrow-down.svg" alt="arrow-down" />
+            <HiChevronDoubleDown />
           </div>
         </div>
       </section>
