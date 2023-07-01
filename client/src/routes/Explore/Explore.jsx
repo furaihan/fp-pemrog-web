@@ -7,47 +7,47 @@ import React from "react";
 
 const animalList = [
   {
-    src: "./public/pikachu.jpg",
+    src: "pikachu.jpg",
     alt: "Iki Pika",
     name: "Iki Pika",
   },
   {
-    src: "./public/barbary-singa atlas.jpg",
+    src: "barbary-singa-atlas.jpg",
     alt: "Singa Atlas",
     name: "Singa Atlas",
   },
   {
-    src: "./public/berang-berang.jpg",
+    src: "berang-berang.jpg",
     alt: "Berang-Berang",
     name: "Berang-Berang",
   },
   {
-    src: "./public/karakalo australia.jpg",
+    src: "karakalo australia.jpg",
     alt: "Karakalo Australia",
     name: "Karakalo Australia",
   },
   {
-    src: "./public/lesser bilby.jpg",
+    src: "lesser-bilby.jpg",
     alt: "Lesser Bilby",
     name: "Lesser Bilby",
   },
   {
-    src: "./public/takahe.jpg",
+    src: "takahe.jpg",
     alt: "Takahe",
     name: "Takahe",
   },
   {
-    src: "./public/elang harpa.jpg",
+    src: "elang harpa.jpg",
     alt: "Elang Harpa",
     name: "Elang Harpa",
   },
   {
-    src: "./public/katak pinokio.jpg",
+    src: "katak pinokio.jpg",
     alt: "Katak Pinokio",
     name: "Katak Pinokio",
   },
   {
-    src: "./public/anglerfish.jpg",
+    src: "anglerfish.jpg",
     alt: "Angler Fish",
     name: "Angler Fish",
   },
@@ -56,7 +56,7 @@ const animalList = [
 function Explore() {
   return (
     <React.Fragment>
-      <section className="explore-hero">
+      <section className="explore-hero" style={{background: 'url("takahe.jpg") center/cover no-repeat'}}>
         <div className="explore-hero-body">
           <p className="explore-hero-title">Lorem Ipsum</p>
           <p className="explore-hero-subtitle">

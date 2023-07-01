@@ -1,7 +1,6 @@
 .wrapper {
   height: 100vh;
   width: 100vw;
-  background: url("bacround-signup.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;

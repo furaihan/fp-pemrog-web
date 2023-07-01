@@ -5,7 +5,10 @@ export default function About() {
   return (
     <React.Fragment>
       <div className="body">
-        <section className="hero">
+        <section
+          className="hero"
+          style={{ background: 'url("homie.jpg") center/cover no-repeat' }}
+        >
           <div className="hero-body">
             <p className="hero-title">About</p>
             <p className="hero-subtitle">

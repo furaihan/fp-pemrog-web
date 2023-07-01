@@ -30,7 +30,10 @@ function App() {
   // ];
   return (
     <React.Fragment>
-      <section className="hero">
+      <section
+        className="hero"
+        style={{ background: 'url("homie.jpg") center/cover no-repeat' }}
+      >
         <div className="hero-body">
           <p className="hero-title">Lorem Ipsum</p>
           <p className="hero-subtitle">
@@ -58,7 +61,7 @@ function App() {
         </div>
       </section> */}
 
-      <Fun/>
+      <Fun />
 
       <section className="quotes">
         <div className="pembatas">
@@ -69,7 +72,7 @@ function App() {
           </p>
         </div>
       </section>
-      
+
       <FocusImg />
 
       <section className="hewan-punah">
