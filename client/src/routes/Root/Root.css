@@ -108,6 +108,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-family: 'Times New Roman', Times, serif;
 }
 .container-hewan-punah-1 {
   width: 100vw;
@@ -117,48 +118,26 @@
   display: flex;
   flex-direction: row;
 }
-.dunia {
+
+.container-hewan-punah-1 div b {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 282.96px;
-  height: 142.36px;
-  left: 633.42px;
-  top: 13.5px;
-}
-.asia {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 282.96px;
-  height: 142.36px;
-  left: 633.42px;
-  top: 13.5px;
-}
-.indonesia {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 282.96px;
-  height: 142.36px;
-  left: 633.42px;
-  top: 13.5px;
-}
-.text-dunia {
-  font-size: 45px;
+  width: 25vw;
+  height: 20%;
+  font-size: 75px;
+  font-family: 'Times New Roman', Times, serif;
   color: #00a751;
+  text-align: center;
 }
-.text-asia {
-  font-size: 45px;
-  color: #00a751;
+.container-hewan-punah-1 div p{
+  text-align: center;
+  font-size: 25px;
+  font-family:'Times New Roman', Times, serif ;
+  font-weight:300px;
 }
-.text-indonesia {
-  font-size: 45px;
-  color: #00a751;
-}
+
 .kuis {
   width: 100vw;
   height: 100vh;
