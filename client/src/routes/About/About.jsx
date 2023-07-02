@@ -90,7 +90,7 @@ export default function About() {
                   </h2>
                   <div className="anggota">
                     <p>
-                      Muhammad Zafar
+                      Muhammad Zhafar
                     </p>
                     <p className="job">
                     Backend
