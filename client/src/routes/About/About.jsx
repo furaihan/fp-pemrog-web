@@ -84,49 +84,77 @@ export default function About() {
             </div>
             <div className="right">
               <div className="article">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas sed eaque sint hic necessitatibus ad incidunt
-                  temporibus corrupti, esse omnis, quisquam aut ipsam, in id
-                  veritatis ut at nemo quae. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Rem vero officia voluptatem nisi
-                  quod beatae atque dolorem dicta in eaque sapiente illo eum
-                  accusantium assumenda quaerat autem odio, maiores totam. Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Vel, unde.
-                  Doloremque ducimus ratione maiores veritatis saepe. Quo quasi
-                  eius ea a exercitationem? Dicta voluptatem inventore nam est
-                  itaque. Fugit, eaque! Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Provident aperiam vel cum praesentium
-                  necessitatibus maiores. Qui sed ipsam provident vero tenetur,
-                  ea deleniti voluptates commodi facilis id, impedit, aspernatur
-                  voluptatum. Lorem ipsum, dolor sit amet consectetur
-                  adipisicing elit. Magni error, assumenda nostrum voluptas
-                  repudiandae id reiciendis alias veritatis! Fuga, veniam iusto
-                  rerum assumenda quibusdam provident adipisci quas voluptate
-                  necessitatibus recusandae. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Quia natus, sed eius rerum
-                  ratione animi cupiditate vel odio, quos mollitia id velit
-                  doloremque totam sit enim iste aliquam fugiat ducimus? Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Quis veniam
-                  qui ipsa. Deleniti nihil corrupti animi suscipit! Voluptatum
-                  voluptate error provident a. Neque recusandae dolor ad
-                  facilis, adipisci voluptate. Sed! Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Itaque eaque maiores quos,
-                  aliquam placeat temporibus odio distinctio quae ipsum
-                  necessitatibus. Commodi architecto voluptatum cumque saepe
-                  amet dolorum necessitatibus rem quas. Lorem ipsum dolor sit,
-                  amet consectetur adipisicing elit. Minima ut blanditiis nemo
-                  amet vel numquam, cumque tempore error quibusdam quo iure
-                  dolorem esse magni voluptates repellat harum animi ipsa illum.
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Vitae adipisci aspernatur ab voluptatum dignissimos quo illo
-                  saepe corporis quod, dolorem ea, reiciendis velit? Sed
-                  laudantium cupiditate labore sint. Vero, ex. Lorem, ipsum
-                  dolor sit amet consectetur adipisicing elit. Nostrum animi
-                  eveniet sapiente, tempore nihil nemo quia, distinctio ipsam
-                  quidem deserunt quaerat excepturi libero vel reprehenderit
-                  illo aut, inventore pariatur id.
-                </p>
+                <div className="kelompok">
+                  <h2>
+                    Anggota Kelompok
+                  </h2>
+                  <div className="anggota">
+                    <p>
+                      Muhammad Zafar
+                    </p>
+                    <p className="job">
+                    Backend
+                    </p>
+                    <p>
+                    +62 895-1497-6015
+                    </p>
+                  </div>
+                  <div className="anggota">
+                    <p>
+                      Aric Yohanes 
+                    </p>
+                    <p className="job">
+                      FrontEnd
+                    </p>
+                    <p>
+                    +62 823-7955-2087
+                    </p>
+                  </div>
+                  <div className="anggota">
+                    <p>
+                      Hamim Nur Khamid
+                    </p>
+                    <p className="job">
+                      FrontEnd
+                    </p>
+                    <p>
+                    +62 821-3325-6573
+                    </p>
+                  </div>
+                  <div className="anggota">
+                    <p>
+                      Nabella Ayu
+                    </p>
+                    <p className="job">
+                    FrontEnd-UI/UX
+                    </p>
+                    <p>
+                    +62 895-3846-48816
+                    </p>
+                  </div>
+                  <div className="anggota">
+                    <p>
+                    Nur Azzizah
+                    </p>
+                    <p className="job">
+                    FrontEnd-UI/UX
+                    </p>
+                    <p>
+                    +62 898-1063-020
+                    </p>
+                  </div>
+                  <div className="anggota">
+                    <p>
+                    Unik Trisetyowati    
+                    </p>
+                    <p className="job">
+                    FrontEnd-UI/UX
+                    </p>
+                    <p>
+                    +62 821-3400-3946
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

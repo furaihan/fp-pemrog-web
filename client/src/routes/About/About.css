@@ -100,3 +100,19 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
+.kelompok{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-left: 5vw;
+}
+.anggota{
+  margin-bottom: 3vh;
+}
+.job{
+  font-weight: bold;
+}
+.anggota p{
+  margin: 0;
+}
