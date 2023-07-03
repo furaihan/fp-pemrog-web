@@ -7,7 +7,12 @@ export default function AuthLayout() {
     <React.Fragment>
       <header></header>
       <main>
-        <div className="wrapper">
+        <div
+          className="wrapper"
+          style={{
+            background: "url(bacround-signup.jpg) center/cover no-repeat",
+          }}
+        >
           <div className="form-box">
             <Outlet />
           </div>

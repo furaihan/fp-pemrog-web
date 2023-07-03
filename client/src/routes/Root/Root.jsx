@@ -4,6 +4,7 @@ import React from "react";
 import FocusImg from "../FocusImg/FocusImg";
 import Fun from "../Fun/Fun";
 import RandomQuiz from "../RandomQuiz/RandomQuiz";
+import { HiChevronDoubleDown } from "react-icons/hi";
 
 function App() {
   // const funFactItems = [
@@ -31,7 +32,10 @@ function App() {
   // ];
   return (
     <React.Fragment>
-      <section className="hero">
+      <section
+        className="hero"
+        style={{ background: 'url("homie.jpg") center/cover no-repeat' }}
+      >
         <div className="hero-body">
           <p className="hero-title">Lorem Ipsum</p>
           <p className="hero-subtitle">
@@ -39,7 +43,7 @@ function App() {
             nec iaculis mauris.
           </p>
           <div className="arrow-down">
-            <img src="public\arrow-down.svg" alt="arrow-down" />
+            <HiChevronDoubleDown />
           </div>
         </div>
       </section>
@@ -59,7 +63,7 @@ function App() {
         </div>
       </section> */}
 
-      <Fun/>
+      <Fun />
 
       <section className="quotes">
         <div className="pembatas">
@@ -70,21 +74,24 @@ function App() {
           </p>
         </div>
       </section>
-      
+
       <FocusImg />
 
       <section className="hewan-punah">
         <div className="container-hewan-punah">
-          <h2>Jumlah Hewan Punah</h2>
+          <h1>Jumlah Hewan Punah</h1>
           <div className="container-hewan-punah-1">
-            <div className="dunia">
-              <p className="text-dunia">0</p>
+            <div>
+              <b>0</b>
+              <p>Dunia</p>
             </div>
-            <div className="asia">
-              <p className="text-asia">0</p>
+            <div>
+              <b>0</b>
+              <p>Asia</p>
             </div>
-            <div className="indonesia">
-              <p className="text-indonesia">0</p>
+            <div>
+              <b>0</b>
+              <p>Indonesia</p>
             </div>
           </div>
         </div>

@@ -5,10 +5,16 @@ const cookieParser = require("cookie-parser");
 const jwtVerifier = require("./controller/verifyToken");
 const cors = require("cors");
 const app = express();
-const port = 3000;
+const port = process.env.APP_PORT;
+const frontendURL = process.env.APP_FRONTEND_URL;
 
 // Use cors to allow cross-origin resource sharing
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
 // Use express.json() to parse incoming requests with JSON payloads
 app.use(express.json());
 // Use cookieParser() to parse incoming requests with cookies

@@ -4,7 +4,10 @@ import ArrowDown from "../../assets/image/arrow-down.jsx";
 function Description() {
   return (
     <>
-      <section className="explore-hero">
+      <section
+        className="explore-hero"
+        style={{ background: 'url("takahe.jpg") center/cover no-repeat' }}
+      >
         <div className="explore-hero-body">
           <p className="explore-hero-title">Lorem Ipsum</p>
           <p className="explore-hero-subtitle">

@@ -17,7 +17,7 @@ function Login() {
             <label htmlFor="emailOrUsername">Email / Username</label>
           </div>
           <div className="email-login">
-            <img src="public\mail.svg" alt="email" />
+            <img src="mail.svg" alt="email" />
           </div>
         </div>
 
@@ -27,7 +27,7 @@ function Login() {
             <label>Password</label>
           </div>
           <div className="lock-login">
-            <img src="public\lock.svg" alt="lock" />
+            <img src="lock.svg" alt="lock" />
           </div>
         </div>
 

@@ -4,10 +4,11 @@ import { redirect } from "react-router-dom";
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 const signupAction = async ({ request }) => {
+  const url = import.meta.env.VITE_BACKEND_URL;
   const data = await request.formData();
   const axiosRequest = await axios
     .post(
-      "http://localhost:3000/signup",
+      `${url}/signup`,
       {
         email: data.get("email"),
         username: data.get("username"),

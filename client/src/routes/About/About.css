@@ -1,5 +1,4 @@
 .hero {
-  background: url("homie.jpg") center/cover no-repeat;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -100,4 +99,20 @@
   margin-right: 5%;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.kelompok{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-left: 5vw;
+}
+.anggota{
+  margin-bottom: 3vh;
+}
+.job{
+  font-weight: bold;
+}
+.anggota p{
+  margin: 0;
 }

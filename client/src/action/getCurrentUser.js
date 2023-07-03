@@ -1,8 +1,9 @@
 import axios, { AxiosError } from "axios";
 
 const getCurrentUserLoader = async () => {
+  const url = import.meta.env.VITE_BACKEND_URL;
   const axiosRequest = await axios
-    .get("http://localhost:3000/user/current", { withCredentials: true })
+    .get(`${url}/current/user`, { withCredentials: true })
     .then(function (response) {
       return response;
     })
