@@ -57,3 +57,30 @@ const verifyToken = (req, res, next) => {
 };
 
 module.exports = verifyToken;
+
+/*
+A token is a secret that you need to access
+The data that you want from the server's address
+But how do you verify that the token is legit?
+You use a function that I'm about to spit
+
+First, you get the token from the cookie in the request
+Then you check if it exists or else you must reject
+You create an error object with a message and a code
+And you send it back as JSON with a status that shows
+
+But if the token is there, you try to decrypt it
+With the secret that you have in your environment
+You add the userId from the token to the body of the request
+And then you call the next middleware without any stress
+
+But what if something goes wrong and the token is not valid?
+You catch the error and you handle it with logic
+You create another error object with a different message and code
+And you send it back as JSON with a status that shows
+
+Finally, you log a message that says "finally"
+And you export the function so others can use it wisely
+That's how you verify a token with a function in Node.js
+
+*/
