@@ -2,9 +2,11 @@ import "./Fun.css";
 import { useState } from "react";
 
 function Fun() {
+  // State untuk menyimpan card yang dipilih dan state untuk menandai apakah ini pertama kali card diklik
   const [selectedCard, setSelectedCard] = useState(null);
   const [isFirstTime, setIsFirstTime] = useState(true);
 
+  // Fungsi untuk mengatur card yang dipilih dan mengubah state isFirstTime jika ini adalah klik pertama
   const handleClick = (cardId) => {
     if (isFirstTime) {
       setIsFirstTime(false);
@@ -12,6 +14,7 @@ function Fun() {
     setSelectedCard(cardId);
   };
 
+  // Data cards yang akan ditampilkan
   const cards = [
     {
       id: 1,
@@ -44,6 +47,7 @@ function Fun() {
             <p>Fun Fact</p>
           </div>
           <div className="card-grid">
+            {/* Loop melalui setiap card dan tampilkan */}
             {cards.map((card) => (
               <div
                 key={card.id}
@@ -53,9 +57,16 @@ function Fun() {
                 onClick={() => handleClick(card.id)}
               >
                 <div className="fact">
+                  {/* Judul dan gambar card */}
                   <h3>{card.title}</h3>
                   <img src={card.imageSrc} alt={card.title} />
-                  <p>{card.description}</p>
+
+                  {/* Tampilan deskripsi card hanya jika card ini sedang dipilih */}
+                  {selectedCard === card.id && (
+                    <div className="description">
+                      <h5>{card.description}</h5>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

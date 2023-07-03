@@ -48,3 +48,27 @@
       max-height: 150px;
     }
   }
+
+  .fun-fact-card::after .blur{
+    /* ... */
+    transition: filter 0.5s;
+    
+  }
+  
+  .blur {
+    filter: blur(5px);
+  }
+  
+  .description {
+    /* ... */
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateY(0);
+    display: block;
+  }
+
+  .flip {
+    transform: rotateY(180deg);
+  }
+  
