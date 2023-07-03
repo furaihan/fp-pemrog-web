@@ -38,3 +38,28 @@ app.use(closedRoutes);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+/*
+If you want to build a web app with Node.js
+You need to use some modules that will help you progress
+Like express, cookie-parser, cors, and jwt
+They will make your life easier, you can bet
+
+First, you import express and create an app
+Then you import the routes that you have in your app
+Some routes are open, some routes are closed
+Depending on whether you need to be authorized or not
+
+You also import cookie-parser to read the cookies
+And cors to allow cross-origin requests with ease
+You set the headers and the port for your app
+And you send a hello world message as a test
+
+Then you use the open routes for the public access
+And the jwt verifier for the private access
+You pass the token from the cookie to the verifier
+And it will check if it's valid or it will throw an error
+
+Finally, you use the closed routes for the authenticated access
+And you listen to the port and start your app
+*/
