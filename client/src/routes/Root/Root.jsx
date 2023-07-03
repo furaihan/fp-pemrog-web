@@ -3,6 +3,7 @@ import "./Root.css";
 import React from "react";
 import FocusImg from "../FocusImg/FocusImg";
 import Fun from "../Fun/Fun";
+import RandomQuiz from "../RandomQuiz/RandomQuiz";
 
 function App() {
   // const funFactItems = [
@@ -89,9 +90,10 @@ function App() {
         </div>
       </section>
       <section className="kuis">
-        <h1>Kuis</h1>
-        <div className="container-kuis"></div>
+        <h1>Quis</h1>
+        <RandomQuiz />
       </section>
+      
     </React.Fragment>
   );
 }
