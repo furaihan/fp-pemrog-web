@@ -25,6 +25,7 @@
   font-weight: 500;
   margin-top: 10px;
 }
+
 .arrow-down {
   color: white;
   font-size: 50px;
@@ -152,9 +153,9 @@
   background-color: #eaeef1;
 }
 
-.arrow-down {
+/* .arrow-down {
   animation: bounce 1s infinite;
-}
+} */
 
 @keyframes bounce {
   0%,

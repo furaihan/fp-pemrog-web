@@ -7,7 +7,6 @@
   align-items: center;
 }
 
-
 .card-quiz-list {
   position: absolute;
   width: calc(3 * var(--card-width));

@@ -5,6 +5,8 @@ import FocusImg from "../FocusImg/FocusImg";
 import Fun from "../Fun/Fun";
 import RandomQuiz from "../RandomQuiz/RandomQuiz";
 import { HiChevronDoubleDown } from "react-icons/hi";
+import Slider from "../../component/Slider/Slider";
+
 
 function App() {
   // const funFactItems = [
@@ -32,20 +34,21 @@ function App() {
   // ];
   return (
     <React.Fragment>
-      <section
-        className="hero"
+      <section>
+        {/* className="hero"
         style={{ background: 'url("homie.jpg") center/cover no-repeat' }}
-      >
-        <div className="hero-body">
-          <p className="hero-title">Lorem Ipsum</p>
-          <p className="hero-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris.
-          </p>
-          <div className="arrow-down">
+      // > <div className="hero-body"> */}
+      {/* //     <p className="hero-title">Lorem Ipsum</p>
+      //     <p className="hero-subtitle">
+      //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+      //       nec iaculis mauris.
+      //     </p> */}
+          {/* <div className="arrow-down">
             <HiChevronDoubleDown />
-          </div>
-        </div>
+          </div> */}
+         <Slider />
+          
+       {/* </div> */}
       </section>
       {/* <section className="fun-fact">
         <div className="fun-fact-title">
