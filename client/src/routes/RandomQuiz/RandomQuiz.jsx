@@ -57,10 +57,6 @@ const RandomQuiz = () => {
           </div>
         </div>
       </div>
-
-      
-
-
     </div>
   );
 };
