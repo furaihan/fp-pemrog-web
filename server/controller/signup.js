@@ -67,8 +67,9 @@ const signup = async (req, res) => {
       algorithm: "HS256",
     });
     res.cookie("EF_TOKEN_ID", token, {
-      httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24,
+      sameSite: "none",
+      secure: true,
+      maxAge: 1000 * 60 * 60 * 24 * 7,
     });
     const response = {
       code: 201,
