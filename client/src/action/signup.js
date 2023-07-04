@@ -31,7 +31,8 @@ const signupAction = async ({ request }) => {
   console.log("Response:");
   console.log(axiosRequest);
   if (axiosRequest instanceof AxiosError) {
-    return axiosRequest.response.data.message;
+    if (axiosRequest.response?.data) return axiosRequest.response.data.message;
+    return axiosRequest.message;
   }
   await delay(2000);
   return redirect("/");
