@@ -11,7 +11,7 @@ function Slider() {
       caption: 'Hai Brooo'
     },
     {
-      src: 'anglerfish.jpg',
+      src: 'irish-elk.jpg',
       alt: 'Image 2',
       caption: 'Welcome'
     },

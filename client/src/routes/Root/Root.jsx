@@ -4,7 +4,7 @@ import React from "react";
 import FocusImg from "../FocusImg/FocusImg";
 import Fun from "../Fun/Fun";
 import RandomQuiz from "../RandomQuiz/RandomQuiz";
-import { HiChevronDoubleDown } from "react-icons/hi";
+// import { HiChevronDoubleDown } from "react-icons/hi";
 import Slider from "../../component/Slider/Slider";
 
 
