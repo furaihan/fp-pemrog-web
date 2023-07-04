@@ -1,8 +1,6 @@
 import axios, { AxiosError } from "axios";
 import { redirect } from "react-router-dom";
 
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
 const signupAction = async ({ request }) => {
   const url = import.meta.env.VITE_BACKEND_URL;
   const data = await request.formData();
@@ -34,7 +32,6 @@ const signupAction = async ({ request }) => {
     if (axiosRequest.response?.data) return axiosRequest.response.data.message;
     return axiosRequest.message;
   }
-  await delay(2000);
   return redirect("/");
 };
 export default signupAction;
