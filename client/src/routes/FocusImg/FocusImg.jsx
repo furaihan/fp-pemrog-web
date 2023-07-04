@@ -8,21 +8,21 @@ function FocusImg() {
       image: "lesser-bilby.jpg",
       title: "Lesser Bilby",
       subtitle:
-        "Asal darimana",
+        "Australia",
     },
     {
       id: 2,
       image: "takahe.jpg",
       title: "Takahe",
       subtitle:
-        "Asal darimana",
+        "Selandia Baru",
     },
     {
       id: 3,
       image: "irish-elk.jpg",
       title: "Irish Elk",
       subtitle:
-        "Asal darimana",
+        "Irlandia",
     },
   ];
 
