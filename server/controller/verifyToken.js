@@ -2,8 +2,16 @@ const jwt = require("jsonwebtoken");
 
 const verifyToken = (req, res, next) => {
   // Get the token from the request's cookie
-  const token = req.cookies.EF_TOKEN_ID;
+  let token = req.cookies.EF_TOKEN_ID;
   console.log(req.cookies);
+
+  if (!token) {
+    // Get from header authorization
+    const authHeader = req.headers["authorization"];
+    if (authHeader) {
+      token = authHeader.split(" ")[1];
+    }
+  }
 
   // Check if the token is not found
   if (!token) {

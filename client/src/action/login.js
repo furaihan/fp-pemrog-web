@@ -20,6 +20,8 @@ const loginAction = async ({ request }) => {
       }
     )
     .then(function (response) {
+      localStorage.setItem("token", response.data.data.token);
+      localStorage.setItem("loginTime", Date.now());
       return response;
     })
     .catch(function (error) {

@@ -21,6 +21,7 @@ const signupAction = async ({ request }) => {
       }
     )
     .then(function (response) {
+      localStorage.setItem("token", response.data.data.token);
       return response;
     })
     .catch(function (error) {
