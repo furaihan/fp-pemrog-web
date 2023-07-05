@@ -38,7 +38,7 @@
     color: #fff;
     font-size: 40px;
     font-weight: bold;
-    
+    font-family: "newyork", sans-serif;
   }
   .previous-img, .next-img{
     justify-content: center;
@@ -95,3 +95,9 @@
     stroke: none;
     border: none;
   } 
+  @font-face {
+    font-family: "newyork";
+    src: url("./NEW YORK.ttf") format("truetype");
+    /* Atur properti lain seperti gaya font (font-style), berat font (font-weight), dll jika diperlukan */
+  }
+  
