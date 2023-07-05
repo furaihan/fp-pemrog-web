@@ -3,6 +3,7 @@ import axios, { AxiosError } from "axios";
 const getCurrentUserLoader = async () => {
   const url = import.meta.env.VITE_BACKEND_URL;
   if (localStorage.getItem("token") === null) {
+    console.log("No token found");
     return {
       isUserLoggedIn: false,
       user: {
@@ -14,7 +15,6 @@ const getCurrentUserLoader = async () => {
   const axiosRequest = await axios
     .get(`${url}/current/user`, {
       headers: {
-        "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       withCredentials: true,
