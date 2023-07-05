@@ -42,36 +42,10 @@ function EditProfile() {
               <br />
               <input type="text" />
             </div>
-            <div className="double">
-              <div className="city">
-                <label htmlFor="city">City</label>
-                <br />
-                <select name="city" id="city">
-                  <option value="USA">United States</option>
-                  <option value="UK">United Kingdom</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Australia">Australia</option>
-                  <option value="Japan">Japan</option>
-                </select>
-              </div>
-              <div className="state">
-                <label htmlFor="state">State</label>
-                <br />
-                <select name="state" id="state">
-                  <option value="USA">United States</option>
-                  <option value="UK">United Kingdom</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Australia">Australia</option>
-                  <option value="Japan">Japan</option>
-                </select>
-              </div>
-            </div>
-            <div className="single">
-              <div className="password">
-                <label htmlFor="password">Password</label>
-                <br />
-                <input type="password" />
-              </div>
+            <div className="single-bio">
+              <label htmlFor="bio">Bio</label>
+              <br />
+              <textarea name="bio" id="bio"></textarea>
             </div>
             <div className="acc-button">
               <button className="cancel">Cancel</button>
