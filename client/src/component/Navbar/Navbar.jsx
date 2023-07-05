@@ -48,13 +48,12 @@ export default function Navbar({ isLoggedin, username }) {
         </div>
       ) : (
         <div className="navbar-search-login">
-          <h3>{username}</h3>
+          <Link to="/profile">Hi {username}</Link>
         </div>
       )}
     </nav>
   );
 }
-
 
 Navbar.propTypes = {
   isLoggedin: PropTypes.bool,
