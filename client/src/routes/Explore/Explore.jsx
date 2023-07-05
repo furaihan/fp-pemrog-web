@@ -106,7 +106,7 @@ function Explore() {
                 src={animal.src}
                 alt={animal.alt}
               />
-            <h3 className="list-animal-name">{animal.name}</h3>
+            <h3>{animal.name}</h3>
             </div>
           ))}
         </div>
