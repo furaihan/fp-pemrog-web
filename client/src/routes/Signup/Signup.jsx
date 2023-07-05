@@ -17,7 +17,7 @@ function Signup() {
         <div className="input-box flex">
           <input type="u-name" name="username" required />
           <label>Username</label>
-          <div className="user">
+          <div className="user-logo">
             <img src="user.svg" alt="user"/>
           </div>
         </div>

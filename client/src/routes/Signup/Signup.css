@@ -31,14 +31,14 @@
   /* line-height: 57px; */
 }
 
-.user {
-  position: absolute;
+.user-logo {
+  /* position: absolute; */
   display: flex;
   width: max-content;
   height: 20px;
   left: 190px; 
   color: #162938;
-  bottom: 5px;
+  /* bottom: 5px; */
   /* line-height: 57px; */
 }
 
