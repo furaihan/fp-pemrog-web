@@ -66,11 +66,6 @@ const signup = async (req, res) => {
       expiresIn: "7d",
       algorithm: "HS256",
     });
-    res.cookie("EF_TOKEN_ID", token, {
-      sameSite: "none",
-      secure: true,
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-    });
     const response = {
       code: 201,
       status: "Created",
@@ -80,6 +75,7 @@ const signup = async (req, res) => {
         account_id: account.account_id,
         username: user.username,
         email: account.email,
+        token: token,
       },
     };
     console.log(response);

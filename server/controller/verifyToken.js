@@ -2,11 +2,21 @@ const jwt = require("jsonwebtoken");
 
 const verifyToken = (req, res, next) => {
   // Get the token from the request's cookie
-  const token = req.cookies.EF_TOKEN_ID;
+  let token = req.cookies.EF_TOKEN_ID;
   console.log(req.cookies);
+
+  if (!token) {
+    // Get from header authorization
+    const authHeader = req.headers["authorization"];
+    if (authHeader) {
+      console.log("Token found in header!");
+      token = authHeader.split(" ")[1];
+    }
+  }
 
   // Check if the token is not found
   if (!token) {
+    console.log("Token not found!");
     // Create an error object
     const error = new Error("Access Denied!");
     error.code = "401";
@@ -27,15 +37,18 @@ const verifyToken = (req, res, next) => {
   }
 
   try {
+    console.log(token);
     // Attempt to decrypt the token with the provided secret from the environment variable
     const decoded = jwt.verify(token, process.env.JWT_SECRET, {
       algorithms: ["HS256"],
     });
+    console.log(decoded);
 
     // Add the userId from the decoded token to the request body
     req.body.userId = decoded.userId;
 
     // If the token is valid, move to the next middleware
+    console.log("Token is valid! Moving to the next middleware...");
     next();
   } catch (error) {
     console.log(error);

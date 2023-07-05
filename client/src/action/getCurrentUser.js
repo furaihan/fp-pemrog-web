@@ -2,8 +2,23 @@ import axios, { AxiosError } from "axios";
 
 const getCurrentUserLoader = async () => {
   const url = import.meta.env.VITE_BACKEND_URL;
+  if (localStorage.getItem("token") === null) {
+    console.log("No token found");
+    return {
+      isUserLoggedIn: false,
+      user: {
+        email: null,
+        username: null,
+      },
+    };
+  }
   const axiosRequest = await axios
-    .get(`${url}/current/user`, { withCredentials: true })
+    .get(`${url}/user/current`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+      withCredentials: true,
+    })
     .then(function (response) {
       return response;
     })

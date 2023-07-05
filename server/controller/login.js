@@ -85,16 +85,17 @@ const login = async (req, res) => {
       algorithm: "HS256",
     });
 
-    // Set the JWT as a cookie with a 24-hour expiry
-    res.cookie("EF_TOKEN_ID", token, {
-      sameSite: "none",
-      secure: true,
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-    });
 
     const response = {
       code: 200,
       message: "Login successful",
+      data: {
+        user_id: user.user_id,
+        account_id: account.account_id,
+        username: user.username,
+        email: account.email,
+        token: token,
+      },
     };
 
     // Return a successful login response
