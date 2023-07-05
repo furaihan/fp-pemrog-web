@@ -61,15 +61,11 @@
   margin-left: 20px;
 }
 
-.login-button,
-.signup-button {
-  background-color: #fff;
-  border:2px solid  #3fd29b;
+.login-button{
+  background-color: #3FD29B;
   width: 100px;
   height: 30px;
   border-radius: 5px;
-  font-weight: bold;
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,8 +73,22 @@
 
 .signup-button {
   margin-left: 20px;
+  border:1.5px solid  #3FD29B;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.login-item{
+  color: #fff9f9;
+  font-weight: bold;
+}
+.signup-item{
+  color: #3FD29B;
+  font-weight: bold;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar-menu {

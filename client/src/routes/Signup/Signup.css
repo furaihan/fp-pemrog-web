@@ -42,8 +42,8 @@
   /* line-height: 57px; */
 }
 
-.remember-forgot {
-  font-size: 0.9em;
+.privacy-policy {
+  font-size: 0.8em;
   color: #162938;
   font-weight: 500;
   font-style: underline;
@@ -86,7 +86,7 @@ label input[type="checkbox"] {
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
-  font-size: 1em;
+  font-size: 0.8em;
   color: #162938;
   font-weight: 500;
   pointer-events: none;

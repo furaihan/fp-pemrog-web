@@ -27,6 +27,7 @@ import AuthLayout from "./layouts/AuthLayout.jsx";
 import signUpAction from "./action/signup.js";
 import loginAction from "./action/login.js";
 import getCurrentUserLoader from "./action/getCurrentUser.js";
+import getProfileLoader from "./action/getProfile.js";
 
 import "./index.css";
 
@@ -39,7 +40,7 @@ const router = createBrowserRouter(
         <Route path="explore" element={<Explore />} />
         <Route path="description" element={<Description />} />
         <Route path="train" element={<Train />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="profile" element={<Profile />} loader={getProfileLoader} />
         <Route path="editprofile" element={<EditProfile />} />
       </Route>
       <Route element={<AuthLayout />}>

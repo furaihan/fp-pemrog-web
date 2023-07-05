@@ -21,12 +21,13 @@
 }
 
 .remember-forgot-login {
-  font-size: 0.9em;
+  font-size: 14px;
   color: #162938;
   font-weight: 500;
   font-style: underline;
   margin: -15px 30px 15px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
