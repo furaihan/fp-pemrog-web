@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Slider.css';
 import { HiChevronDoubleDown } from 'react-icons/hi';
 
@@ -32,7 +32,7 @@ function Slider() {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [images.length]);
 
   const goToPreviousImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);

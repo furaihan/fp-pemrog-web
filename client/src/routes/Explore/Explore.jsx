@@ -22,7 +22,7 @@ const animalList = [
     name: "Berang-Berang",
   },
   {
-    src: "karakalo australia.jpg",
+    src: "karakalo-australia.jpg",
     alt: "Karakalo Australia",
     name: "Karakalo Australia",
   },
@@ -37,12 +37,12 @@ const animalList = [
     name: "Takahe",
   },
   {
-    src: "elang harpa.jpg",
+    src: "elang-harpa.jpg",
     alt: "Elang Harpa",
     name: "Elang Harpa",
   },
   {
-    src: "katak pinokio.jpg",
+    src: "katak-pinokio.jpg",
     alt: "Katak Pinokio",
     name: "Katak Pinokio",
   },
