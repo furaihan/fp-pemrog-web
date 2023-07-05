@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
   }
   
   .fun-fact-card {
@@ -66,9 +69,19 @@
     backface-visibility: hidden;
     transform: rotateY(0);
     display: block;
+    hyphenate-character:inherit;
   }
 
   .flip {
     transform: rotateY(180deg);
   }
+
+  .ReadMore{
+    border-color: rgb(31, 131, 0);
+    color: #000;
+    width: 30%;
+    font-size: small;
+    margin-top: 30px;
+  }
+
   
