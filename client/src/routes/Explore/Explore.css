@@ -102,7 +102,8 @@
   position: relative;
 }
 .list-name h3 {
-  font-weight: normal;
+  font-weight: bolder;
+  font-family: 'Cascadia Code';
   position: absolute;
   /* top: calc(100% + 10px); */
   top: 50%;
@@ -111,7 +112,7 @@
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.3s ease;
