@@ -1,8 +1,11 @@
-const { User } = require("../models");
+const { User, Account } = require("../models");
 
 const getProfile = async (req, res) => {
   console.log("Request profile received!");
-  const user = await User.findOne({ where: { user_id: req.body.userId } });
+  const account = await Account.findOne({
+    include: { model: User, where: { user_id: req.body.userId } },
+  });
+  const user = account.User;
   if (!user) {
     const error = new Error("User not found!");
     error.code = "404";
@@ -23,7 +26,7 @@ const getProfile = async (req, res) => {
       username: user.username,
       firstName: user.firstName,
       lastName: user.lastName,
-      email: user.email,
+      email: account.email,
       bio: user.bio,
       address: user.address,
       phone: user.phone,
