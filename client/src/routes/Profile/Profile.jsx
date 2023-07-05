@@ -32,9 +32,16 @@ function Profile() {
               consequuntur!
             </p>
           </div>
+          <div className="button-container">
           <button className="edit-profile">
             <Link to="/editprofile">Edit Profile</Link>{" "}
           </button>
+          <br />
+          <button className="logout">
+          <Link to="/logout">Logout</Link>
+          </button>
+          </div>
+          
         </div>
         <div className="card">
           <div className="icon"></div>
@@ -70,9 +77,6 @@ function Profile() {
         </div>
       </div>
       <div>
-        <button type="button" className="block">
-          Logout
-        </button>
       </div>
     </>
   );
