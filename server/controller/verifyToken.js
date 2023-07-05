@@ -42,6 +42,7 @@ const verifyToken = (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET, {
       algorithms: ["HS256"],
     });
+    console.log(decoded);
 
     // Add the userId from the decoded token to the request body
     req.body.userId = decoded.userId;
