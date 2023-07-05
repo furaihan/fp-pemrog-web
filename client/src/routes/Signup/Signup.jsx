@@ -22,7 +22,7 @@ function Signup() {
           </div>
         </div>
         <div className="input-box flex">
-          <input type="email" name="email" required />
+          <input type="e-mail" name="email" required />
           <label>Email</label>
           <div className="email">
             <img src="mail.svg" alt="email" />
@@ -42,9 +42,9 @@ function Signup() {
             <img src="lock.svg" alt="lock" />
           </div>
         </div>
-        <div className="remember-forgot">
+        <div className="privacy-policy">
           <label>
-            <input type="checkbox" />I agree to and Privacy Policy
+            <input type="checkbox" />I agree to the terms of use and your privacy policy
           </label>
         </div>
         <div className="center">
