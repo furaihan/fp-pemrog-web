@@ -9,6 +9,7 @@ const getProfileLoader = async () => {
       data: {
         firstName: null,
         lastName: null,
+        email: null,
         bio: null,
         address: null,
         phone: null,
@@ -37,6 +38,7 @@ const getProfileLoader = async () => {
       data: {
         firstName: null,
         lastName: null,
+        email: null,
         bio: null,
         address: null,
         phone: null,
@@ -49,6 +51,7 @@ const getProfileLoader = async () => {
     data: {
       firstName: axiosRequest.data.user.firstName,
       lastName: axiosRequest.data.user.lastName,
+      email: axiosRequest.data.user.email,
       bio: axiosRequest.data.user.bio,
       address: axiosRequest.data.user.address,
       phone: axiosRequest.data.user.phone,

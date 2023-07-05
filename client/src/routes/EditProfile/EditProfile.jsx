@@ -9,6 +9,9 @@ function EditProfile() {
     queryFn: getProfileLoader,
   });
   const navigation = useNavigation();
+  if (profileQuery.isLoading) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <>
       <div id="edit">
