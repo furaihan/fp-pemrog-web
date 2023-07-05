@@ -46,6 +46,7 @@ function Profile() {
   {/* <a href="#" className="link">See the recipe</a> */}
 </div>
       </div>
+      <div><button type="button" class="block">Logout</button></div>
     </>
   );
 }
