@@ -1,6 +1,7 @@
 const { User, Account } = require("../models");
 
 const getUser = async (req, res) => {
+  console.log("Reqest user received!");
   const account = await Account.findOne({
     include: { model: User, where: { user_id: req.body.userId } },
   });

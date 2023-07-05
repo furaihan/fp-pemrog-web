@@ -13,7 +13,7 @@ const getCurrentUserLoader = async () => {
     };
   }
   const axiosRequest = await axios
-    .get(`${url}/current/user`, {
+    .get(`${url}/user/current`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
