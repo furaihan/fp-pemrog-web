@@ -59,7 +59,7 @@ function Fun() {
                 <div className="fact">
                   {/* Judul dan gambar card */}
                   <h3>{card.title}</h3>
-                  <img src={card.imageSrc} alt={card.title} />
+                  <img src={card.imageSrc} alt={card.title} style={{ width: '200px', height: '200px' }} />
 
                   {/* Tampilan deskripsi card hanya jika card ini sedang dipilih */}
                   {selectedCard === card.id && (

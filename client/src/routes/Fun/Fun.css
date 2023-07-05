@@ -2,9 +2,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
-    width: 90%;
+    width: 60%;
     height: 90%;
-    justify-content: center;
   }
   
   .fun-fact-card {
@@ -12,6 +11,7 @@
     padding: 20px;
     border-radius: 8px;
     transition: filter 0.3s;
+    
   }
   
   .fun-fact-card.blur {
@@ -53,7 +53,6 @@
   }
 
   .fun-fact-card::after .blur{
-    /* ... */
     transition: filter 0.5s;
     
   }
@@ -63,13 +62,13 @@
   }
   
   .description {
-    /* ... */
     transition: transform 0.5s;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transform: rotateY(0);
     display: block;
     hyphenate-character:inherit;
+    font-size: small;
   }
 
   .flip {
@@ -79,7 +78,7 @@
   .ReadMore{
     border-color: rgb(31, 131, 0);
     color: #000;
-    width: 30%;
+    width: 50%;
     font-size: small;
     margin-top: 30px;
   }

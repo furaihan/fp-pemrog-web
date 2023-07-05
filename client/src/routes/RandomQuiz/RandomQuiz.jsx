@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import './RandomQuiz.css';
 
 const RandomQuiz = () => {
+  // State untuk melacak apakah setiap kartu sedang terbalik atau tidak
   const [isFlipped, setIsFlipped] = useState([false, false, false]);
 
+  // Fungsi untuk membalikkan kartu dengan indeks yang diberikan
   const handleFlip = (index) => {
     const newFlipped = [...isFlipped];
     newFlipped[index] = !newFlipped[index];
     setIsFlipped(newFlipped);
   };
 
+  // Data kuis yang berisi id, gambar, dan judul
   const OurQuiz = [
     {
       id: 1,
@@ -31,31 +34,34 @@ const RandomQuiz = () => {
   return (
     <div className="card-container">
       <div className="card-row">
-        <div className={`card ${isFlipped[0] ? 'flipped' : ''}`} onClick={() => handleFlip(0)}>
-          <div className="card-inner">
-            <div className="card-front">
-            {OurQuiz.map((item) => (
-        <div className="card-front" key={item.id}>
-          <div className={`card-object card-${item.id}`}>
-            <div className="face front" style={{ backgroundImage: `url(${item.image})` }}>
-              <div className="title-wrapper">
-                <div className="title">{item.title}</div>
+        {OurQuiz.map((item) => (
+          <div
+            className={`card ${isFlipped[item.id - 1] ? 'flipped' : ''}`}
+            key={item.id}
+            onClick={() => handleFlip(item.id - 1)}
+          >
+            <div className="card-inner">
+              <div className="card-front">
+                <div className={`card-object card-${item.id}`}>
+                  <div className="face front" style={{ backgroundImage: `url(${item.image})` }}>
+                    <div className="title-wrapper">
+                      <div className="title">{item.title}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-back">
+                {/* Bagian belakang kartu dengan aturan kuis */}
+                <h2>Rules</h2>
+                <ul>
+                  <li></li>
+                </ul>
+                <button className='play'>Play</button>
               </div>
             </div>
           </div>
-        </div>
-      ))}
-            </div>
-
-            <div className="card-back">
-              <h2>Rules</h2>
-              <ul>
-                <li>hgjhvjhb</li>
-              </ul>
-              <button className='play'>Play</button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
