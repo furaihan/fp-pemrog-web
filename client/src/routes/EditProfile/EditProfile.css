@@ -56,7 +56,7 @@ select{
     /* font-weight: bold; */
 }
 .double input{
-    width: 50%;
+    width: 60%;
 }
 .firstName{
     width: 50%;
@@ -65,6 +65,7 @@ select{
 .lastName{
     width: 50%;
     float: left;
+    margin-left: -5%;
 }
 .single{
     margin-top: 2vh;
