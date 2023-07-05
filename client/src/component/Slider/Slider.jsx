@@ -62,8 +62,9 @@ function Slider() {
       <div className="arrow-down" onClick={scrollToBottom}>
         <HiChevronDoubleDown />
       </div>
-      <button className="previous-button" onClick={goToPreviousImage}><img src="chevron-left.svg" alt="" /></button>
-      <button className="next-button" onClick={goToNextImage}><img src="chevron-right.svg" alt="" /></button>
+      <button className="previous-button" onClick={goToPreviousImage}><img className="previous-img"
+      src="chevron-left.svg" alt="" /></button>
+      <button className="next-button" onClick={goToNextImage}><img className="next-img" src="chevron-right.svg" alt="" /></button>
     </div>
   );
 }

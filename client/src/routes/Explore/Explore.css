@@ -90,6 +90,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 .list-container{
   width: 100vw;
@@ -99,16 +100,33 @@
   gap: 30px;
   margin-bottom: 30px;
 }
-.list-row{
-  width: 100vw;
+.list-name{
+  cursor:pointer;
   align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.list-animal-img-container {
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 }
+.list-animal-name {
+  font-weight: normal;
+  position: absolute;
+  /* top: calc(100% + 10px); */
+   top: 50%;
+  /* bottom: 50px; */
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* .list-animal-img-container {
+  position: relative;
+} */
 
 .list-animal-img {
   align-items: center;
@@ -147,26 +165,10 @@
   opacity: 0.8;
 }
 
-.list-animal-name{
-  font-weight: normal;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  z-index: 1;
-  opacity: 0;
-  transition: opacitity 0.3s ease;
+.list-animal-name:hover {
+  opacity: 1; 
 }
-.list-animal-img:hover .list-animal-name {
-  opacity: 1;
-}
-.list-name{
-  cursor:pointer;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
+/* .list-animal-img:hover .list-animal-name:hover {
+  opacity: 1; 
+} */

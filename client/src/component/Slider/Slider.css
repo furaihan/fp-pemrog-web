@@ -40,7 +40,10 @@
     font-weight: bold;
     
   }
-  
+  .previous-img, .next-img{
+    justify-content: center;
+    align-items: center;
+  }
   .previous-button,
   .next-button {
     stroke: none;
@@ -54,10 +57,13 @@
     font-size: 16px;
     cursor: pointer;
     background-repeat: none;
-    background-size: 30%;
+    background-size: cover;
+    border-radius: 50%;
     background-position: center;
     transition: background-color 0.3s ease;
     transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
   }
   
   .previous-button:hover,
