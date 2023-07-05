@@ -32,13 +32,13 @@
 }
 
 .user {
-  /* position: absolute; */
+  position: absolute;
   display: flex;
   width: max-content;
   height: 20px;
-  /* left: 360px; */
+  left: 190px; 
   color: #162938;
-  /* top: 145px; */
+  bottom: 5px;
   /* line-height: 57px; */
 }
 
@@ -50,6 +50,15 @@
   margin: -15px 30px 15px;
   display: flex;
   justify-content: space-between;
+}
+
+label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+label input[type="checkbox"] {
+  vertical-align: middle;
 }
 
 .input-box input:focus ~ label,
@@ -149,3 +158,4 @@
     width: 100%;
   }
 }
+

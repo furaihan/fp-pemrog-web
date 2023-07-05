@@ -25,17 +25,17 @@ function Fun() {
     },
     {
       id: 2,
-      title: "Sumatran Tiger",
-      imageSrc: "pikachu.jpg",
+      title: "Berang-Berang",
+      imageSrc: "berang-berang.jpg",
       description:
-        "Salah satu fakta unik Harimau Sumatra yaitu memiliki penglihatan yang tajam 30 kali lebih tajam dari penglihatan manusia pada saat malam hari.",
+        "Berang-berang adalah mamalia karnivora yang tergolong ke dalam subfamili Lutrinae. Terdapat 13 spesies berang-berang, dan semuanya merupakan hewan semiakuatik, akuatik, atau hewan laut, dan mereka memakan ikan atau invertebrata. Lutrinae adalah cabang dari famili Mustelidae.",
     },
     {
       id: 3,
-      title: "Berang-Berang",
-      imageSrc: "pikachu.jpg",
+      title: "Elang Harpa",
+      imageSrc: "elang-harpa.jpg",
       description:
-        "Berang-Berang mempunyai nama untuk kotorannya, yang diberi nama keselo. Keselo mempunyai aroma yang khas dan bisa digunakan untuk berkomunikasi menunjukkan lokasi serta dari aroma tersebut Berang-Berang dapat mengenali identitas Berang-Berang lain seperti jenis kelamin dan usianya.Description 3",
+        "Elang harpy adalah spesies elang yang neotropis. Ini juga disebut elang harpy Amerika untuk membedakannya dari rajawali papua, yang kadang-kadang dikenal sebagai elang harpy Papua. Ini adalah hewan liar terbesar dan paling kuat yang ditemukan di hutan hujan, dan di antara spesies elang terbesar yang ada di dunia.",
     },
   ];
 
@@ -65,6 +65,7 @@ function Fun() {
                   {selectedCard === card.id && (
                     <div className="description">
                       <h5>{card.description}</h5>
+                      <button className="ReadMore">Read More</button>
                     </div>
                   )}
                 </div>

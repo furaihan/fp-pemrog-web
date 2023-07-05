@@ -50,7 +50,7 @@ const RandomQuiz = () => {
             <div className="card-back">
               <h2>Rules</h2>
               <ul>
-                <li>pertama</li>
+                <li>hgjhvjhb</li>
               </ul>
               <button className='play'>Play</button>
             </div>
