@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import "./Profile.css";
-import { useLoaderData, Link, redirect } from "react-router-dom";
+import { useLoaderData, Link, redirect, useNavigation } from "react-router-dom";
 
 function Profile() {
   const profile = useLoaderData();
+  const navigation = useNavigation();
   console.log("Profile: ");
   console.log(profile);
   useEffect(() => {
-    if (!profile.username === null) {
+    if (profile.username === null) {
       redirect("/login");
     }
   });
@@ -23,7 +24,13 @@ function Profile() {
             </div>
           </div>
           <div className="biodata">
-            <h1 className="nama">Aric Yohanes</h1>
+            <h1 className="nama">
+              {navigation.state === "loading"
+                ? "Loading..."
+                : profile.data.firstName
+                ? profile.data.firstName + " " + profile.data.lastName
+                : profile.username}
+            </h1>
             <p className="bio">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Necessitatibus, ipsam ratione? Architecto necessitatibus tempora,
