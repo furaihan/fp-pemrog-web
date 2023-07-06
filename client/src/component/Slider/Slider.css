@@ -76,6 +76,10 @@
     stroke: none;
     border: none;
   }
+  .previous-button:focus,
+  .next-button:focus {
+    outline: none;
+  }
   .previous-button {
     left: 20px;
     stroke: none;

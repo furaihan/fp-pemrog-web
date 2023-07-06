@@ -107,6 +107,7 @@ textarea{
     height: 5vh;
     border-radius: 5px;
     border: 2px solid #a7f56b;
+    background-color: white;
 }
 .acc-button .save{
     margin-left: 3vw;

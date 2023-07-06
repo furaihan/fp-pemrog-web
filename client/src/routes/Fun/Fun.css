@@ -78,6 +78,7 @@
   .ReadMore{
     border-color: rgb(31, 131, 0);
     color: #000;
+    background-color: white;
     width: 50%;
     font-size: small;
     margin-top: 30px;
