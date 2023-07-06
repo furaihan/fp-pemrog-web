@@ -42,7 +42,7 @@ function EditProfile() {
                   <input
                     type="text"
                     name="firstName"
-                    value={profileQuery.data.data.firstName}
+                    defaultValue={profileQuery.data.data.firstName}
                   />
                 </div>
                 <div className="lastName">
@@ -51,7 +51,7 @@ function EditProfile() {
                   <input
                     type="text"
                     name="lastName"
-                    value={profileQuery.data.data.lastName}
+                    defaultValue={profileQuery.data.data.lastName}
                   />
                 </div>
               </div>
@@ -61,7 +61,9 @@ function EditProfile() {
                 <input
                   type="text"
                   name="email"
-                  value={profileQuery.data.data.email}
+                  defaultValue={profileQuery.data.data.email}
+                  disabled
+                  alt="Email is uneditable"
                 />
               </div>
               <div className="single">
@@ -70,7 +72,7 @@ function EditProfile() {
                 <input
                   type="text"
                   name="address"
-                  value={profileQuery.data.data.address}
+                  defaultValue={profileQuery.data.data.address}
                 />
               </div>
               <div className="single">
@@ -79,15 +81,17 @@ function EditProfile() {
                 <input
                   type="text"
                   name="phone"
-                  value={profileQuery.data.data.phone}
+                  defaultValue={profileQuery.data.data.phone}
                 />
               </div>
               <div className="single-bio">
                 <label htmlFor="bio">Bio</label>
                 <br />
-                <textarea name="bio" id="bio">
-                  {profileQuery.data.data.bio}
-                </textarea>
+                <textarea
+                  name="bio"
+                  id="bio"
+                  defaultValue={profileQuery.data.data.bio}
+                ></textarea>
               </div>
               <div className="acc-button">
                 <Link to="/profile">

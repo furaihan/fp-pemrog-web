@@ -26,6 +26,7 @@ const getProfile = async (req, res) => {
       username: user.username,
       firstName: user.first_name,
       lastName: user.last_name,
+      email: account.email,
       bio: user.bio,
       address: user.address,
       phone: user.phone,

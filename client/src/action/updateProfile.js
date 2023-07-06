@@ -12,7 +12,6 @@ const updateProfileAction = async ({ request }) => {
       {
         firstName: data.get("firstName"),
         lastName: data.get("lastName"),
-        email: data.get("email"),
         phone: data.get("phone"),
         address: data.get("address"),
         bio: data.get("bio"),
