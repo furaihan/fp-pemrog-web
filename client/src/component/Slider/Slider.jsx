@@ -8,17 +8,17 @@ function Slider() {
     {
       src: 'homie.jpg',
       alt: 'Image 1',
-      caption: 'Hai Brooo'
+      caption: 'Hello, Welcome to My Jungle'
     },
     {
-      src: 'irish-elk.jpg',
+      src: 'berang-berang.jpg',
       alt: 'Image 2',
-      caption: 'Welcome'
+      caption: 'Meet Our Unique Animal'
     },
     {
       src: 'takahe.jpg',
       alt: 'Image 3',
-      caption: 'to My Jungle'
+      caption: 'Explore the Fauna around the World'
     }
   ];
 

@@ -8,7 +8,6 @@
 .card-wrapper {
   display: block;
   float: left;
-  display: relative;
   margin: 0;
   width: 30%;
   height: 0;
@@ -22,7 +21,7 @@
   float: left;
   position: absolute;
   top: 6%;
-  left: 6%;
+  left: 9%;
   width: 90%;
   height: 90%;
   transform-style: preserve-3d;
