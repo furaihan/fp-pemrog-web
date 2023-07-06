@@ -89,61 +89,90 @@ export default function About() {
                     Anggota Kelompok
                   </h2>
                   <div className="anggota">
-                    <p>
-                      Muhammad Zhafar
-                    </p>
-                    <p className="job">
-                    Backend
-                    </p>
-                    <p>
-                    +62 895-1497-6015
-                    </p>
+                    <div className="circle">
+                      <div className="zhafar"></div>
+                    </div>
+                    <div>
+                      <p>
+                        Muhammad Zhafar
+                      </p>
+                      <p className="job">
+                      Backend
+                      </p>
+                      <p>
+                      +62 895-1497-6015
+                      </p>
+                    </div>
                   </div>
                   <div className="anggota">
-                    <p>
-                      Aric Yohanes 
-                    </p>
-                    <p className="job">
-                      FrontEnd
-                    </p>
-                    <p>
-                    +62 823-7955-2087
-                    </p>
+                    <div className="circle">
+                      <div className="aric"></div>
+                    </div>
+                    <div>
+                      <p>
+                        Aric Yohanes 
+                      </p>
+                      <p className="job">
+                        FrontEnd
+                      </p>
+                      <p>
+                      +62 823-7955-2087
+                      </p>
+                    </div>
                   </div>
                   <div className="anggota">
-                    <p>
-                      Hamim Nur Khamid
-                    </p>
-                    <p className="job">
-                      FrontEnd
-                    </p>
-                    <p>
-                    +62 821-3325-6573
-                    </p>
+                    <div className="circle">
+                      <div className="hamim"></div>
+                    </div>
+                    <div>
+                      <p>
+                        Hamim Nur Khamid
+                      </p>
+                      <p className="job">
+                        FrontEnd
+                      </p>
+                      <p>
+                      +62 821-3325-6573
+                      </p>
+                    </div>
                   </div>
                   <div className="anggota">
-                    <p>
-                      Nabella Ayu
-                    </p>
-                    <p className="job">
-                    FrontEnd-UI/UX
-                    </p>
-                    <p>
-                    +62 895-3846-48816
-                    </p>
+                    <div className="circle">
+                      <div className="nabela"></div>
+                    </div>
+                    <div>
+                      <p>
+                        Nabella Ayu
+                      </p>
+                      <p className="job">
+                      FrontEnd-UI/UX
+                      </p>
+                      <p>
+                      +62 895-3846-48816
+                      </p>
+                    </div>
                   </div>
                   <div className="anggota">
-                    <p>
-                    Nur Azzizah
-                    </p>
-                    <p className="job">
-                    FrontEnd-UI/UX
-                    </p>
-                    <p>
-                    +62 898-1063-020
-                    </p>
+                    <div className="circle">
+                      <div className="nur"></div>
+                    </div>
+                    <div>
+                      <p>
+                      Nur Azzizah
+                      </p>
+                      <p className="job">
+                      FrontEnd-UI/UX
+                      </p>
+                      <p>
+                      +62 898-1063-020
+                      </p>
+                    </div>
                   </div>
                   <div className="anggota">
+                    <div className="circle">
+                      <div className="unik"></div>
+                    </div>
+                    <div>
                     <p>
                     Unik Trisetyowati    
                     </p>
@@ -153,6 +182,7 @@ export default function About() {
                     <p>
                     +62 821-3400-3946
                     </p>
+                    </div>
                   </div>
                 </div>
               </div>
