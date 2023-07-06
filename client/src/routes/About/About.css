@@ -129,37 +129,55 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #53616F;
+  /* background-color: #53616F; */
+  background-image: url("Male_avatar.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 .circle .aric{
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #53616F;
+  /* background-color: #53616F; */
+  background-image: url("Bad_avatar.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 .circle .hamim{
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #53616F;
+  /* background-color: #53616F; */
+  background-image: url("Male_avatar.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 .circle .nabela{
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: #53616F;
+  background-image: url("Female_avatar.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 .circle .nur{
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: #53616F;
+  background-image: url("Female_avatar.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 .circle .unik{
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: #53616F;
+  background-image: url("Female_avatar.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 .job{
   font-weight: bold;
