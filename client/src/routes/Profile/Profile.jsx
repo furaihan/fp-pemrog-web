@@ -32,23 +32,20 @@ function Profile() {
                 : profile.username}
             </h1>
             <p className="bio">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Necessitatibus, ipsam ratione? Architecto necessitatibus tempora,
-              rerum nemo nihil illum voluptatem facere, quibusdam tempore,
-              tenetur provident natus ducimus laborum assumenda. Fugit,
-              consequuntur!
+              {profile.data.bio
+                ? profile.data.bio
+                : "Belum ada bio nih, tambahin di edit profile yuk!"}
             </p>
           </div>
           <div className="button-container">
-          <button className="edit-profile">
-            <Link to="/editprofile">Edit Profile</Link>{" "}
-          </button>
-          <br />
-          <button className="logout">
-          <Link to="/logout">Logout</Link>
-          </button>
+            <button className="edit-profile">
+              <Link to="/editprofile">Edit Profile</Link>{" "}
+            </button>
+            <br />
+            <button className="logout">
+              <Link to="/logout">Logout</Link>
+            </button>
           </div>
-          
         </div>
         <div className="card">
           <div className="icon"></div>
@@ -83,8 +80,7 @@ function Profile() {
           {/* <a href="#" className="link">See the recipe</a> */}
         </div>
       </div>
-      <div>
-      </div>
+      <div></div>
     </>
   );
 }

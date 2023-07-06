@@ -1,5 +1,5 @@
 import "./EditProfile.css";
-import { Form, Link, redirect, useNavigation } from "react-router-dom";
+import { Form, Link, useNavigation } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import getProfileLoader from "../../action/getProfile";
 
