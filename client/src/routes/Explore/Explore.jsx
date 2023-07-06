@@ -58,10 +58,9 @@ function Explore() {
     <React.Fragment>
       <section className="explore-hero" style={{background: 'url("takahe.jpg") center/cover no-repeat'}}>
         <div className="explore-hero-body">
-          <p className="explore-hero-title">Lorem Ipsum</p>
+          <p className="explore-hero-title">welcome </p>
           <p className="explore-hero-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris.
+          To explore animals around the world
           </p>
           <div className="arrow-down">
             <ArrowDown />

@@ -34,7 +34,7 @@ function Profile() {
             <p className="bio">
               {profile.data.bio
                 ? profile.data.bio
-                : "Belum ada bio nih, tambahin di edit profile yuk!"}
+                : "There's no bio yet, let's add it to edit profile!"}
             </p>
           </div>
           <div className="button-container">
