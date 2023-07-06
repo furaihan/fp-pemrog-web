@@ -22,6 +22,7 @@ import Quiz from "./routes/Quiz/Quiz.jsx";
 import Profile from "./routes/Profile/Profile.jsx";
 import EditProfile from "./routes/EditProfile/EditProfile.jsx";
 import QuizResult from "./routes/Quiz/QuizResult.jsx";
+import Logout from "./routes/Logout/Logout.jsx";
 
 //Layouts
 import RootLayout from "./layouts/RootLayout.jsx";
@@ -33,6 +34,7 @@ import loginAction from "./action/login.js";
 import getCurrentUserLoader from "./action/getCurrentUser.js";
 import getProfileLoader from "./action/getProfile.js";
 import updateProfileAction from "./action/updateProfile.js";
+import logoutAction from "./action/logout.js";
 
 import "./index.css";
 
@@ -53,6 +55,7 @@ const router = createBrowserRouter(
           element={<EditProfile />}
           action={updateProfileAction}
         />
+        <Route path="logout" element={<Logout />} action={logoutAction} />
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} action={loginAction} />
