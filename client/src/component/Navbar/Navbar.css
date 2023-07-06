@@ -162,7 +162,8 @@
     background: #fff;
     height: 100vh;
     max-width: 300px;
-    transform: translate(-150%);
+    /* transform: translate(-150%); */
+    transform: none;
     display: flex;
     flex-direction: column;
     margin-left: -40px;
@@ -178,7 +179,7 @@
     font-weight: 500;
   }
 
-  .navbar-logo-menu input[type="checkbox"]:checked ~ .menu-items {
+  .navbar-logo-menu input[type="checkbox"]:checked ~ .navbar-menu {
     transform: translateX(0);
   }
 
@@ -193,4 +194,39 @@
   .navbar-logo-menu input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-35deg);
   }
+}
+
+/* Menambahkan event handler untuk menutup menu */
+.hamburger-menu {
+  cursor: pointer;
+}
+
+.hamburger-menu:focus {
+  outline: none;
+}
+
+.hamburger-menu:focus .hamburger-lines,
+.hamburger-menu:active .hamburger-lines {
+  opacity: 1;
+}
+
+.hamburger-menu:active .hamburger-lines .line1 {
+  transform: rotate(35deg);
+}
+
+.hamburger-menu:active .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.hamburger-menu:active .hamburger-lines .line3 {
+  transform: rotate(-35deg);
+}
+
+.hamburger-menu.open .hamburger-lines .line1,
+.hamburger-menu.open .hamburger-lines .line3 {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu.open .hamburger-lines .line2 {
+  transform: scaleY(0);
 }
