@@ -8,9 +8,8 @@ const updateProfile = async (req, res) => {
   try {
     const result = await User.update(
       {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
+        first_name: firstName,
+        last_name: lastName,
         phone: phone,
         address: address,
         bio: bio,
