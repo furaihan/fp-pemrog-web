@@ -30,6 +30,17 @@ module.exports = (sequelize, DataTypes) => {
           "string.min": "Nama belakang setidaknya 2 karakter",
           "string.max": "Nama belakang tidak boleh lebih dari 30 karakter",
         }),
+        address: joi.string().trim().min(2).max(255).messages({
+          "string.min": "Alamat setidaknya 2 karakter",
+          "string.max": "Alamat tidak boleh lebih dari 255 karakter",
+        }),
+        phone: joi.string().trim().pattern(/^(0|\+62)(\d{8,15})$/).messages({
+          "string.pattern.base": "Nomor telepon tidak valid",
+        }),
+        bio: joi.string().trim().min(2).max(1023).messages({
+          "string.min": "Bio setidaknya 2 karakter",
+          "string.max": "Bio tidak boleh lebih dari 1023 karakter",
+        }),
       });
       return schema.validate(model);
     }
@@ -62,6 +73,24 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         field: "username",
       },
+      address:{
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: null,
+        field: "address",
+      },
+      phone:{
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: null,
+        field: "phone",
+      },
+      bio:{
+        type: DataTypes.TEXT,
+        allowNull: true,
+        defaultValue: null,
+        field: "bio",
+      }
     },
     {
       sequelize,

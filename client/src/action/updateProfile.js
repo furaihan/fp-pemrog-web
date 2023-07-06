@@ -19,7 +19,6 @@ const updateProfileAction = async ({ request }) => {
       },
       {
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         withCredentials: true,
@@ -31,7 +30,7 @@ const updateProfileAction = async ({ request }) => {
     .catch(function (error) {
       return error;
     });
-  console.log("Response:");
+  console.log("Update Profile Response:");
   console.log(axiosRequest);
   if (axiosRequest instanceof AxiosError) {
     if (axiosRequest.response?.data) return axiosRequest.response.data.message;
