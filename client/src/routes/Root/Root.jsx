@@ -15,7 +15,7 @@ function App() {
   //     image: "pikachu.jpg",
   //     title: "Iki Pika",
   //     subtitle:
-  //       "Suka memakan kotorannya sendiri. Pika mengeluarkan kotoran berwarna hijau yang terdiri dari tanaman atau tumbuh-tumbuhan. Untuk mendapatkan lebih banyak nutrisi, Pika memakan lagi kotorannya dan setelah itu mengeluarkan kotoran berwarna gelap.",
+  //       "Pika practices coprophagy, which is the consumption of its own feces. Pika's feces are green in color and consist of plant material or vegetation. By consuming its feces, Pika is able to obtain additional nutrients, after which it excretes dark-colored feces.",
   //   },
   //   {
   //     id: 2,
@@ -71,9 +71,9 @@ function App() {
       <section className="quotes">
         <div className="pembatas">
           <p className="our-focus-text">
-            Semarak Bumi semakin indah dengan beragamnya hewan dan <br />{" "}
-            tumbuhan. Lestarikan mereka, lestarikan keindahan bumi, <br />{" "}
-            lestarikan kehidupan!
+          The splendor of the Earth is made more beautiful by the variety of animals and <br />
+          plants. Preserve them, preserve the beauty of the earth,<br />
+           preserve life!
           </p>
         </div>
       </section>
@@ -82,7 +82,7 @@ function App() {
 
       <section className="hewan-punah">
         <div className="container-hewan-punah">
-          <h1>Jumlah Hewan Punah</h1>
+          <h1>Number of Extinct Animals</h1>
           <div className="container-hewan-punah-1">
             <div>
               <b>0</b>

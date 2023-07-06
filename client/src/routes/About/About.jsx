@@ -86,7 +86,7 @@ export default function About() {
               <div className="article">
                 <div className="kelompok">
                   <h2>
-                    Anggota Kelompok
+                  Members of the group
                   </h2>
                   <div className="anggota">
                     <div className="circle">
