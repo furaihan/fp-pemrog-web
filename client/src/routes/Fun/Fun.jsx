@@ -41,39 +41,41 @@ function Fun() {
 
   return (
     <>
-      <main>
-        <section className="hero-section">
-          <div className="fun-fact-title">
-            <p>Fun Fact</p>
-          </div>
-          <div className="card-grid">
-            {/* Loop melalui setiap card dan tampilkan */}
-            {cards.map((card) => (
-              <div
-                key={card.id}
-                className={`fun-fact-card ${
-                  selectedCard === card.id || isFirstTime ? "" : "blur"
-                }`}
-                onClick={() => handleClick(card.id)}
-              >
-                <div className="fact">
-                  {/* Judul dan gambar card */}
-                  <h3>{card.title}</h3>
-                  <img src={card.imageSrc} alt={card.title} style={{ width: '200px', height: '200px' }} />
+      <section className="hero-section">
+        <div className="fun-fact-title">
+          <p>Fun Fact</p>
+        </div>
+        <div className="card-grid">
+          {/* Loop melalui setiap card dan tampilkan */}
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              className={`fun-fact-card ${
+                selectedCard === card.id || isFirstTime ? "" : "blur"
+              }`}
+              onClick={() => handleClick(card.id)}
+            >
+              <div className="fact">
+                {/* Judul dan gambar card */}
+                <h3>{card.title}</h3>
+                <img
+                  src={card.imageSrc}
+                  alt={card.title}
+                  style={{ width: "200px", height: "200px" }}
+                />
 
-                  {/* Tampilan deskripsi card hanya jika card ini sedang dipilih */}
-                  {selectedCard === card.id && (
-                    <div className="description">
-                      <h5>{card.description}</h5>
-                      <button className="ReadMore">Read More</button>
-                    </div>
-                  )}
-                </div>
+                {/* Tampilan deskripsi card hanya jika card ini sedang dipilih */}
+                {selectedCard === card.id && (
+                  <div className="description">
+                    <h5>{card.description}</h5>
+                    <button className="ReadMore">Read More</button>
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-        </section>
-      </main>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
