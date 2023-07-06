@@ -3,14 +3,13 @@ const { User } = require("../models");
 const updateProfile = async (req, res) => {
   console.log("Update profile received!");
 
-  const { firstName, lastName, email, phone, address, bio, userId } = req.body;
+  const { firstName, lastName, phone, address, bio, userId } = req.body;
 
   try {
     const result = await User.update(
       {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
+        first_name: firstName,
+        last_name: lastName,
         phone: phone,
         address: address,
         bio: bio,
