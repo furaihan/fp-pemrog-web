@@ -5,20 +5,20 @@ import { HiChevronDoubleDown } from "react-icons/hi";
 function Slider() {
   const images = [
     {
-      src: "homie.jpg",
-      alt: "Image 1",
-      caption: "Hai Brooo",
+      src: 'homie.jpg',
+      alt: 'Image 1',
+      caption: 'Hello, Welcome to My Jungle'
     },
     {
-      src: "irish-elk.jpg",
-      alt: "Image 2",
-      caption: "Welcome",
+      src: 'berang-berang.jpg',
+      alt: 'Image 2',
+      caption: 'Meet Our Unique Animal'
     },
     {
-      src: "takahe.jpg",
-      alt: "Image 3",
-      caption: "to My Jungle",
-    },
+      src: 'takahe.jpg',
+      alt: 'Image 3',
+      caption: 'Explore the Fauna around the World'
+    }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -86,7 +86,7 @@ function App() {
           <div className="container-hewan-punah-1">
             <div>
               <b>0</b>
-              <p>Dunia</p>
+              <p>World</p>
             </div>
             <div>
               <b>0</b>
@@ -99,10 +99,10 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="kuis">
-        <h1>Quis</h1>
+      {/* <section className="kuis"> */}
+        
         <RandomQuiz />
-      </section>
+      {/* </section> */}
       
     </React.Fragment>
   );

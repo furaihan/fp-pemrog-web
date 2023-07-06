@@ -33,6 +33,7 @@ const RandomQuiz = () => {
 
   return (
     <div className="card-container">
+      <h1>Quiz</h1>
       <div className="card-row">
         {OurQuiz.map((item) => (
           <div
@@ -40,6 +41,7 @@ const RandomQuiz = () => {
             key={item.id}
             onClick={() => handleFlip(item.id - 1)}
           >
+            
             <div className="card-inner">
               <div className="card-front">
                 <div className={`card-object card-${item.id}`}>

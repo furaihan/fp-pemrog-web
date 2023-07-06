@@ -1,20 +1,29 @@
 .card-container {
+  gap: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
 }
 
 .card-row {
-  flex-basis: 300px;
-  max-width: 300px;
+ display: block;
+ float: left;
+ width: 100%;
+
 }
 
 .card {
+  display: block;
+  float: left;
+  position: relative;
+  right: 4%;
   width: 100%;
   height: 200px;
-  perspective: 1000px;
+  perspective: 1000px;/*buat prespective flip layar*/
   transition: transform 0.8s;
 }
+
 
 .card-inner {
   width: 100%;
@@ -89,11 +98,32 @@ h2 {
   color: #000;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .card-row {
-    flex-basis: 100%;
-    max-width: 100%;
+    width: 105%;
+    justify-content: center;
+    
   }
 }
 
+@media screen and (max-width: 992px) {
+  .card-row {
+    width: 110%;
+    justify-content: center;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .card-row {
+    width: 115%;
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .card-row {
+    width: 120%;
+    justify-content: center;
+  }
+}
