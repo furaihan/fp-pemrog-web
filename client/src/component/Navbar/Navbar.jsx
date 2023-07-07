@@ -2,10 +2,9 @@ import logo from "../../assets/image/logo.svg";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Navbar({ isLoggedin, username }) {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
@@ -34,9 +33,9 @@ export default function Navbar({ isLoggedin, username }) {
           <Link to="/about" className="navbar-item" onClick={closeMenu}>
             About
           </Link>
-          <Link to="/support" className="navbar-item" onClick={closeMenu}>
+          {/* <Link to="/support" className="navbar-item" onClick={closeMenu}>
             Support
-          </Link>
+          </Link> */}
         </div>
         <div className="hamburger-menu" onClick={handleMenuClick}>
           <div className={`hamburger-lines ${isMenuOpen ? "open" : ""}`}>
@@ -48,20 +47,24 @@ export default function Navbar({ isLoggedin, username }) {
       </div>
       {!isLoggedin ? (
         <div className="navbar-search-login">
-        <div className="login-button">
-          <Link to="/login" className="login-item">
-            Login
-          </Link>
+          <div className="login-button">
+            <Link to="/login" className="login-item">
+              Login
+            </Link>
+          </div>
+          <div className="signup-button">
+            <Link to="/signup" className="signup-item">
+              Sign Up
+            </Link>
+          </div>
         </div>
-        <div className="signup-button">
-          <Link to="/signup" className="signup-item">
-            Sign Up
-          </Link>
-        </div>
-      </div>
       ) : (
         <div className="navbar-search-login">
-          <Link to="/profile">Hi {username}</Link>
+          <Link to="/profile">
+            <h3>
+              Hi <span className="username">{username}</span>!
+            </h3>
+          </Link>
         </div>
       )}
     </nav>

@@ -82,19 +82,19 @@ function App() {
 
       <section className="hewan-punah">
         <div className="container-hewan-punah">
-          <h1>Number of Extinct Animals</h1>
+          <h1>Approximate Number of Endangered Animals</h1>
           <div className="container-hewan-punah-1">
             <div>
-              <b>0</b>
-              <p>World</p>
+              <b>42.100</b>
+              <h3>World</h3>
             </div>
             <div>
-              <b>0</b>
-              <p>Asia</p>
+              <b>2.380</b>
+              <h3>Asian</h3>
             </div>
             <div>
-              <b>0</b>
-              <p>Indonesia</p>
+              <b>586</b>
+              <h3>Indonesian</h3>
             </div>
           </div>
         </div>

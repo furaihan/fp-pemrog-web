@@ -35,6 +35,7 @@ import getCurrentUserLoader from "./action/getCurrentUser.js";
 import getProfileLoader from "./action/getProfile.js";
 import updateProfileAction from "./action/updateProfile.js";
 import logoutAction from "./action/logout.js";
+import getAnimalsLoader from "./action/animals.js";
 
 import "./index.css";
 
@@ -46,7 +47,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<RootLayout />} loader={getCurrentUserLoader}>
         <Route index element={<Root />} />
         <Route path="about" element={<About />} />
-        <Route path="explore" element={<Explore />} />
+        <Route path="explore" element={<Explore />} loader={getAnimalsLoader} />
         <Route path="description" element={<Description />} />
         <Route path="train" element={<Train />} />
         <Route path="profile" element={<Profile />} loader={getProfileLoader} />

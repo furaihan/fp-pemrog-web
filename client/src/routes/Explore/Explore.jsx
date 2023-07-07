@@ -4,63 +4,21 @@ import Environtment from "../../component/Dropdown/Environtment";
 import Region from "../../component/Dropdown/Region";
 import Type from "../../component/Dropdown/Type";
 import React from "react";
-
-const animalList = [
-  {
-    src: "pikachu.jpg",
-    alt: "Iki Pika",
-    name: "Iki Pika",
-  },
-  {
-    src: "barbary-singa-atlas.jpg",
-    alt: "Singa Atlas",
-    name: "Singa Atlas",
-  },
-  {
-    src: "berang-berang.jpg",
-    alt: "Berang-Berang",
-    name: "Berang-Berang",
-  },
-  {
-    src: "karakalo-australia.jpg",
-    alt: "Karakalo Australia",
-    name: "Karakalo Australia",
-  },
-  {
-    src: "lesser-bilby.jpg",
-    alt: "Lesser Bilby",
-    name: "Lesser Bilby",
-  },
-  {
-    src: "takahe.jpg",
-    alt: "Takahe",
-    name: "Takahe",
-  },
-  {
-    src: "elang-harpa.jpg",
-    alt: "Elang Harpa",
-    name: "Elang Harpa",
-  },
-  {
-    src: "katak-pinokio.jpg",
-    alt: "Katak Pinokio",
-    name: "Katak Pinokio",
-  },
-  {
-    src: "anglerfish.jpg",
-    alt: "Angler Fish",
-    name: "Angler Fish",
-  },
-];
+import { useLoaderData, useNavigation } from "react-router-dom";
 
 function Explore() {
+  const data = useLoaderData();
+  const navigation = useNavigation();
   return (
     <React.Fragment>
-      <section className="explore-hero" style={{background: 'url("takahe.jpg") center/cover no-repeat'}}>
+      <section
+        className="explore-hero"
+        style={{ background: 'url("takahe.jpg") center/cover no-repeat' }}
+      >
         <div className="explore-hero-body">
-          <p className="explore-hero-title">welcome </p>
+          <p className="explore-hero-title"> Explore </p>
           <p className="explore-hero-subtitle">
-          To explore animals around the world
+            Welcome To Explore, Find Animals Around the World
           </p>
           <div className="arrow-down">
             <ArrowDown />
@@ -98,16 +56,20 @@ function Explore() {
       <br />
       <section className="list-animal">
         <div className="list-container">
-          {animalList.map((animal, index) => (
-            <div className="list-name" key={index}>
-              <img
-                className="list-animal-img"
-                src={animal.src}
-                alt={animal.alt}
-              />
-            <h3>{animal.name}</h3>
-            </div>
-          ))}
+          {navigation.state === "loading" ? (
+            <h2>Loading...</h2>
+          ) : (
+            data.animals.map((animal) => (
+              <div className="list-name" key={animal.id}>
+                <img
+                  className="list-animal-img"
+                  src={animal.image}
+                  alt={animal.animal_name}
+                />
+                <h3>{animal.animal_name}</h3>
+              </div>
+            ))
+          )}
         </div>
       </section>
     </React.Fragment>
