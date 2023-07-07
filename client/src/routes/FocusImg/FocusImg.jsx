@@ -1,4 +1,3 @@
-import React from 'react';
 import "./FocusImg.css";
 
 function FocusImg() {
