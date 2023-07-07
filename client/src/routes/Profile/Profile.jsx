@@ -28,8 +28,9 @@ function Profile() {
               {navigation.state === "loading"
                 ? "Loading..."
                 : profile.data.firstName
-                ? profile.data.firstName + " " + profile.data.lastName
-                : profile.username}
+                ? profile.data.firstName + " " + profile.data.lastName ?? ""
+                : profile.username ??
+                  "Anonymous! You're not logged in and should not be here!"}
             </h1>
             <p className="bio">
               {profile.data.bio
@@ -38,43 +39,32 @@ function Profile() {
             </p>
           </div>
           <div className="button-container">
-            <button className="edit-profile">
-              <Link to="/editprofile" className="edit-profile">Edit Profile</Link>{" "}
-            </button>
+            <Link to="/editprofile">
+              <button className="edit-profile">Edit Profile</button>
+            </Link>{" "}
             <br />
-            <button className="logout">
-              <Link to="/logout" className="logout">Logout</Link>
-            </button>
+            <Link to="/logout">
+              <button className="logout">Logout</button>
+            </Link>
           </div>
         </div>
         <div className="card-container">
           <div className="card">
             <div className="icon"></div>
             <div className="title">Lesser Bilby</div>
-            <p className="description">
-              Highscore 1234
-            </p>
+            <p className="description">Highscore 1234</p>
           </div>
           <div className="card">
             <div className="icon"></div>
             <div className="title">Takahe</div>
-            <p className="description">
-            Highscore 1023
-            </p>
+            <p className="description">Highscore 1023</p>
           </div>
           <div className="card">
             <div className="icon"></div>
             <div className="title">Irish Elk</div>
-            <p className="description">
-            Highscore 980
-            </p>
+            <p className="description">Highscore 980</p>
           </div>
         </div>
-        
-
-        
-
-        
       </div>
       <div></div>
     </>

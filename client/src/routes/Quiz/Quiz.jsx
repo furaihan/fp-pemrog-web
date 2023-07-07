@@ -2,7 +2,7 @@
 //import Timer from "../../component/Timer/Timer";
 import "./Quiz.css";
 import { useState, useEffect } from "react";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const soal = [
   {
@@ -50,10 +50,15 @@ const soal = [
 function Quiz() {
   const [timer, setTimer] = useState(30);
   const [soalIndex, setSoalIndex] = useState(0);
+  const redirect = useNavigate();
   useEffect(() => {
     if (timer === 0) {
       console.log("Waktu habis");
       setTimer(30);
+      if (soalIndex + 1 === soal.length) {
+        console.log("Selesai");
+        return redirect("/quizresult");
+      }
       setSoalIndex((prev) => prev + 1);
     }
     // Mengurangi timer setiap 1 detik
@@ -62,7 +67,7 @@ function Quiz() {
     }, 1000);
     // Membersihkan interval saat komponen Timer di-unmount
     return () => clearInterval(interval);
-  }, [timer]); // Tambahkan array kosong sebagai dependensi untuk menjalankan efek sekali saat komponen pertama kali di-mount
+  }, [timer, soalIndex, redirect]);
 
   const handleAnswer = (answer) => {
     if (answer === soal[soalIndex].jawaban) {
