@@ -21,21 +21,21 @@ function Fun() {
       title: "Iki Pika",
       imageSrc: "pikachu.jpg",
       description:
-        "Suka memakan kotorannya sendiri. Pika mengeluarkan kotoran berwarna hijau yang terdiri dari tanaman atau tumbuh-tumbuhan. Untuk mendapatkan lebih banyak nutrisi, Pika memakan lagi kotorannya dan setelah itu mengeluarkan kotoran berwarna gelap",
+        "Likes to eat its own feces. Pika excretes green-colored feces consisting of plants or vegetation. To get more nutrients, the Pika eats more of its own feces and then excretes dark-colored feces.",
     },
     {
       id: 2,
       title: "Berang-Berang",
       imageSrc: "berang-berang.jpg",
       description:
-        "Berang-berang adalah mamalia karnivora yang tergolong ke dalam subfamili Lutrinae. Terdapat 13 spesies berang-berang, dan semuanya merupakan hewan semiakuatik, akuatik, atau hewan laut, dan mereka memakan ikan atau invertebrata. Lutrinae adalah cabang dari famili Mustelidae.",
+        "Otters are carnivorous mammals that belong to the subfamily Lutrinae. There are 13 species of otters, and all are semi-aquatic, aquatic, or marine animals, and they feed on fish or invertebrates. Lutrinae is a branch of the family Mustelidae.",
     },
     {
       id: 3,
       title: "Elang Harpa",
       imageSrc: "elang-harpa.jpg",
       description:
-        "Elang harpy adalah spesies elang yang neotropis. Ini juga disebut elang harpy Amerika untuk membedakannya dari rajawali papua, yang kadang-kadang dikenal sebagai elang harpy Papua. Ini adalah hewan liar terbesar dan paling kuat yang ditemukan di hutan hujan, dan di antara spesies elang terbesar yang ada di dunia.",
+        "The harpy eagle is a neotropical species of eagle. It is also called the American harpy eagle to distinguish it from the Papuan eagle, which is sometimes known as the Papuan harpy eagle. It is the largest and most powerful wild animal found in the rainforest, and among the largest existing eagle species in the world.",
     },
   ];
 
