@@ -58,9 +58,9 @@ function Explore() {
     <React.Fragment>
       <section className="explore-hero" style={{background: 'url("takahe.jpg") center/cover no-repeat'}}>
         <div className="explore-hero-body">
-          <p className="explore-hero-title">Explore </p>
+          <p className="explore-hero-title"> Explore </p>
           <p className="explore-hero-subtitle">
-          Welcome To Explore,<br /> Animals Around the World
+          Welcome To Explore, Find Animals Around the World
           </p>
           <div className="arrow-down">
             <ArrowDown />

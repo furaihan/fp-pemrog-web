@@ -16,20 +16,20 @@
 .hero-title {
   position: absolute;
   color: white;
-  font-size: 64px;
+  font-size: 80px;
   font-weight: 700;
-  left: 263px;
-  top: 344px;
-  margin-top: 10px; 
+  text-align: center;
+  font-family: cursive;
 }
 .hero-subtitle {
   color: white;
   position: absolute;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 500;
-  left: 263px;
-  top: 434px;
-  margin-top: 10px; 
+  justify-content: center;
+  margin-top: 200px;
+  text-align: center;
+  font-family: cursive;
 }
 #about .container{
   width: 100%;
