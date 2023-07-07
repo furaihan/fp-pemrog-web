@@ -36,6 +36,7 @@
     height: 110px;
     border-radius: 50%;
     background-color: rgb(99, 191, 252);
+    
 }
 input{
     height: 4vh;
@@ -123,7 +124,9 @@ textarea{
     height: 100vh;
     float: left;
 }
-
+.profile{
+    
+}
 .profile .camera{
     display: flex;
     padding-top: 40%;

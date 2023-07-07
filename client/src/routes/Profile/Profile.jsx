@@ -47,32 +47,34 @@ function Profile() {
             </button>
           </div>
         </div>
-        <div className="card">
-          <div className="icon"></div>
-          <div className="title">Lesser Bilby</div>
-          <p className="description">
-            This cheesy, juicy ultimate comforting lunch or quick and easy
-            dinner recipe.
-          </p>
+        <div className="card-container">
+          <div className="card">
+            <div className="icon"></div>
+            <div className="title">Lesser Bilby</div>
+            <p className="description">
+              Highscore 1234
+            </p>
+          </div>
+          <div className="card">
+            <div className="icon"></div>
+            <div className="title">Takahe</div>
+            <p className="description">
+            Highscore 1023
+            </p>
+          </div>
+          <div className="card">
+            <div className="icon"></div>
+            <div className="title">Irish Elk</div>
+            <p className="description">
+            Highscore 980
+            </p>
+          </div>
         </div>
+        
 
-        <div className="card">
-          <div className="icon"></div>
-          <div className="title">Takahe</div>
-          <p className="description">
-            This cheesy, juicy ultimate comforting lunch or quick and easy
-            dinner recipe.
-          </p>
-        </div>
+        
 
-        <div className="card">
-          <div className="icon"></div>
-          <div className="title">Irish Elk</div>
-          <p className="description">
-            This cheesy, juicy ultimate comforting lunch or quick and easy
-            dinner recipe.
-          </p>
-        </div>
+        
       </div>
       <div></div>
     </>
