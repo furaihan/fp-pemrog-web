@@ -1,6 +1,6 @@
 const express = require("express");
 const { signup, login } = require("../controller");
-const getAnimals = require("../controller/animals");
+const { getAnimals } = require("../controller/animals");
 
 const router = express.Router();
 
