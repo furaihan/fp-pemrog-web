@@ -19,7 +19,7 @@ function Profile() {
           <div className="foto-profile">
             <div className="foto">
               <div className="user">
-                <img src="public\user.svg" alt="user" />
+                <img className="icon-user" src="public\user.svg" alt="user" />
               </div>
             </div>
           </div>
@@ -39,45 +39,39 @@ function Profile() {
           </div>
           <div className="button-container">
             <button className="edit-profile">
-              <Link to="/editprofile">Edit Profile</Link>{" "}
+              <Link to="/editprofile" className="edit-profile">Edit Profile</Link>{" "}
             </button>
             <br />
             <button className="logout">
-              <Link to="/logout">Logout</Link>
+              <Link to="/logout" className="logout">Logout</Link>
             </button>
           </div>
         </div>
         <div className="card">
           <div className="icon"></div>
-          <div className="title">Easy Cheesy</div>
+          <div className="title">Lesser Bilby</div>
           <p className="description">
             This cheesy, juicy ultimate comforting lunch or quick and easy
             dinner recipe.
           </p>
-          <div className="rating"></div>
-          {/* <a href="#" className="link">See the recipe</a> */}
         </div>
 
         <div className="card">
           <div className="icon"></div>
-          <div className="title">Easy Cheesy</div>
+          <div className="title">Takahe</div>
           <p className="description">
             This cheesy, juicy ultimate comforting lunch or quick and easy
             dinner recipe.
           </p>
-          <div className="rating"></div>
-          {/* <a href="#" className="link">See the recipe</a> */}
         </div>
 
         <div className="card">
           <div className="icon"></div>
-          <div className="title">Easy Cheesy</div>
+          <div className="title">Irish Elk</div>
           <p className="description">
             This cheesy, juicy ultimate comforting lunch or quick and easy
             dinner recipe.
           </p>
-          <div className="rating"></div>
-          {/* <a href="#" className="link">See the recipe</a> */}
         </div>
       </div>
       <div></div>

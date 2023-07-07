@@ -2,7 +2,7 @@ import logo from "../../assets/image/logo.svg";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Navbar({ isLoggedin, username }) {
 
