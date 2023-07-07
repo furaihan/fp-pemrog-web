@@ -1,3 +1,4 @@
+/* CSS untuk tata letak kartu dalam grid */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -6,6 +7,7 @@
   height: 90%;
 }
 
+/* CSS untuk kartu fakta menarik */
 .fun-fact-card {
   background-color: #f2f2f2;
   padding: 20px;
@@ -13,14 +15,17 @@
   transition: filter 0.3s;
 }
 
+/* Efek blur saat hover pada kartu */
 .fun-fact-card.blur {
   filter: blur(4px);
 }
 
+/* Tampilan cursor saat hover pada kartu */
 .fun-fact-card:hover {
   cursor: pointer;
 }
 
+/* Konten fakta dalam kartu */
 .fun-fact-card .fact {
   text-align: center;
 }
@@ -42,23 +47,28 @@
 
 /* Responsiveness */
 @media (max-width: 768px) {
+  /* Mengatur tata letak kartu dalam grid untuk tampilan responsif */
   .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
+  /* Mengatur tinggi maksimum gambar fakta untuk tampilan responsif */
   .fun-fact-card .fact img {
     max-height: 150px;
   }
 }
 
+/* Efek blur menggunakan pseudo-element ::after */
 .fun-fact-card::after .blur {
   transition: filter 0.5s;
 }
 
+/* Efek blur */
 .blur {
   filter: blur(5px);
 }
 
+/* Deskripsi fakta */
 .description {
   transition: transform 0.5s;
   transform-style: preserve-3d;
@@ -69,10 +79,12 @@
   font-size: small;
 }
 
+/* Efek flip */
 .flip {
   transform: rotateY(180deg);
 }
 
+/* Tombol "Read More" */
 .ReadMore {
   border-color: rgb(31, 131, 0);
   color: #000;
@@ -80,4 +92,9 @@
   width: 50%;
   font-size: small;
   margin-top: 30px;
+}
+
+.ReadMore.active::after {
+  background-color: rgb(31, 131, 0);
+  color: white;
 }

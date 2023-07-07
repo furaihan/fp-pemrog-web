@@ -10,14 +10,20 @@
  display: block;
  float: left;
  width: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: center; /* Penambahan properti */
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+
 
 }
 
 .card {
   display: block;
-  float: left;
-  position: relative;
-  right: 4%;
+  /* float: left; */
+  /* position: relative;  */
+  /* right: 4%; */
   width: 100%;
   height: 200px;
   perspective: 1000px;/*buat prespective flip layar*/
@@ -85,7 +91,7 @@ h2 {
   position: absolute;
   width: 80px;
   height: 30px;
-  top: 230px;
+  top: 200px;
   left: 65px; 
   display: flex;
   justify-content: center;
