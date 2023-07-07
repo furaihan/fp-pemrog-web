@@ -85,15 +85,15 @@ function App() {
           <h1>Approximate Number of Endangered Animals</h1>
           <div className="container-hewan-punah-1">
             <div>
-              <b>902</b>
+              <b>42.100</b>
               <h3>World</h3>
             </div>
             <div>
-              <b>0</b>
+              <b>2.380</b>
               <h3>Asian</h3>
             </div>
             <div>
-              <b>361</b>
+              <b>586</b>
               <h3>Indonesian</h3>
             </div>
           </div>
