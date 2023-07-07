@@ -1,14 +1,14 @@
 import "./About.css";
 import React from "react";
-import Slider from "../../component/Slider/Slider";
+
 
 export default function About() {
   return (
     <React.Fragment>
 
       <div className="body">
-      <Slider />
-        {/* <section
+     
+        <section
           className="hero"
           style={{ background: 'url("homie.jpg") center/cover no-repeat' }}
         >
@@ -19,7 +19,7 @@ export default function About() {
               and Our Accomplishments
             </p>
           </div>
-        </section> */}
+        </section>
         <section id="about">
           <div className="container">
             <div className="left">

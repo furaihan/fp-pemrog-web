@@ -105,7 +105,7 @@ textarea{
 }
 .acc-button .cancel{
     width: 100px;
-    height: 5vh;
+    height: 6vh;
     border-radius: 5px;
     border: 2px solid #a7f56b;
     background-color: white;
@@ -113,10 +113,11 @@ textarea{
 .acc-button .save{
     margin-left: 3vw;
     width: 100px;
-    height: 5vh;
+    height: 6vh;
     border-radius: 5px;
     background-color: #6EAB40;
     border: 0;
+    
 }
 .left .FotoPP{
     display: flex;
@@ -124,11 +125,52 @@ textarea{
     height: 100vh;
     float: left;
 }
-.profile{
-    
-}
+
 .profile .camera{
     display: flex;
     padding-top: 40%;
     padding-left: 39%;
 }
+
+@media screen and (max-width: 768px) {
+    #edit {
+      flex-direction: column;
+    }
+  
+    #edit .left {
+      width: 100%;
+      height: auto;
+      float: none;
+    }
+  
+    #edit .right {
+      width: 100%;
+      height: auto;
+      float: none;
+    }
+  
+    #edit .right .content {
+      width: 100%;
+      height: auto;
+      margin-top: 4%;
+      margin-left: 0;
+    }
+  
+    .double {
+      flex-direction: column;
+    }
+  
+    .double input {
+      width: 100%;
+    }
+  
+    .firstName,
+    .lastName,
+    .city,
+    .state {
+      width: 100%;
+      float: none;
+      margin-left: 0;
+    }
+  }
+  
