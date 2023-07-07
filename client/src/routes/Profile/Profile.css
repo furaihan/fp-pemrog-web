@@ -213,15 +213,15 @@
     overflow: hidden;
   }
   
-  .card > .link {
+  /* .card > .link {
     margin-bottom: 1rem;
     color: var(--linkColor);
     font-size: .8em;
     font-weight: 600;
-  }
+  } */
   
   /* Optional ~ Link the whole card */
-  .card > .link::before {
+  /* .card > .link::before {
     content: "";
     position: absolute;
     top: 0;
@@ -239,8 +239,8 @@
   
   .card:hover > .link:after {
     transform: translate(.2em, -.2em);
-  }
-  .block {
+  } */
+  /* .block {
     display: block;
     width: 10%;
     border: none;
@@ -254,11 +254,11 @@
     margin-top: 50px;
     margin-bottom: 50px;
 
-  }
-  .block:hover {
+  } */
+  /* .block:hover {
     background-color: #ddd;
     color: black;
-  }
+  } */
 
 
 

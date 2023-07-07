@@ -1,11 +1,14 @@
 import "./About.css";
 import React from "react";
+import Slider from "../../component/Slider/Slider";
 
 export default function About() {
   return (
     <React.Fragment>
+
       <div className="body">
-        <section
+      <Slider />
+        {/* <section
           className="hero"
           style={{ background: 'url("homie.jpg") center/cover no-repeat' }}
         >
@@ -16,7 +19,7 @@ export default function About() {
               and Our Accomplishments
             </p>
           </div>
-        </section>
+        </section> */}
         <section id="about">
           <div className="container">
             <div className="left">
@@ -33,8 +36,11 @@ export default function About() {
               </div>
               <div className="content">
                 <p>
-                  Welcome to our page dedicated to raising awareness about endangered animals and the importance of their conservation. At [Organization Name], we believe that every creature on this planet plays a vital role in maintaining our ecosystems. Our mission is to educate and inspire individuals to protect these magnificent creatures.
+                  Welcome to our page dedicated to raising awareness about endangered animals and the importance of their conservation. At Extict Fauna, we believe that every creature on this planet plays a vital role in maintaining our ecosystems. 
                 </p>
+
+                <p>Our mission is to educate and inspire individuals to protect these magnificent creatures.</p>
+
                 <p>
                   We are a passionate team of animal lovers and conservationists committed to preserving biodiversity. Through our efforts, we strive to provide a platform for knowledge-sharing and advocacy. Together, we can make a difference in safeguarding endangered species for future generations.
                 </p>
