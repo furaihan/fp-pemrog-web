@@ -56,9 +56,10 @@ const RandomQuiz = () => {
               <div className="card-back">
                 {/* Bagian belakang kartu dengan aturan kuis */}
                 <h2>Rules</h2>
-                <ul>
-                  <li></li>
-                </ul>
+                <ol>
+                  <li>Cant go back to the previous question</li>
+                  <li>There are 5 questions and only 30 seconds are given each question</li>
+                </ol>
                 <button className='play'>Play</button>
               </div>
             </div>
