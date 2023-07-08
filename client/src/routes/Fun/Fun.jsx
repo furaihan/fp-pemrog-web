@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Fun.css";
 import { useState } from "react";
 
@@ -68,14 +69,18 @@ function Fun() {
                 {selectedCard === card.id && (
                   <div className="description">
                     <h5>{card.description}</h5>
-                    <button
-                      className={`ReadMore ${selectedCard === card.id ? "active" : ""}`}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                      }}
-                    >
-                      Read More
-                    </button>
+                    <Link to="/description">
+                      <button
+                        className={`ReadMore ${
+                          selectedCard === card.id ? "active" : ""
+                        }`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                        }}
+                      >
+                        Read More
+                      </button>
+                    </Link>
                   </div>
                 )}
               </div>

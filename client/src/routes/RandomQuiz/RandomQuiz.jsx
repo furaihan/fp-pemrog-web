@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import './RandomQuiz.css';
+import { useState } from "react";
+import "./RandomQuiz.css";
+import { Link } from "react-router-dom";
 
 const RandomQuiz = () => {
   // State untuk melacak apakah setiap kartu sedang terbalik atau tidak
@@ -37,15 +38,17 @@ const RandomQuiz = () => {
       <div className="card-row">
         {OurQuiz.map((item) => (
           <div
-            className={`card ${isFlipped[item.id - 1] ? 'flipped' : ''}`}
+            className={`card ${isFlipped[item.id - 1] ? "flipped" : ""}`}
             key={item.id}
             onClick={() => handleFlip(item.id - 1)}
           >
-            
             <div className="card-inner">
               <div className="card-front">
                 <div className={`card-object card-${item.id}`}>
-                  <div className="face front" style={{ backgroundImage: `url(${item.image})` }}>
+                  <div
+                    className="face front"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  >
                     <div className="title-wrapper">
                       <div className="title">{item.title}</div>
                     </div>
@@ -58,9 +61,14 @@ const RandomQuiz = () => {
                 <h2>Rules</h2>
                 <ol>
                   <li>Cant go back to the previous question</li>
-                  <li>There are 5 questions and only 30 seconds are given each question</li>
+                  <li>
+                    There are 5 questions and only 30 seconds are given each
+                    question
+                  </li>
                 </ol>
-                <button className='play'>Play</button>
+                <Link to="/quiz">
+                  <button className="play">Play</button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,8 @@
 const { Animal, Description } = require("../models");
+const { Sequelize } = require("sequelize");
+const env = process.env.NODE_ENV || "development";
+const db = require("../config/database.js")[env];
+const sequelize = new Sequelize(db);
 
 const getAnimals = async (req, res) => {
   try {
@@ -40,24 +44,48 @@ const getAnimals = async (req, res) => {
   }
 };
 
-const getRandomAnimal = async (req, res) => {
-  const { count } = req.body;
+const getRandomAnimalsFunFact = async (req, res) => {
+  const { count } = req.params;
   try {
     const animals = await Animal.findAll({
-      include: {
-        model: Description,
-        attributes: ["title", "description", "image", "fun_fact"],
-      },
+      attributes: ["animal_id", "animal_name"],
+      include: [
+        {
+          model: Description,
+          attributes: ["fun_fact", "image"],
+        },
+      ],
+      order: sequelize.random(),
+      limit: parseInt(count) || 3,
     });
-    const randomAnimals = [];
-    for (let i = 0; i < count; i++) {
-      const randomIndex = Math.floor(Math.random() * animals.length);
-      randomAnimals.push(animals[randomIndex]);
-    }
-    res.json({ animals: randomAnimals });
+
+    const animalData = animals.map((animal) => {
+      return {
+        animal_id: animal.animal_id,
+        animal_name: animal.animal_name,
+        image: animal.Description.image,
+        fun_fact: animal.Description.fun_fact,
+      };
+    });
+
+    const response = {
+      status: "success",
+      code: 200,
+      animals: animalData,
+    };
+
+    return res.json(response);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error(error);
+
+    const response = {
+      status: "error",
+      code: 500,
+      message: "Internal server error",
+    };
+
+    return res.status(response.code).json(response);
   }
 };
 
-module.exports = { getAnimals, getRandomAnimal };
+module.exports = { getAnimals, getRandomAnimalsFunFact };

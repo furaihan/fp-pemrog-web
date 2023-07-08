@@ -29,13 +29,13 @@ import RootLayout from "./layouts/RootLayout.jsx";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 
 //Action
-import signUpAction from "./action/signup.js";
-import loginAction from "./action/login.js";
-import getCurrentUserLoader from "./action/getCurrentUser.js";
-import getProfileLoader from "./action/getProfile.js";
-import updateProfileAction from "./action/updateProfile.js";
-import logoutAction from "./action/logout.js";
-import getAnimalsLoader from "./action/animals.js";
+import signUpAction from "./api/signup.js";
+import loginAction from "./api/login.js";
+import getCurrentUserLoader from "./api/getCurrentUser.js";
+import getProfileLoader from "./api/getProfile.js";
+import updateProfileAction from "./api/updateProfile.js";
+import logoutAction from "./api/logout.js";
+import { getAnimalsLoader } from "./api/animals.js";
 
 import "./index.css";
 
@@ -56,7 +56,7 @@ const router = createBrowserRouter(
           element={<EditProfile />}
           action={updateProfileAction}
         />
-        <Route path="logout" element={<Logout />} action={logoutAction} />
+        <Route path="logout" element={<Logout />} loader={logoutAction} />
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} action={loginAction} />

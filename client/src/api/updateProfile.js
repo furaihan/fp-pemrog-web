@@ -1,14 +1,13 @@
-import axios, { AxiosError } from "axios";
+import { axiosInstance } from "./baseApi";
 import { redirect } from "react-router-dom";
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 const updateProfileAction = async ({ request }) => {
-  const url = import.meta.env.VITE_BACKEND_URL;
   const data = await request.formData();
-  const axiosRequest = await axios
-    .put(
-      `${url}/user/profile`,
+  try {
+    const response = await axiosInstance.put(
+      `/user/profile`,
       {
         firstName: data.get("firstName"),
         lastName: data.get("lastName"),
@@ -22,21 +21,18 @@ const updateProfileAction = async ({ request }) => {
         },
         withCredentials: true,
       }
-    )
-    .then(function (response) {
-      return response;
-    })
-    .catch(function (error) {
-      return error;
-    });
-  console.log("Update Profile Response:");
-  console.log(axiosRequest);
-  if (axiosRequest instanceof AxiosError) {
-    if (axiosRequest.response?.data) return axiosRequest.response.data.message;
-    return axiosRequest.message;
+    );
+    console.log("Update Profile Response:");
+    console.log(response);
+    await delay(1000);
+    return redirect("/profile");
+  } catch (error) {
+    console.error(error);
+    if (error.response?.data) {
+      return error.response.data.message;
+    }
+    return error.message;
   }
-  await delay(1000);
-  return redirect("/profile");
 };
 
 export default updateProfileAction;

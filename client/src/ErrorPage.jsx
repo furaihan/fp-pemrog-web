@@ -1,4 +1,5 @@
 import "./ErrorPage.css";
+import { Link } from "react-router-dom";
 
 function ErrorPage() {
   return (
@@ -10,9 +11,9 @@ function ErrorPage() {
           The page you are looking for might have been removed, had its name
           changed or is temporarily unavailable.
         </div>
-        <a href="/" className="error-button">
+        <Link to="/" className="error-button">
           Back to Home
-        </a>
+        </Link>
       </div>
     </div>
   );

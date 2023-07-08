@@ -9,6 +9,7 @@ const port = process.env.APP_PORT;
 const frontendURL = process.env.APP_FRONTEND_URL;
 
 // Use cors to allow cross-origin resource sharing
+console.log(frontendURL);
 app.use(
   cors({
     origin: ["http://localhost:5173", "http://localhost:4173", frontendURL],

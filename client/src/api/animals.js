@@ -1,17 +1,14 @@
-import axios, { AxiosError } from "axios";
+import { AxiosError } from "axios";
+import { axiosInstance } from "./baseApi";
 
-const getAnimalsLoader = async () => {
+export const getAnimalsLoader = async () => {
   const url = import.meta.env.VITE_BACKEND_URL;
-  const axiosRequest = await axios
+  const axiosRequest = await axiosInstance
     .get(`${url}/animals`, {
       withCredentials: true,
     })
-    .then(function (response) {
-      return response;
-    })
-    .catch(function (error) {
-      return error;
-    });
+    .then((response) => response)
+    .catch((error) => error);
   let data = {};
   if (axiosRequest instanceof AxiosError) {
     data = {
@@ -24,5 +21,3 @@ const getAnimalsLoader = async () => {
   };
   return data;
 };
-
-export default getAnimalsLoader;

@@ -4,7 +4,7 @@ import Environtment from "../../component/Dropdown/Environtment";
 import Region from "../../component/Dropdown/Region";
 import Type from "../../component/Dropdown/Type";
 import React from "react";
-import { useLoaderData, useNavigation } from "react-router-dom";
+import { Link, useLoaderData, useNavigation } from "react-router-dom";
 
 function Explore() {
   const data = useLoaderData();
@@ -60,14 +60,16 @@ function Explore() {
             <h2>Loading...</h2>
           ) : (
             data.animals.map((animal) => (
-              <div className="list-name" key={animal.id}>
-                <img
-                  className="list-animal-img"
-                  src={animal.image}
-                  alt={animal.animal_name}
-                />
-                <h3>{animal.animal_name}</h3>
-              </div>
+              <Link to="/description" key={animal.id}>
+                <div className="list-name" key={animal.id}>
+                  <img
+                    className="list-animal-img"
+                    src={animal.image}
+                    alt={animal.animal_name}
+                  />
+                  <h3>{animal.animal_name}</h3>
+                </div>
+              </Link>
             ))
           )}
         </div>

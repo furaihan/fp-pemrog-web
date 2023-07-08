@@ -1,7 +1,7 @@
 import "./EditProfile.css";
 import { Form, Link, useNavigation } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import getProfileLoader from "../../action/getProfile";
+import getProfileLoader from "../../api/getProfile";
 
 function EditProfile() {
   const profileQuery = useQuery({
@@ -98,7 +98,11 @@ function EditProfile() {
                   <button className="cancel">Cancel</button>
                 </Link>
                 <button className="save" type="submit">
-                  {navigation.state === "submitting" ? "Saving..." : "Save"}
+                  {navigation.state === "submitting"
+                    ? "Saving..."
+                    : navigation.state === "loading"
+                    ? "Saved!"
+                    : "Save"}
                 </button>
               </div>
             </Form>
