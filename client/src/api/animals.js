@@ -5,7 +5,6 @@ export const getAnimalsLoader = async () => {
   const url = import.meta.env.VITE_BACKEND_URL;
   const axiosRequest = await axiosInstance
     .get(`${url}/animals`, {
-      withCredentials: true,
     })
     .then((response) => response)
     .catch((error) => error);

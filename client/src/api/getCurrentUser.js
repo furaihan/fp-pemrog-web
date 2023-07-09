@@ -16,7 +16,6 @@ const getCurrentUserLoader = async () => {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-      withCredentials: true,
     });
     console.log("Response:");
     console.log(response);

@@ -14,7 +14,6 @@ const loginAction = async ({ request }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,
       }
     );
     console.log("Response:");

@@ -13,5 +13,6 @@ const headers = isDevelopment
 
 export const axiosInstance = axios.create({
   baseURL: beUrl,
-  headers,
+  headers: headers,
+  withCredentials: false,
 });

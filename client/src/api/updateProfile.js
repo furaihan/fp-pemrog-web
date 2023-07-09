@@ -19,7 +19,6 @@ const updateProfileAction = async ({ request }) => {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        withCredentials: true,
       }
     );
     console.log("Update Profile Response:");
