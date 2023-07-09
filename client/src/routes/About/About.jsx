@@ -1,5 +1,7 @@
 import "./About.css";
 import React from "react";
+import Male_Avatar from './M_Avatar.png';
+import Female_Avatar from './F_Avatar.png'
 
 
 export default function About() {
@@ -63,7 +65,7 @@ export default function About() {
                   </h2>
                   <div className="anggota">
                     <div className="circle">
-                      <div className="zhafar"></div>
+                      <img className="avatar" src={Male_Avatar} alt="cowok" />
                     </div>
                     <div>
                       <p>
@@ -79,7 +81,7 @@ export default function About() {
                   </div>
                   <div className="anggota">
                     <div className="circle">
-                      <div className="aric"></div>
+                      <img className="avatar" src={Male_Avatar} alt="cowok" />
                     </div>
                     <div>
                       <p>
@@ -95,7 +97,7 @@ export default function About() {
                   </div>
                   <div className="anggota">
                     <div className="circle">
-                      <div className="hamim"></div>
+                      <img className="avatar" src={Male_Avatar} alt="cowok" />
                     </div>
                     <div>
                       <p>
@@ -111,7 +113,7 @@ export default function About() {
                   </div>
                   <div className="anggota">
                     <div className="circle">
-                      <div className="nabela"></div>
+                      <img className="avatar" src={Female_Avatar} alt="cewek" />
                     </div>
                     <div>
                       <p>
@@ -127,7 +129,7 @@ export default function About() {
                   </div>
                   <div className="anggota">
                     <div className="circle">
-                      <div className="nur"></div>
+                      <img className="avatar" src={Female_Avatar} alt="cewek" />
                     </div>
                     <div>
                       <p>
@@ -143,7 +145,7 @@ export default function About() {
                   </div>
                   <div className="anggota">
                     <div className="circle">
-                      <div className="unik"></div>
+                      <img className="avatar" src={Female_Avatar} alt="cewek" />
                     </div>
                     <div>
                     <p>
