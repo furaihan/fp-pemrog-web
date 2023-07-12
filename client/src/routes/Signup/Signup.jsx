@@ -1,4 +1,4 @@
-import "./SignUp.css";
+import "./Signup.css";
 import { Link, Form, useActionData, useNavigation } from "react-router-dom";
 import React, { useEffect } from "react";
 
@@ -18,7 +18,7 @@ function Signup() {
           <input type="u-name" name="username" required />
           <label>Username</label>
           <div className="user-logo">
-            <img src="user.svg" alt="user"/>
+            <img src="user.svg" alt="user" />
           </div>
         </div>
         <div className="input-box flex">
@@ -44,7 +44,8 @@ function Signup() {
         </div>
         <div className="privacy-policy">
           <label>
-            <input type="checkbox" />I agree to the terms of use and your privacy policy
+            <input type="checkbox" />I agree to the terms of use and your
+            privacy policy
           </label>
         </div>
         <div className="center">
