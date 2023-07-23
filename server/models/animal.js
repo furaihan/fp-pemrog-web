@@ -68,6 +68,27 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         field: "animal_origin",
       },
+      latin_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        field: "latin_name",
+      },
+      family_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        field: "family_name",
+      },
+      order_name: {
+        type: DataTypes.ENUM(
+          "carnivore",
+          "herbivore",
+          "omnivore",
+          "insectivore",
+          "other"
+        ),
+        allowNull: true,
+        defaultValue: null,
+      },
     },
     {
       sequelize,

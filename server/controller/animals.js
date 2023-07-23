@@ -95,7 +95,13 @@ const getAnimalById = async (req, res) => {
       where: {
         animal_id: id,
       },
-      attributes: ["animal_id", "animal_name"],
+      attributes: [
+        "animal_id",
+        "animal_name",
+        "latin_name",
+        "family_name",
+        "order_name",
+      ],
       include: [
         {
           model: Description,
@@ -109,6 +115,8 @@ const getAnimalById = async (req, res) => {
       animal: {
         animal_id: animal.animal_id,
         animal_name: animal.animal_name,
+        latin_name: animal.latin_name,
+        family_name: animal.family_name,
         image: animal.Description.image,
         description: animal.Description.description,
         title: animal.Description.title,

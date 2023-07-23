@@ -1,7 +1,10 @@
 import "./Description.css";
 import ArrowDown from "../../assets/image/arrow-down.jsx";
+import { useParam, useLoaderData } from "react-router-dom";
 
 function Description() {
+  const { id } = useParam();
+  const animal = useLoaderData();
   return (
     <>
       <section
