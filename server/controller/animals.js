@@ -88,4 +88,42 @@ const getRandomAnimalsFunFact = async (req, res) => {
   }
 };
 
-module.exports = { getAnimals, getRandomAnimalsFunFact };
+const getAnimalById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const animal = await Animal.findOne({
+      where: {
+        animal_id: id,
+      },
+      attributes: ["animal_id", "animal_name"],
+      include: [
+        {
+          model: Description,
+          attributes: ["image", "description", "title"],
+        },
+      ],
+    });
+    const response = {
+      status: "success",
+      code: 200,
+      animal: {
+        animal_id: animal.animal_id,
+        animal_name: animal.animal_name,
+        image: animal.Description.image,
+        description: animal.Description.description,
+        title: animal.Description.title,
+      },
+    };
+    return res.json(response);
+  } catch (error) {
+    console.error(error);
+    const response = {
+      status: "error",
+      code: 500,
+      message: "Internal server error",
+    };
+    return res.status(response.code).json(response);
+  }
+};
+
+module.exports = { getAnimals, getRandomAnimalsFunFact, getAnimalById };
