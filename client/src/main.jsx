@@ -35,7 +35,7 @@ import getCurrentUserLoader from "./api/getCurrentUser.js";
 import getProfileLoader from "./api/getProfile.js";
 import updateProfileAction from "./api/updateProfile.js";
 import logoutAction from "./api/logout.js";
-import { getAnimalsLoader } from "./api/animals.js";
+import { getAnimalsLoader, getAnimalLoader } from "./api/animals.js";
 
 import "./index.css";
 
@@ -48,7 +48,13 @@ const router = createBrowserRouter(
         <Route index element={<Root />} />
         <Route path="about" element={<About />} />
         <Route path="explore" element={<Explore />} loader={getAnimalsLoader} />
-        <Route path="description" element={<Description />} />
+        <Route path="description">
+          <Route
+            path=":id"
+            element={<Description />}
+            loader={getAnimalLoader}
+          />
+        </Route>
         <Route path="train" element={<Train />} />
         <Route path="profile" element={<Profile />} loader={getProfileLoader} />
         <Route

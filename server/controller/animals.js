@@ -117,6 +117,7 @@ const getAnimalById = async (req, res) => {
         animal_name: animal.animal_name,
         latin_name: animal.latin_name,
         family_name: animal.family_name,
+        order_name: animal.order_name,
         image: animal.Description.image,
         description: animal.Description.description,
         title: animal.Description.title,
