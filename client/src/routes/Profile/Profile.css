@@ -126,118 +126,6 @@
     /* --cardBorderActive: #8ab4f8; */
     --textColor: #e9eaee;
   }
-<<<<<<< HEAD
-  
-  .card:hover {
-    transform: translate(-2px, -4px);
-    box-shadow: 16px 16px 0 var(--cardShadowHover);
-  }
-  
-  .card:active {
-    transform: translate(-2px, -4px);
-    border: 2px solid var(--cardBorderActive);
-    box-shadow: 4px 4px 0 var(--cardShadowActive);
-  }
-  
-  .card > .icon,
-  .card > .title,
-  .card > .description {
-    margin-bottom: 0.7em;
-    cursor: default;
-    user-select: none;
-  }
-  
-  .card > .title {
-    margin-top: 1.5em;
-    font-weight: bold;
-  }
-  
-  .card > .description {
-    line-height: 1.5em;
-    min-height: 6em;
-  }
-  
-  .card > .icon {
-    margin: 0 auto;
-    width: 100%;
-    height: 80px;
-    max-width: 80px;
-    background: linear-gradient(90deg, #7eaaff 0%, #ff48fb 40%, rgba(0, 0, 0, 0.28) 60%);
-    border-radius: 100%;
-    display: flex;
-    background-size: 200px;
-    
-  }
-  
-  .card > .rating {
-    font-size: 1.5em;
-    margin-bottom: 0.8em;
-    color: var(--ratingColor);
-    font-weight: bold;
-    position: relative;
-    width: max-content;
-  }
-  
-  .card > .rating:before {
-    content: "☆☆☆☆☆";
-  }
-  
-  .card > .rating:after {
-    content: "★★★★★";
-    position: absolute;
-    left: 0;
-    z-index: 0;
-    width: calc(var(--rating) * 1%);
-    overflow: hidden;
-  }
-  
-  /* .card > .link {
-    margin-bottom: 1rem;
-    color: var(--linkColor);
-    font-size: .8em;
-    font-weight: 600;
-  } */
-  
-  /* Optional ~ Link the whole card */
-  /* .card > .link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .card > .link:after {
-    content: "↗";
-    display: inline-block;
-    margin-left: .3em;
-    transition: transform .3s ease-in-out;
-  }
-  
-  .card:hover > .link:after {
-    transform: translate(.2em, -.2em);
-  } */
-  /* .block {
-    display: block;
-    width: 10%;
-    border: none;
-    background-color: #7abd4b;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    margin: auto;
-    border-radius: 10;
-    margin-top: 50px;
-    margin-bottom: 50px;
-
-  } */
-  /* .block:hover {
-    background-color: #ddd;
-    color: black;
-  } */
-=======
 }
 .card-container{
   margin-top: 50px;
@@ -263,7 +151,6 @@
   transform: translate(-2px, -4px);
   box-shadow: 15px 15px 0 var(--cardShadowHover);
 }
->>>>>>> 278fc90f7bb1739abb04fb70ae25d98c45db71ef
 
 /* .card:active {
   transform: translate(-2px, -4px);

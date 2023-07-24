@@ -7,14 +7,14 @@ function QuizResult() {
     <React.Fragment>
       <section className="quizresult">
         <div className="box">
-          <h4 className="name">Congratulation Uun!</h4>
-          <img className="icon" src="public\ikon quiz.svg" alt="ikon" />
-          <h4 className="score">You earned 999</h4>
+          <h4>Congratulation Uun!</h4>
+          <img className="w-24 h-24" src="./ikon quiz.svg" alt="ikon" />
+          <h4>You earned 999</h4>
         </div>
 
         <div className="result">
           <h3>RESULTS</h3>
-          <img className="avatar" src="public\avatar.svg" alt="avatar" />
+          <img className="w-24 h-24" src="./avatar.svg" alt="avatar" />
           <h4>Uun</h4>
         </div>
 

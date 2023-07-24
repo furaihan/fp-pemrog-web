@@ -37,35 +37,30 @@
 .navigation-home {
   width: 25%;
 }
-.home-line{
-    width: 20%;
-    border-bottom: 2px solid red;
+.home-line {
+  width: 20%;
+  border-bottom: 2px solid red;
 }
 .navigation-explore {
   width: 25%;
 }
-.explore-line{
-    width: 20%;
-    border-bottom: 2px solid blue;
+.explore-line {
+  width: 20%;
+  border-bottom: 2px solid blue;
 }
 .navigation-about {
   width: 25%;
 }
-.about-line{
-    width: 20%;
-    border-bottom: 2px solid green;
+.about-line {
+  width: 20%;
+  border-bottom: 2px solid green;
 }
 .navigation-support {
   width: 25%;
 }
-.support-line{
-    width: 20%;
-    border-bottom: 2px solid cyan;
-}
 
 @media (max-width: 768px) {
-    .navigation{
-        display: none;
-    }
+  .navigation {
+    display: none;
+  }
 }
-

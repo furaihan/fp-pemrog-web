@@ -39,7 +39,7 @@ function Login() {
           <a href="#"> Forgot Password?</a>
         </div>
         <div className="center">
-          <button type="submit" className="btn-login">
+          <button type="submit" className="w-[70%] bg-[#162938]">
             {navigation.state === "submitting" ? "Logging In..." : "Login"}
           </button>
         </div>
