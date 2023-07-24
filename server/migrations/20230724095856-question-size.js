@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     /**
      * Add altering commands here.
      *
@@ -10,32 +10,32 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
     // Modify the question column size to be 4096 characters
-    await queryInterface.changeColumn('quizzes', 'question', {
+    await queryInterface.changeColumn("questions", "question", {
       type: Sequelize.STRING(4096),
       allowNull: false,
-      field: 'question',
+      field: "question",
     });
     // Modify the option_1 column size to be 4096 characters
-    await queryInterface.changeColumn('quizzes', 'option_1', {
+    await queryInterface.changeColumn("questions", "option_1", {
       type: Sequelize.STRING(4096),
       allowNull: false,
-      field: 'option_1',
+      field: "option_1",
     });
     // Modify the option_2 column size to be 4096 characters
-    await queryInterface.changeColumn('quizzes', 'option_2', {
+    await queryInterface.changeColumn("questions", "option_2", {
       type: Sequelize.STRING(4096),
       allowNull: false,
-      field: 'option_2',
+      field: "option_2",
     });
     // Modify the option_3 column size to be 4096 characters
-    await queryInterface.changeColumn('quizzes', 'option_3', {
+    await queryInterface.changeColumn("questions", "option_3", {
       type: Sequelize.STRING(4096),
       allowNull: false,
-      field: 'option_3',
-    }); 
+      field: "option_3",
+    });
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add reverting commands here.
      *
@@ -43,28 +43,28 @@ module.exports = {
      * await queryInterface.dropTable('users');
      */
     // Modify the question column size to be 255 characters
-    await queryInterface.changeColumn('quizzes', 'question', {
+    await queryInterface.changeColumn("questions", "question", {
       type: Sequelize.STRING,
       allowNull: false,
-      field: 'question',
+      field: "question",
     });
     // Modify the option_1 column size to be 255 characters
-    await queryInterface.changeColumn('quizzes', 'option_1', {
+    await queryInterface.changeColumn("questions", "option_1", {
       type: Sequelize.STRING,
       allowNull: false,
-      field: 'option_1',
+      field: "option_1",
     });
     // Modify the option_2 column size to be 255 characters
-    await queryInterface.changeColumn('quizzes', 'option_2', {
+    await queryInterface.changeColumn("questions", "option_2", {
       type: Sequelize.STRING,
       allowNull: false,
-      field: 'option_2',
+      field: "option_2",
     });
     // Modify the option_3 column size to be 255 characters
-    await queryInterface.changeColumn('quizzes', 'option_3', {
+    await queryInterface.changeColumn("questions", "option_3", {
       type: Sequelize.STRING,
       allowNull: false,
-      field: 'option_3',
+      field: "option_3",
     });
-  }
+  },
 };
