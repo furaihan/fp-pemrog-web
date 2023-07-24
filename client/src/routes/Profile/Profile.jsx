@@ -19,7 +19,7 @@ function Profile() {
           <div className="foto-profile">
             <div className="foto">
               <div className="user">
-                <img className="icon-user" src="public\user.svg" alt="user" />
+                <img className="icon-user" src="./user.svg" alt="user" />
               </div>
             </div>
           </div>

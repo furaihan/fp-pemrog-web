@@ -20,18 +20,22 @@ export default function Navbar({ isLoggedin, username }) {
         <div className="flex md:order-2">
           {!isLoggedin ? (
             <>
-              <button
-                type="button"
-                className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 "
-              >
-                Login
-              </button>
-              <button
-                type="button"
-                className="text-green-500  bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 border-green-500 border-2"
-              >
-                SignUp
-              </button>
+              <Link to="/login">
+                <button
+                  type="button"
+                  className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3"
+                >
+                  Login
+                </button>
+              </Link>
+              <Link to="/signup">
+                <button
+                  type="button"
+                  className="text-green-500  bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 border-green-500 border-2"
+                >
+                  SignUp
+                </button>
+              </Link>
             </>
           ) : (
             <Link

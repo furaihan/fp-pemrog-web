@@ -17,7 +17,7 @@ function EditProfile() {
       <div id="edit">
         <div className="left">
           <div className="FotoPP">
-            <img src="public\BGPP.svg" alt="FotoPP" />
+            <img src="./BGPP.svg" alt="FotoPP" />
           </div>
         </div>
         <div className="right">
@@ -28,11 +28,7 @@ function EditProfile() {
                   Edit Profile {profileQuery.isLoading ? "Loading..." : ""}
                 </h1>
                 <div className="profile">
-                  <img
-                    src="public\camera.svg"
-                    alt="camera"
-                    className="camera"
-                  />
+                  <img src="./camera.svg" alt="camera" className="camera" />
                 </div>
               </div>
               <div className="double">
