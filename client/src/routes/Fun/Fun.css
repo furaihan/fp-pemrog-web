@@ -5,12 +5,13 @@
   grid-gap: 10vw;
   width: 100%;
   height: 90%;
+  margin-bottom: 50px;
 }
 
 /* CSS untuk kartu fakta menarik */
 .fun-fact-card {
   position: relative;
-  background-color: #f2f2f2;
+  background-color: #000;
   padding: 20px;
   border-radius: 8px;
   transition: filter 0.3s;
@@ -19,15 +20,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(to bottom, #f2f2f2, #c4c4c4);
+  color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-.fun-fact-title h1 {
-  margin-top: 20px;
-  font-size: 2rem;
-  margin: 0;
+.fun-fact-title h2 {
+  font-size: 1.2em;
+  margin-top: 80px;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  line-height: 1.1;
+
 }
 .fun-fact-card .fact img {
   width: 100%;
@@ -67,7 +69,7 @@
   margin-top: 0;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333;
+  color: #fff;
 }
 
 

@@ -1,3 +1,8 @@
+.our-focus-title{
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
 .cards-wrapper {
   display: flex;
   justify-content: center;

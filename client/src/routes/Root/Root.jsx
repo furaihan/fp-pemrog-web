@@ -35,38 +35,9 @@ function App() {
   return (
     <React.Fragment>
       <section>
-        {/* className="hero"
-        style={{ background: 'url("homie.jpg") center/cover no-repeat' }}
-      // > <div className="hero-body"> */}
-      {/* //     <p className="hero-title">Lorem Ipsum</p>
-      //     <p className="hero-subtitle">
-      //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-      //       nec iaculis mauris.
-      //     </p> */}
-          {/* <div className="arrow-down">
-            <HiChevronDoubleDown />
-          </div> */}
-         <Slider />
-          
-       {/* </div> */}
-      </section>
-      {/* <section className="fun-fact">
-        <div className="fun-fact-title">
-          <p>Fun Fact</p>
-        </div>
-        <div className="fun-fact-items">
-          {funFactItems.map((item) => (
-            <FunFactBox
-              key={item.id}
-              title={item.title}
-              subtitle={item.subtitle}
-              image={item.image}
-            />
-          ))}
-        </div>
-      </section> */}
-
-      <Fun />
+       <Slider />  
+     </section>
+      <Fun />     
 
       <section className="quotes">
         <div className="pembatas">
@@ -77,8 +48,10 @@ function App() {
           </p>
         </div>
       </section>
-
+      <section className="our-focus-img">
       <FocusImg />
+      </section>
+      
 
       <section className="hewan-punah">
         <div className="container-hewan-punah">
@@ -98,11 +71,8 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
-      {/* <section className="kuis"> */}
-        
+      </section>        
         <RandomQuiz />
-      {/* </section> */}
       
     </React.Fragment>
   );

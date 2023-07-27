@@ -1,33 +1,40 @@
 .card-container {
-  gap: 20px;
+  gap: 50px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 120px;
+  margin-bottom: 50px;
+}
+.card-container h1{
+  font-weight: bold;
 }
 
 .card-row {
  display: block;
  float: left;
  width: 100%;
-  gap: 20px;
+  gap: 100px;
   display: flex;
   justify-content: center; /* Penambahan properti */
   flex-wrap: wrap;
   margin-bottom: 120px;
-
-
 }
 
-.card {
+.card-row .card {
   display: block;
   /* float: left; */
   /* position: relative;  */
   /* right: 4%; */
-  width: 100%;
-  height: 200px;
+  width: 250px;
+  height: 300px;
   perspective: 1000px;/*buat prespective flip layar*/
   transition: transform 0.8s;
+}
+
+.card.flipped{
+width: 250px;
+height: 300px;
 }
 
 .card-inner {
@@ -59,11 +66,11 @@
   overflow: hidden;
   background-position: 50% 50%;
   position: absolute;
-  width: 110%;
-  height: 110%;
+  width: 120%;
+  height: 120%;
   backface-visibility: hidden;
-  bottom: -10px;
-  right: -7px;
+  bottom: -19px;
+  right: -10px;
 }
 
 .card-back {
@@ -71,28 +78,28 @@
   transform: rotateY(180deg);
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+ol, li{
+  list-style: disc;
+  padding: 5px;
+  margin: 5px;
+  color: #f1f1f1;
+  font-family: cursive;
 }
 
-li {
-  color: #f1f1f1;
-  margin-bottom: 10px;
-}
-
-h2 {
+.card-back h3 {
   margin: 0;
-  color: #f1f1f1;
+  color: #00b3ff;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: cursive;
 }
 
 .card-back .play{
   position: absolute;
   width: 80px;
   height: 30px;
-  top: 200px;
-  left: 65px; 
+  top: 205px;
+  left: 60px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +114,6 @@ h2 {
   .card-row {
     width: 105%;
     justify-content: center;
-    
   }
 }
 
@@ -123,7 +129,6 @@ h2 {
     width: 115%;
     justify-content: center;
   }
-
 }
 
 @media screen and (max-width: 576px) {
