@@ -2,6 +2,7 @@ import "./EditProfile.css";
 import { Form, Link, useNavigation } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import getProfileLoader from "../../api/getProfile";
+import AvatarChange from "./AvatarChange";
 
 function EditProfile() {
   const profileQuery = useQuery({
@@ -27,9 +28,9 @@ function EditProfile() {
                 <h1>
                   Edit Profile {profileQuery.isLoading ? "Loading..." : ""}
                 </h1>
-                <div className="profile">
-                  <img src="./camera.svg" alt="camera" className="camera" />
-                </div>
+            
+                <AvatarChange/>
+            
               </div>
               <div className="double">
                 <div className="firstName">
