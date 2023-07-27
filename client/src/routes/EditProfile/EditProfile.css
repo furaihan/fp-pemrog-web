@@ -25,12 +25,6 @@
     margin-left: 4%;
     background-color: rgba(238, 244, 239, 1);
 }
-#edit .right .content .title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(238, 244, 239, 1);
-}
 #edit .right .content .profile{
     width: 110px;
     height: 110px;
@@ -182,6 +176,16 @@ textarea{
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+  
+@media screen and (max-width: 1024px) {
+    #edit .right .content .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(238, 244, 239, 1);
+    }
+}
   
 @media screen and (max-width: 768px) {
     #edit {
@@ -192,12 +196,14 @@ textarea{
       width: 100%;
       height: auto;
       float: none;
+      display: none;
     }
   
     #edit .right {
       width: 100%;
       height: auto;
       float: none;
+      padding: 10px;
     }
   
     #edit .right .content {
@@ -206,13 +212,20 @@ textarea{
       margin-top: 4%;
       margin-left: 0;
     }
+    #edit .right .content .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
   
     .double {
       flex-direction: column;
+      gap: 2vh;
     }
   
     .double input {
-      width: 100%;
+      width: 75%;
     }
   
     .firstName,
