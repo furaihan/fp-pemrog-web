@@ -55,4 +55,29 @@ const getFiveRandomQuestionsByAnimalId = async (req, res) => {
   }
 };
 
-module.exports = { getFiveRandomQuestionsByAnimalId };
+const createQuiz = async (req, res) => {
+  const { animalId, userId, score } = req.body;
+  try {
+    const quiz = await Quiz.create({
+      animal_id: animalId,
+      user_id: userId,
+      score: score,
+    });
+    const response = {
+      status: "success",
+      code: 200,
+      quiz_id: quiz.quiz_id,
+    };
+    return res.json(response);
+  } catch (error) {
+    console.error(error); // Log the error for debugging purposes
+    const response = {
+      status: "error",
+      code: 500,
+      message: "Internal server error",
+    };
+    return res.status(500).json(response);
+  }
+};
+
+module.exports = { getFiveRandomQuestionsByAnimalId, createQuiz };

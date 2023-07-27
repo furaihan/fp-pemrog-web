@@ -2,15 +2,22 @@
 //import Timer from "../../component/Timer/Timer";
 import "./Quiz.css";
 import { useState, useEffect } from "react";
-import { useNavigate, useLoaderData } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useNavigate, useLoaderData, useParams } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
+import { createQuizLoader } from "../../api/quiz";
 
 function Quiz() {
   const [timer, setTimer] = useState(30);
   const [soalIndex, setSoalIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const animalId = useParams();
   const redirect = useNavigate();
   const data = useLoaderData();
+  const mutation = useMutation({
+    mutationKey: "createQuiz",
+    mutationFn: createQuizLoader,
+  });
+
   useEffect(() => {
     console.log("Data dari loader");
     console.log(data);
@@ -42,6 +49,10 @@ function Quiz() {
       console.log("Salah");
     }
     if (soalIndex + 1 === 5) {
+      mutation.mutate({
+        animalId: animalId,
+        score: score,
+      });
       console.log("Selesai");
       return redirect("/quizresult");
     }

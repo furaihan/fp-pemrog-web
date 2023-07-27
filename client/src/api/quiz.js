@@ -26,3 +26,36 @@ export const getQuizzesLoader = async ({ params }) => {
   };
   return data;
 };
+
+export const createQuizLoader = async ({ params }) => {
+  console.log("createQuizLoader");
+  const { animalId, score } = params;
+  const axiosRequest = await axiosInstance
+    .post(
+      "/quiz",
+      {
+        animalId,
+        score,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
+    .then((response) => response)
+    .catch((error) => error);
+  let data = {};
+  if (axiosRequest instanceof AxiosError) {
+    console.log(axiosRequest);
+    data = {
+      status: "error",
+      quizId: null,
+    };
+    return data;
+  }
+  data = {
+    quizId: axiosRequest.data.quiz_id,
+  };
+  return data;
+};
