@@ -60,7 +60,7 @@ const RandomQuiz = () => {
                 {/* Bagian belakang kartu dengan aturan kuis */}
                 <h3>Rules</h3>
                 <ol>
-                  <li>Can't go back to the previous question</li>
+                  <li>Can not go back to the previous question</li>
                   <li>
                     There are 5 questions and only 30 seconds are given each
                     question
