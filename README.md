@@ -4,6 +4,16 @@
 # Pemrograman Web
 Final Project Kelompok 8 (21-Informatika-8) Mata Kuliah Pemrograman Web Program Studi Informatika Universitas Amikom Yogyakarta
 
+## Live Website
+[https://extinct-fauna.site/](https://extinct-fauna.site/)
+
+## User Login
+```
+username: kelompok8
+password: Cakepbanget100
+```
+
+
 # How To
 - Clone the project first
 ```sh
