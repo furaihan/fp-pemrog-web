@@ -44,7 +44,7 @@ function Fun() {
     <>
       <section className="hero-section">
         <div className="fun-fact-title">
-          <h1>Fun Fact</h1>
+          <h2>Fun Fact</h2>
         </div>
         <div className="card-grid">
           {/* Loop melalui setiap card dan tampilkan */}
