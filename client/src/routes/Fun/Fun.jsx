@@ -44,7 +44,7 @@ function Fun() {
     <>
       <section className="hero-section">
         <div className="fun-fact-title">
-          <p>Fun Fact</p>
+          <h1>Fun Fact</h1>
         </div>
         <div className="card-grid">
           {/* Loop melalui setiap card dan tampilkan */}
@@ -62,7 +62,7 @@ function Fun() {
                 <img
                   src={card.imageSrc}
                   alt={card.title}
-                  style={{ width: "200px", height: "200px" }}
+                  style={{ width: "200px", height: "200px",  marginBottom: selectedCard === card.id ? "10px" : "0", }}
                 />
 
                 {/* Tampilan deskripsi card hanya jika card ini sedang dipilih */}

@@ -9,10 +9,39 @@
 
 /* CSS untuk kartu fakta menarik */
 .fun-fact-card {
+  position: relative;
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 8px;
   transition: filter 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #f2f2f2, #c4c4c4);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.fun-fact-title h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.fun-fact-card .fact img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+/* Gambar akan berada di tengah saat card dipilih */
+.fun-fact-card.selected .fact img {
+  max-height: 100%;
+  background-image: linear-gradient(to bottom, #f2f2f2, #919191);
+  
+ /* Atur ulang maksimum tinggi gambar agar tetap di tengah */
 }
 
 /* Efek blur saat hover pada kartu */
@@ -28,21 +57,23 @@
 /* Konten fakta dalam kartu */
 .fun-fact-card .fact {
   text-align: center;
+  display: flex; /* Menggunakan display flex untuk mengatur posisi elemen */
+  flex-direction: column; /* Mengatur tata letak kolom */
+  align-items: center; /* Mengatur posisi elemen secara horizontal di tengah */
+  justify-content: center; /* Mengatur posisi elemen secara vertikal di tengah */
 }
 
 .fun-fact-card .fact h3 {
   margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.fun-fact-card .fact img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-}
 
 .fun-fact-card .fact p {
   margin-bottom: 0;
+  color: #555;
 }
 
 /* Responsiveness */
@@ -57,44 +88,22 @@
     max-height: 150px;
   }
 }
-
-/* Efek blur menggunakan pseudo-element ::after */
-.fun-fact-card::after .blur {
-  transition: filter 0.5s;
-}
-
-/* Efek blur */
-.blur {
-  filter: blur(5px);
-}
-
-/* Deskripsi fakta */
-.description {
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  transform: rotateY(0);
-  display: block;
-  hyphenate-character: inherit;
-  font-size: small;
-}
-
-/* Efek flip */
-.flip {
-  transform: rotateY(180deg);
-}
-
 /* Tombol "Read More" */
 .ReadMore {
-  border-color: rgb(31, 131, 0);
+  border: 2px solid rgb(31, 131, 0);
   color: #000;
   background-color: white;
   width: 50%;
   font-size: small;
   margin-top: 30px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.ReadMore.active::after {
+.ReadMore:hover {
   background-color: rgb(31, 131, 0);
   color: white;
+}
+
+.ReadMore:active {
+  background-color: #0b5a00; /* Warna yang berbeda saat tombol diklik */
 }
