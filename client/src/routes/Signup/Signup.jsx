@@ -49,7 +49,8 @@ function Signup() {
           </label>
         </div>
         <div className="center">
-          <button type="submit" className="btn-signup">
+          <button type="submit" className="w-[70%] bg-[#162938]"
+            style={{ color: "white" }}>
             {state.state === "submitting"
               ? "Signing Up..."
               : state.state === "loading"
