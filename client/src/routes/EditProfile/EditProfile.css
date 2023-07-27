@@ -5,7 +5,7 @@
 
 #edit .left {
   width: 25%;
-  height: 100vh;
+  height: 110vh;
   background-color: rgba(238, 244, 239, 1);
   float: left;
 }
@@ -13,7 +13,7 @@
 #edit .right {
   display: flex;
   width: 75%;
-  height: 100vh;
+  height: 110vh;
   background-color: rgba(238, 244, 239, 1);
   float: left;
   font-weight: bold;
@@ -116,7 +116,7 @@ textarea{
 .left .FotoPP{
     display: flex;
     width: 200%;
-    height: 100vh;
+    height: 110vh;
     float: left;
 }
 
