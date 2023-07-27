@@ -53,12 +53,13 @@
 .inner-box{
   position: relative;
   width: 95%;
-  height: 80%;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid #F1EAEA;
   background-color: rgba(#CBB279, 0, 0, 1);
+  padding: 60px;
 }
 .m-left{
   background-color: #53616F;
@@ -111,6 +112,9 @@
 }
 .kelompok h2{
   color: #000;
+  margin-bottom: 3vh;
+  font-weight: bold;
+  text-align: center;
 }
 .anggota{
   display: flex;
@@ -146,4 +150,53 @@ img{
 }
 .anggota p{
   margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #about .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #about .left {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  #about .right {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-top: 3vh;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .kelompok {
+    margin-top: 2vh;
+  }
+
+  .anggota {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .kelompok h2 {
+    font-size: 20px; 
+  }
+
+  .m-left, .m-right, .content p {
+    font-size: 16px; 
+  }
+  .circle {
+    margin-bottom: 10px;
+  }
+  .inner-box{
+    padding: 70px;
+  }
 }
