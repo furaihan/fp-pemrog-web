@@ -36,6 +36,7 @@ import getProfileLoader from "./api/getProfile.js";
 import updateProfileAction from "./api/updateProfile.js";
 import logoutAction from "./api/logout.js";
 import { getAnimalsLoader, getAnimalLoader } from "./api/animals.js";
+import { getQuizzesLoader } from "./api/quiz.js";
 
 import "./index.css";
 
@@ -68,7 +69,9 @@ const router = createBrowserRouter(
         <Route path="/login" element={<Login />} action={loginAction} />
         <Route path="/signup" element={<Signup />} action={signUpAction} />
       </Route>
-      <Route path="/quiz" element={<Quiz />} />
+      <Route path="/quiz">
+        <Route path=":animalId" element={<Quiz />} loader={getQuizzesLoader} />
+      </Route>
       <Route path="/quizresult" element={<QuizResult />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
