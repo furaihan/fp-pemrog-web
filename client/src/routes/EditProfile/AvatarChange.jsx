@@ -28,7 +28,7 @@ const AvatarChange = () => {
           <img src={selectedImage} alt="Selected Avatar" />
         ) : (
           <img
-            src="default-avatar.png"
+            src="camera.svg"
             alt="Default Avatar"
           />
         )}
