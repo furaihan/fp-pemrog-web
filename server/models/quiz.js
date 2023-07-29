@@ -38,6 +38,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         field: "score",
       },
+      time: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+        field: "time",
+      },
     },
     {
       sequelize,

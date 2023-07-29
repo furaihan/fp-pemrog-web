@@ -10,18 +10,23 @@ function Quiz() {
   const [timer, setTimer] = useState(30);
   const [soalIndex, setSoalIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const animalId = useParams();
+  const [answers, setAnswers] = useState([]);
+  const [responseTimes, setResponseTimes] = useState([]);
+  const [isCorrectArray, setIsCorrectArray] = useState([]);
+  const [isMutated, setIsMutated] = useState(false);
+  const { animalId } = useParams();
   const redirect = useNavigate();
   const data = useLoaderData();
   const mutation = useMutation({
     mutationKey: "createQuiz",
-    mutationFn: createQuizLoader,
+    mutationFn: (params) => createQuizLoader(params),
   });
 
   useEffect(() => {
     console.log("Data dari loader");
     console.log(data);
-  }, [data]);
+    console.log(animalId);
+  }, [data, animalId]);
 
   useEffect(() => {
     if (timer === 0) {
@@ -42,21 +47,64 @@ function Quiz() {
   }, [timer, soalIndex, redirect]);
 
   const handleAnswer = (answer) => {
+    setAnswers((prev) => [...prev, answer]);
+    setResponseTimes((prev) => [...prev, 30 - timer]);
     if (answer === data.quizzes[soalIndex].correct_answer) {
       console.log("Benar");
-      setScore((prev) => prev + 1);
+      setIsCorrectArray((prev) => [...prev, true]);
+      setScore((prev) => {
+        // Update the score state with a callback function
+        const newScore = prev + 1;
+        // Check if the quiz is finished
+        if (soalIndex + 1 === 5) {
+          if (isMutated) return;
+          // Call the mutation with the updated score
+          mutation.mutate({
+            animalId: animalId,
+            score: newScore,
+            details: createData(),
+          });
+          setIsMutated(true);
+          console.log("Selesai");
+          return redirect("/quizresult");
+        }
+        // Return the new score
+        return newScore;
+      });
     } else {
       console.log("Salah");
-    }
-    if (soalIndex + 1 === 5) {
-      mutation.mutate({
-        animalId: animalId,
-        score: score,
-      });
-      console.log("Selesai");
-      return redirect("/quizresult");
+      // Check if the quiz is finished
+      setIsCorrectArray((prev) => [...prev, false]);
+      if (soalIndex + 1 === 5) {
+        if (isMutated) return;
+        // Call the mutation with the current score
+        mutation.mutate({
+          animalId: animalId,
+          score: score,
+          details: createData(),
+        });
+        setIsMutated(true);
+        console.log("Selesai");
+        return redirect("/quizresult");
+      }
     }
     setSoalIndex((prev) => prev + 1);
+  };
+
+  const createData = () => {
+    let ret = {};
+    for (let i = 0; i < 5; i++) {
+      ret = {
+        ...ret,
+        [i]: {
+          question_id: data.quizzes[i].question_id,
+          answer: answers[i],
+          response_time: responseTimes[i],
+          is_correct: isCorrectArray[i],
+        },
+      };
+    }
+    return ret;
   };
 
   return (

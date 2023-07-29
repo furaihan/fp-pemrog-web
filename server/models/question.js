@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.INTEGER,
         },
       });
+      this.Quiz = this.belongsToMany(models.Quiz, {
+        through: models.QuizDetail,
+        foreignKey: "question_id",
+      });
     }
   }
   Question.init(

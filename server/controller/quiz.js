@@ -1,4 +1,4 @@
-const { Question, Quiz, Animal } = require("../models");
+const { Question, Quiz, Animal, QuizDetail } = require("../models");
 const { Sequelize } = require("sequelize");
 const env = process.env.NODE_ENV || "development";
 const db = require("../config/database.js")[env];
@@ -56,7 +56,7 @@ const getFiveRandomQuestionsByAnimalId = async (req, res) => {
 };
 
 const createQuiz = async (req, res) => {
-  const { animalId, userId, score } = req.body;
+  const { animalId, userId, score, details } = req.body;
   try {
     const quiz = await Quiz.create({
       animal_id: animalId,
@@ -68,6 +68,9 @@ const createQuiz = async (req, res) => {
       code: 200,
       quiz_id: quiz.quiz_id,
     };
+    QuizDetail.bulkCreate(
+      details.map((detail) => ({ ...detail, quiz_id: quiz.quiz_id }))
+    );
     return res.json(response);
   } catch (error) {
     console.error(error); // Log the error for debugging purposes

@@ -27,15 +27,17 @@ export const getQuizzesLoader = async ({ params }) => {
   return data;
 };
 
-export const createQuizLoader = async ({ params }) => {
+export const createQuizLoader = async (params) => {
   console.log("createQuizLoader");
-  const { animalId, score } = params;
+  console.log(params);
+  const { animalId, score, details } = params;
   const axiosRequest = await axiosInstance
     .post(
       "/quiz",
       {
         animalId,
         score,
+        details,
       },
       {
         headers: {
