@@ -54,7 +54,7 @@ function Quiz() {
         setQuizDetails((prev) => [
           ...prev,
           {
-            quiz_id: data.quizzes[soalIndex].question_id,
+            question_id: data.quizzes[soalIndex].question_id,
             selected_option: answer,
             is_correct: isCorrect,
             response_time: responseTime,

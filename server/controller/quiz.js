@@ -72,10 +72,10 @@ const createQuiz = async (req, res) => {
     const quizDetails = details.map((detail) => {
       return {
         quiz_id: quiz.quiz_id,
-        question_id: detail.questionId,
-        selected_option: detail.selectedOption,
-        response_time: detail.responseTime,
-        is_correct: detail.isCorrect,
+        question_id: detail.question_id,
+        selected_option: detail.selected_option,
+        response_time: detail.response_time,
+        is_correct: detail.is_correct,
       };
     });
     console.log(quizDetails);
