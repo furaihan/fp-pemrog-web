@@ -57,6 +57,7 @@ const getFiveRandomQuestionsByAnimalId = async (req, res) => {
 
 const createQuiz = async (req, res) => {
   const { animalId, userId, score, details } = req.body;
+  console.log(req.body);
   try {
     const quiz = await Quiz.create({
       animal_id: animalId,
@@ -68,9 +69,16 @@ const createQuiz = async (req, res) => {
       code: 200,
       quiz_id: quiz.quiz_id,
     };
-    QuizDetail.bulkCreate(
-      details.map((detail) => ({ ...detail, quiz_id: quiz.quiz_id }))
-    );
+    const quizDetails = details.map((detail) => {
+      return {
+        quiz_id: quiz.quiz_id,
+        question_id: detail.questionId,
+        selected_option: detail.selectedOption,
+        response_time: detail.responseTime,
+        is_correct: detail.isCorrect,
+      };
+    });
+    console.log(quizDetails);
     return res.json(response);
   } catch (error) {
     console.error(error); // Log the error for debugging purposes

@@ -1,13 +1,12 @@
-//import QnA from "../../component/QnA/QnA";
-//import Timer from "../../component/Timer/Timer";
 import "./Quiz.css";
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLoaderData, useParams } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { createQuizLoader } from "../../api/quiz";
+import { useTimer } from "../../component/Timer/Timer";
 
 function Quiz() {
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useTimer(30);
   const [soalIndex, setSoalIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [isMutated, setIsMutated] = useState(false);
@@ -22,13 +21,16 @@ function Quiz() {
   });
 
   useEffect(() => {
-    if (timer > 0) {
-      setTimeout(() => setTimer(timer - 1), 1000);
-    } else {
-      setTimer(30);
-      setSoalIndex((prev) => (prev < 5 ? prev + 1 : prev));
+    console.log(data);
+  }, []);
+
+  useEffect(() => {
+    // increment the question index when the timer runs out or reset
+    if (timer === 0) {
+      setSoalIndex((prev) => prev + 1);
+      setTimer(30); // reset the timer
     }
-  }, [timer]);
+  }, [timer, setTimer, setSoalIndex]); // pass the custom setter as a dependency
 
   useEffect(() => {
     if (soalIndex === 5) {
@@ -45,7 +47,7 @@ function Quiz() {
   const handleAnswer = useCallback(
     (answer) => {
       if (soalIndex < 5) {
-        const isCorrect = data.quizzes[soalIndex].answer === answer;
+        const isCorrect = data.quizzes[soalIndex].correct_answer === answer;
         console.log("Benar? ", isCorrect);
         const responseTime = 30 - timer;
         setScore((prev) => (isCorrect ? prev + 1 : prev));
@@ -62,7 +64,7 @@ function Quiz() {
         setSoalIndex((prev) => (prev < 5 ? prev + 1 : prev));
       }
     },
-    [soalIndex, timer, data]
+    [soalIndex, timer, data, setTimer]
   );
 
   useEffect(() => {
