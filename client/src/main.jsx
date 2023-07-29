@@ -71,8 +71,10 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/quiz">
         <Route path=":animalId" element={<Quiz />} loader={getQuizzesLoader} />
+        <Route path="result">
+          <Route path=":quizId" element={<QuizResult />} />
+        </Route>
       </Route>
-      <Route path="/quizresult" element={<QuizResult />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )

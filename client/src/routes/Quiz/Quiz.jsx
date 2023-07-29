@@ -19,18 +19,22 @@ function Quiz() {
     mutationKey: "createQuiz",
     mutationFn: (params) => createQuizLoader(params),
   });
-
-  useEffect(() => {
-    console.log(data);
-  }, []);
-
   useEffect(() => {
     // increment the question index when the timer runs out or reset
     if (timer === 0) {
+      setQuizDetails((prev) => [
+        ...prev,
+        {
+          question_id: data.quizzes[soalIndex].question_id,
+          selected_option: "timeout",
+          is_correct: null,
+          response_time: null,
+        },
+      ]);
       setSoalIndex((prev) => prev + 1);
       setTimer(30); // reset the timer
     }
-  }, [timer, setTimer, setSoalIndex]); // pass the custom setter as a dependency
+  }, [timer, setTimer, soalIndex, data]); // pass the custom setter as a dependency
 
   useEffect(() => {
     if (soalIndex === 5) {

@@ -5,6 +5,7 @@ const updateProfile = require("../controller/updateProfile");
 const {
   getFiveRandomQuestionsByAnimalId,
   createQuiz,
+  getQuizById,
 } = require("../controller/quiz");
 
 const router = express.Router();
@@ -14,5 +15,6 @@ router.get("/user/profile", getProfile);
 router.put("/user/profile", updateProfile);
 router.get("/quiz/:animalId", getFiveRandomQuestionsByAnimalId);
 router.post("/quiz", createQuiz);
+router.get("/quiz/:quizId", getQuizById);
 
 module.exports = router;

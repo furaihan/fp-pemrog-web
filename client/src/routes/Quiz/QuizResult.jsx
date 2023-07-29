@@ -1,6 +1,6 @@
 import React from "react";
 import "./QuizResult.css";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 function QuizResult() {
   return (
