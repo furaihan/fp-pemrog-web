@@ -102,19 +102,16 @@ const getQuizById = async (req, res) => {
           attributes: ["animal_name"],
         },
         {
-          model: QuizDetail,
-          attributes: [
-            "detail_id",
-            "selected_option",
-            "response_time",
-            "is_correct",
-          ],
-          include: [
-            {
-              model: Question,
-              attributes: ["question"],
-            },
-          ],
+          model: Question,
+          attributes: ["question"],
+          through: {
+            attributes: [
+              "detail_id",
+              "selected_option",
+              "response_time",
+              "is_correct",
+            ],
+          },
         },
       ],
     });

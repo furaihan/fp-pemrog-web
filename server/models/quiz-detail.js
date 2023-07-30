@@ -1,6 +1,5 @@
 "use strict";
 const { Model } = require("sequelize");
-const { Question, Quiz } = require("../models");
 module.exports = (sequelize, DataTypes) => {
   class QuizDetail extends Model {}
   QuizDetail.init(
@@ -18,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         field: "quiz_id",
         references: {
-          model: Quiz,
+          model: "quizzes",
           key: "quiz_id",
         },
       },
@@ -27,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         field: "question_id",
         references: {
-          model: Question,
+          model: "questions",
           key: "question_id",
         },
       },
