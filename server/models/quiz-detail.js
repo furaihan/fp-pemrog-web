@@ -1,5 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
+const { Question, Quiz } = require("../models");
 module.exports = (sequelize, DataTypes) => {
   class QuizDetail extends Model {}
   QuizDetail.init(
@@ -19,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         references: {
           model: Quiz,
           key: "quiz_id",
+        },
       },
       question_id: {
         type: DataTypes.UUID,
@@ -28,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
           model: Question,
           key: "question_id",
         },
+      },
       selected_option: {
         type: DataTypes.ENUM("option_1", "option_2", "option_3", "timeout"),
         allowNull: false,
