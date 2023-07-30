@@ -98,6 +98,10 @@ const getQuizById = async (req, res) => {
       attributes: ["quiz_id", "score", "time"],
       include: [
         {
+          model: Animal,
+          attributes: ["animal_name"],
+        },
+        {
           model: QuizDetail,
           attributes: [
             "detail_id",
