@@ -15,6 +15,6 @@ router.get("/user/profile", getProfile);
 router.put("/user/profile", updateProfile);
 router.get("/quiz/:animalId", getFiveRandomQuestionsByAnimalId);
 router.post("/quiz", createQuiz);
-router.get("/quiz/:quizId", getQuizById);
+router.get("/quiz/result/:quizId", getQuizById);
 
 module.exports = router;
