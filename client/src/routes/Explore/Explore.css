@@ -106,7 +106,7 @@
 }
 .list-name h3 {
   font-weight: bolder;
-  font-family: 'Cascadia Code';
+  font-family: "Cascadia Code";
   position: absolute;
   /* top: calc(100% + 10px); */
   top: 50%;
@@ -145,7 +145,6 @@
   transform: scale(1.05);
 }
 
-
 .list-animal-img:hover + h3 {
   opacity: 1;
   pointer-events: none;
@@ -164,14 +163,8 @@
   pointer-events: none;
 }
 
-/* .list-animal-img:hover::before {
-  opacity: 0.8;
-} */
-
-/* .list-animal-name:hover {
-  opacity: 1; 
-} */
-
-/* .list-animal-img:hover .list-animal-name:hover {
-  opacity: 1; 
-} */
+@media screen and (max-width: 768px) {
+  .list-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

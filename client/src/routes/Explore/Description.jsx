@@ -33,9 +33,7 @@ function Description() {
       <section id="body">
         <div className="container">
           <div className="left">
-            <div className="desc">
-              <div dangerouslySetInnerHTML={{ __html: clean }} />
-            </div>
+            <div className="desc" dangerouslySetInnerHTML={{ __html: clean }} />
           </div>
           <div className="right">
             <div className="title">

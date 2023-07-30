@@ -1,4 +1,4 @@
-const { Question, Quiz, Animal, QuizDetail } = require("../models");
+const { Question, Quiz, Animal, QuizDetail, User } = require("../models");
 const { Sequelize } = require("sequelize");
 const env = process.env.NODE_ENV || "development";
 const db = require("../config/database.js")[env];
@@ -98,6 +98,10 @@ const getQuizById = async (req, res) => {
       attributes: ["quiz_id", "score", "time"],
       include: [
         {
+          model: User,
+          attributes: ["username", "first_name", "last_name"],
+        },
+        {
           model: Animal,
           attributes: ["animal_name"],
         },
@@ -132,4 +136,41 @@ const getQuizById = async (req, res) => {
   }
 };
 
-module.exports = { getFiveRandomQuestionsByAnimalId, createQuiz, getQuizById };
+const getLast3QuizzesByUserId = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    const quizzes = await Quiz.findAll({
+      where: { user_id: userId },
+      attributes: ["quiz_id", "score", "time"],
+      include: [
+        {
+          model: Animal,
+          attributes: ["animal_name"],
+        },
+      ],
+      order: [["time", "DESC"]],
+      limit: 3,
+    });
+    const response = {
+      status: "success",
+      code: 200,
+      quizzes,
+    };
+    return res.json(response);
+  } catch (error) {
+    console.error(error); // Log the error for debugging purposes
+    const response = {
+      status: "error",
+      code: 500,
+      message: "Internal server error",
+    };
+    return res.status(500).json(response);
+  }
+};
+
+module.exports = {
+  getFiveRandomQuestionsByAnimalId,
+  createQuiz,
+  getQuizById,
+  getLast3QuizzesByUserId,
+};

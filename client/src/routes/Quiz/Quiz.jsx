@@ -1,19 +1,18 @@
 import "./Quiz.css";
 import { useState, useEffect, useCallback } from "react";
-import { useNavigate, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams, Navigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { createQuizLoader } from "../../api/quiz";
-import { useTimer } from "../../component/Timer/Timer";
 
 function Quiz() {
-  const [timer, setTimer] = useTimer(30);
+  const [timer, setTimer] = useState(30);
   const [soalIndex, setSoalIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [isMutated, setIsMutated] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [quizDetails, setQuizDetails] = useState([]);
+  const [shouldRedirect, setShouldRedirect] = useState(false);
   const { animalId } = useParams();
-  const redirect = useNavigate();
   const data = useLoaderData();
   const mutation = useMutation({
     mutationKey: "createQuiz",
@@ -34,6 +33,12 @@ function Quiz() {
       setSoalIndex((prev) => prev + 1);
       setTimer(30); // reset the timer
     }
+    // Mengurangi timer setiap 1 detik
+    const interval = setInterval(() => {
+      setTimer((prev) => prev - 1);
+    }, 1000);
+    // Membersihkan interval saat komponen Timer di-unmount
+    return () => clearInterval(interval);
   }, [timer, setTimer, soalIndex, data]); // pass the custom setter as a dependency
 
   useEffect(() => {
@@ -44,9 +49,9 @@ function Quiz() {
 
   useEffect(() => {
     if (mutation.isSuccess) {
-      redirect("/quizresult");
+      setShouldRedirect(true);
     }
-  }, [mutation, redirect]);
+  }, [mutation]);
 
   const handleAnswer = useCallback(
     (answer) => {
@@ -81,6 +86,10 @@ function Quiz() {
       setIsMutated(true);
     }
   }, [isFinished, isMutated, mutation, animalId, score, quizDetails]);
+
+  if (shouldRedirect) {
+    return <Navigate to={`/quiz/result/${mutation.data.quizId}`} />;
+  }
 
   return (
     <div className="quiz">

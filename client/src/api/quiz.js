@@ -61,3 +61,31 @@ export const createQuizLoader = async (params) => {
   };
   return data;
 };
+
+export const getQuizLoader = async ({ params }) => {
+  console.log("getQuizLoader");
+  const { quizId } = params;
+  console.log(quizId);
+  const axiosRequest = await axiosInstance
+    .get(`/quiz/result/${quizId}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+    .then((response) => response)
+    .catch((error) => error);
+  let data = {};
+  if (axiosRequest instanceof AxiosError) {
+    console.log(axiosRequest);
+    data = {
+      status: "error",
+      quiz: null,
+    };
+    return data;
+  }
+  data = {
+    quiz: axiosRequest.data.quiz,
+  };
+  console.log(data);
+  return data;
+};

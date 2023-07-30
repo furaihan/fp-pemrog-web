@@ -60,19 +60,16 @@ function Explore() {
             <h2>Loading...</h2>
           ) : (
             data.animals.map((animal) => (
-              <Link
-                to={"/description/" + animal.animal_id}
-                key={animal.animal_id}
-              >
-                <div className="list-name" key={animal.id}>
+              <div className="list-name ml-16 mr-16" key={animal.id}>
+                <Link to={"/description/" + animal.animal_id}>
                   <img
                     className="list-animal-img"
                     src={animal.image}
                     alt={animal.animal_name}
                   />
                   <h3>{animal.animal_name}</h3>
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))
           )}
         </div>
