@@ -1,7 +1,24 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class QuizDetail extends Model {}
+  class QuizDetail extends Model {
+    static associate(models) {
+      this.Quiz = this.belongsTo(models.Quiz, {
+        foreignKey: {
+          name: "quiz_id",
+          allowNull: false,
+          type: DataTypes.UUID,
+        },
+      });
+      this.Question = this.belongsTo(models.Question, {
+        foreignKey: {
+          name: "question_id",
+          allowNull: false,
+          type: DataTypes.UUID,
+        },
+      });
+    }
+  }
   QuizDetail.init(
     {
       detail_id: {
