@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
       });
       this.Quiz = this.belongsToMany(models.Quiz, {
         through: models.QuizDetail,
-        foreignKey: "question_id",
       });
     }
   }

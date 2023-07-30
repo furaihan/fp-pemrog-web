@@ -1,24 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class QuizDetail extends Model {
-    static associate(models) {
-      this.Quiz = this.belongsTo(models.Quiz, {
-        foreignKey: {
-          name: "quiz_id",
-          allowNull: false,
-          type: DataTypes.UUID,
-        },
-      });
-      this.Question = this.belongsTo(models.Question, {
-        foreignKey: {
-          name: "question_id",
-          allowNull: false,
-          type: DataTypes.UUID,
-        },
-      });
-    }
-  }
+  class QuizDetail extends Model {}
   QuizDetail.init(
     {
       detail_id: {
@@ -29,6 +12,22 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         field: "detail_id",
       },
+      quiz_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        field: "quiz_id",
+        references: {
+          model: Quiz,
+          key: "quiz_id",
+      },
+      question_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        field: "question_id",
+        references: {
+          model: Question,
+          key: "question_id",
+        },
       selected_option: {
         type: DataTypes.ENUM("option_1", "option_2", "option_3", "timeout"),
         allowNull: false,
