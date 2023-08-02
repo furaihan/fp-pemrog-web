@@ -1,56 +1,53 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import "./RandomQuiz.css";
+import { getRandomAnimalsFunFactLoader } from "../../api/animals";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 
 const RandomQuiz = () => {
   // State untuk melacak apakah setiap kartu sedang terbalik atau tidak
   const [isFlipped, setIsFlipped] = useState([false, false, false]);
+  const animalQuery = useQuery({
+    queryKey: ["animalQuiz"],
+    queryFn: () => getRandomAnimalsFunFactLoader({ count: 3 }),
+    staleTime: Infinity,
+  });
+  const data = animalQuery.data;
 
   // Fungsi untuk membalikkan kartu dengan indeks yang diberikan
-  const handleFlip = (index) => {
-    const newFlipped = [...isFlipped];
-    newFlipped[index] = !newFlipped[index];
-    setIsFlipped(newFlipped);
-  };
 
-  // Data kuis yang berisi id, gambar, dan judul
-  const OurQuiz = [
-    {
-      id: 1,
-      image: "lesser-bilby.jpg",
-      title: "Lesser Bilby",
+  const handleFlip = useCallback(
+    (index) => {
+      const newFlipped = [...isFlipped];
+      newFlipped[index] = !newFlipped[index];
+      setIsFlipped(newFlipped);
     },
-    {
-      id: 2,
-      image: "takahe.jpg",
-      title: "Takahe",
-    },
-    {
-      id: 3,
-      image: "irish-elk.jpg",
-      title: "Irish Elk",
-    },
-  ];
+    [isFlipped]
+  );
+
+  if (animalQuery.isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="card-container">
       <h1>Quiz</h1>
       <div className="card-row">
-        {OurQuiz.map((item) => (
+        {data.animals.map((item, index) => (
           <div
-            className={`card ${isFlipped[item.id - 1] ? "flipped" : ""}`}
+            className={`card ${isFlipped[index] ? "flipped" : ""}`}
             key={item.id}
-            onClick={() => handleFlip(item.id - 1)}
+            onClick={() => handleFlip(index)}
           >
             <div className="card-inner">
               <div className="card-front">
-                <div className={`card-object card-${item.id}`}>
+                <div className={`card-object card-${index + 1}`}>
                   <div
                     className="face front"
                     style={{ backgroundImage: `url(${item.image})` }}
                   >
                     <div className="title-wrapper">
-                      <div className="title">{item.title}</div>
+                      <h2>{item.animal_name}</h2>
                     </div>
                   </div>
                 </div>
@@ -66,7 +63,7 @@ const RandomQuiz = () => {
                     question
                   </li>
                 </ol>
-                <Link to="/quiz">
+                <Link to={"/quiz/" + item.animal_id}>
                   <button className="play">Play</button>
                 </Link>
               </div>

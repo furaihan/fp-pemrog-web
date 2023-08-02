@@ -20,7 +20,7 @@ export const getAnimalsLoader = async () => {
   return data;
 };
 
-export const getAnimalLoader = async ({ params }) => {
+export const getAnimalLoader = async (params) => {
   const { id } = params;
   const url = import.meta.env.VITE_BACKEND_URL;
   const axiosRequest = await axiosInstance
@@ -36,6 +36,28 @@ export const getAnimalLoader = async ({ params }) => {
   }
   data = {
     animal: axiosRequest.data.animal,
+  };
+  return data;
+};
+
+export const getRandomAnimalsFunFactLoader = async (params) => {
+  console.log("getRandomAnimalsFunFactLoader");
+  console.log(params);
+  const { count } = params;
+  const url = import.meta.env.VITE_BACKEND_URL;
+  const axiosRequest = await axiosInstance
+    .get(`${url}/animals/random/${count}`, {})
+    .then((response) => response)
+    .catch((error) => error);
+  let data = {};
+  if (axiosRequest instanceof AxiosError) {
+    data = {
+      animals: [],
+    };
+    return data;
+  }
+  data = {
+    animals: axiosRequest.data.animals,
   };
   return data;
 };
