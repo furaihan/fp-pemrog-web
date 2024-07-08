@@ -28,7 +28,7 @@ function Profile() {
               {navigation.state === "loading"
                 ? "Loading..."
                 : profile.data.firstName
-                ? profile.data.firstName + " " + profile.data.lastName ?? ""
+                ? profile.data.firstName + " " + profile.data.lastName
                 : profile.username ??
                   "Anonymous! You're not logged in and should not be here!"}
             </h1>

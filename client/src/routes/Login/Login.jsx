@@ -1,4 +1,3 @@
-"use client";
 import "./Login.css";
 import { Link, Form, useActionData, useNavigation } from "react-router-dom";
 import React from "react";
