@@ -1,6 +1,6 @@
 import "./Description.css";
 import ArrowDown from "../../assets/image/arrow-down.jsx";
-import { useParams, useLoaderData } from "react-router-dom";
+import { useParams, useLoaderData, useNavigation } from "react-router-dom";
 import DOMPurify from "dompurify";
 
 function Description() {
@@ -8,8 +8,12 @@ function Description() {
   const animal = useLoaderData();
   const description = animal.animal.description;
   const clean = DOMPurify.sanitize(description);
+  const navigation = useNavigation();
   console.log("Animal Loader:");
   console.log(animal);
+  if (navigation.state === "loading") {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <section

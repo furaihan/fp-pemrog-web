@@ -21,14 +21,16 @@ export const getAnimalsLoader = async () => {
 };
 
 export const getAnimalLoader = async (params) => {
-  const { id } = params;
+  const { id } = params.params;
   const url = import.meta.env.VITE_BACKEND_URL;
+  console.log(url + "/animals/" + id);
   const axiosRequest = await axiosInstance
     .get(`${url}/animals/${id}`, {})
     .then((response) => response)
     .catch((error) => error);
   let data = {};
   if (axiosRequest instanceof AxiosError) {
+    console.log("axiosRequest instanceof AxiosError");
     data = {
       animal: {},
     };
